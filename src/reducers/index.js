@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import categoryReducer from '../reducers/category-reducer';
 
 const rootReducer = combineReducers({
-    category:categoryReducer
+    category: categoryReducer
 })
 
 export default rootReducer;

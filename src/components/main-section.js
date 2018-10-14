@@ -9,6 +9,15 @@ componentDidMount(){
 this.props.dispatch(getHeadlines());
 }
 
+getCurrentDate(){
+    const today = new Date();
+    const dd = today.getDate();
+    const mm = today.getMonth()+1; //January is 0!
+    const yyyy = today.getFullYear(); 
+
+   return  mm + '/' + dd + '/' + yyyy;
+}
+
 
     render(){
        let headlines = this.props.headlines;
@@ -16,6 +25,7 @@ this.props.dispatch(getHeadlines());
        const headlineList = headlines.map((article, index)=><li key={index}>{article.title}</li>)
         return(
             <section>
+                <h2> Headlines for {this.getCurrentDate()} </h2>
           {headlineList}
           
             </section>
