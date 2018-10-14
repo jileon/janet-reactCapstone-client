@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Monofett');
+
+.content-header {
+  background: white;
+  height: 90px;
+  width: 100%;
+  box-shadow: 0 2px 0 rgba(0,0,0,.15);
+  border: solid 1px black;
+}
+
+
+.header-title {
+  letter-spacing: 0.08em;
+  font-family: 'Monofett', cursive;
+  color: #000000;
+  font-size: 4.0em;
+text-align: center;
+font-weight: 100;
+
+margin: 0 auto;
+}
