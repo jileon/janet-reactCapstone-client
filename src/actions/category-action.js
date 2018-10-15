@@ -1,5 +1,5 @@
-import {API_KEY} from '../config'
-
+import {SERVER} from '../config'
+import axios from 'axios';
 export const CATEGORY= 'CATEGORY';
 export const getCategory = category => ({
     type: CATEGORY,
@@ -14,14 +14,24 @@ export const getHeadlineArticles = headlines => ({
 
 
 export const getHeadlines = ()=>(dispatch)=>{
-return fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`,{
-    method: 'GET'
-})
-.then(res => res.json())
-.then((res)=>{
-    dispatch(getCategory('headlines'));
-    dispatch(getHeadlineArticles(res.articles));
 
-})
+    axios.get(`${SERVER}/api/newsflash/everything`)
+    .then(({data})=>{
+        console.log(data);
+        dispatch(getCategory('headlines'));
+        dispatch(getHeadlineArticles(data.articles));
+    
+    })
+    .catch(error => error.status(500).json(error));
+
+// return fetch(`${SERVER}/api/newsflash/everything`,{
+//     method: 'GET'
+// })
+// .then(res => res.json())
+// .then((res)=>{
+//     dispatch(getCategory('headlines'));
+//     dispatch(getHeadlineArticles(res.articles));
+
+// })
 
 };
