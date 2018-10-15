@@ -1,8 +1,7 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import { Carousel } from 'react-responsive-carousel';
 import {getHeadlines}from '../actions/category-action'
-import './css/main-section.css'
+import './css/headlines.css'
  
 export class Headlines extends React.Component{
 componentDidMount(){
@@ -22,27 +21,31 @@ getCurrentDate(){
     render(){
        let headlines = this.props.headlines;
        console.log(headlines);
-      
-       const headlineDivs = headlines.map((article, index)=>{
-        let  imageDiv=<img src={article.urlToImage} alt={article.title}/>
-        if (article.urlToImage===null){
-            imageDiv= <div>{article.description}</div>
-        }
-        return  <div key={index}>
-         <h2>{article.title}</h2>
-         {imageDiv}
-        <p>Source: {article.source.name}</p>
-    </div>
-        
-    })
+       const headlineList = headlines.map((article, index)=>{
+
+
+           let  imageDiv=<img src={article.urlToImage} alt={article.title}/>
+            if (article.urlToImage===null){
+                imageDiv= <div>{article.description}</div>
+            }
+
+           return <li key={index}>
+           <div className= 'card'>
+           <h2>{article.title}</h2>
+                    {imageDiv}
+           <p>{article.source.name}</p>
+           </div>
+           
+           </li>
+       })
         return(
             <section>
-                 <h2> Headlines for {this.getCurrentDate()} </h2>
-                <Carousel>
-              
-                {headlineDivs}
-                
-                </Carousel>          
+                <h2> Headlines for {this.getCurrentDate()} </h2>
+                <ul className='scrolling-wrapper-flexbox'>
+                {headlineList}
+                </ul>
+          
+          
             </section>
         )
     }
