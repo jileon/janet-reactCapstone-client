@@ -17,12 +17,11 @@ export const getHeadlines = ()=>(dispatch)=>{
 
     axios.get(`${SERVER}/api/newsflash/everything`)
     .then(({data})=>{
-        console.log(data);
         dispatch(getCategory('headlines'));
         dispatch(getHeadlineArticles(data.articles));
     
     })
-    .catch(error => error.status(500).json(error));
+    .catch(error => console.log(error));
 
 // return fetch(`${SERVER}/api/newsflash/everything`,{
 //     method: 'GET'
@@ -33,5 +32,16 @@ export const getHeadlines = ()=>(dispatch)=>{
 //     dispatch(getHeadlineArticles(res.articles));
 
 // })
+
+};
+
+export const getBusHeadlines = ()=>(dispatch)=>{
+
+    axios.get(`${SERVER}/api/newsflash/business`)
+    .then(({data})=>{
+        dispatch(getHeadlineArticles(data.articles));
+    
+    })
+    .catch(error => console.log(error));
 
 };

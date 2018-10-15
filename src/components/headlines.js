@@ -1,13 +1,12 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {getHeadlines}from '../actions/category-action';
+// import {getHeadlines}from '../actions/category-action';
 import EverythingHeadlines from '../components/everything-headlines';
+import BusinessHeadlines from '../components/business-headlines'
 import './css/headlines.css';
+
  
 export class Headlines extends React.Component{
-componentDidMount(){
-
-}
 
 getCurrentDate(){
     const today = new Date();
@@ -22,16 +21,16 @@ getCurrentDate(){
     render(){
        let headlineList;
 
-    if (this.props.category=='headlines'){
-      console.log('hello');
-    
-      headlineList=<EverythingHeadlines/>
-    
+    if (this.props.category==='headlines'){
+          headlineList = <EverythingHeadlines/>
+       } else if (this.props.category==='business'){
+        headlineList = <BusinessHeadlines/>
        }
 
         return(
             <section>
                 <h2> Headlines for {this.getCurrentDate()} </h2>
+                <h2>Category: {this.props.category}</h2>
                 <ul className='scrolling-wrapper-flexbox'>
                 {headlineList}
                 </ul>
