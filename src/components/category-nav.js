@@ -7,6 +7,7 @@ export default function CategoryNav(props){
         <ul className='buttonList'>
         
             <li><button type='button' name='headlines' onClick={props.buttonClick}>Everything</button></li>
+            <li><button type='button' name='entertainment' onClick={props.buttonClick}>Entertainment</button></li>
             <li><button type='button' name='business' onClick={props.buttonClick}>Business</button></li>
             <li><button type='button' name='health' onClick={props.buttonClick}>Health</button></li>
             <li><button type='button' name='science' onClick={props.buttonClick}>Science</button></li>
