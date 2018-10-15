@@ -1,0 +1,21 @@
+
+.categoryList{
+
+}
+.buttonList{
+    display: flex;
+    height: 100px;
+    width: 50%;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.categoryList button{
+ color: red;
+ height: 50px;
+ margin: 10px;
+ border: 1px black solid;
+
+}

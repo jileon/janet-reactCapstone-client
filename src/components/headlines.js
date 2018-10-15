@@ -1,11 +1,12 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {getHeadlines}from '../actions/category-action'
-import './css/headlines.css'
+import {getHeadlines}from '../actions/category-action';
+import EverythingHeadlines from '../components/everything-headlines';
+import './css/headlines.css';
  
 export class Headlines extends React.Component{
 componentDidMount(){
-this.props.dispatch(getHeadlines());
+
 }
 
 getCurrentDate(){
@@ -19,25 +20,15 @@ getCurrentDate(){
 
 
     render(){
-       let headlines = this.props.headlines;
-       console.log(headlines);
-       const headlineList = headlines.map((article, index)=>{
+       let headlineList;
 
+    if (this.props.category=='headlines'){
+      console.log('hello');
+    
+      headlineList=<EverythingHeadlines/>
+    
+       }
 
-           let  imageDiv=<img src={article.urlToImage} alt={article.title}/>
-            if (article.urlToImage===null){
-                imageDiv= <div>{article.description}</div>
-            }
-
-           return <li key={index}>
-           <div className= 'card'>
-           <h2>{article.title}</h2>
-                    {imageDiv}
-           <p>{article.source.name}</p>
-           </div>
-           
-           </li>
-       })
         return(
             <section>
                 <h2> Headlines for {this.getCurrentDate()} </h2>

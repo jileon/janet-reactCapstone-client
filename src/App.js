@@ -5,20 +5,33 @@ import SideNav from './components/side-nav';
 // import MainSection from './components/main-section'
 import CategoryNav from './components/category-nav'
 import Headlines from './components/headlines';
+import {connect } from 'react-redux';
+import {getCategory}from './actions/category-action'
 
 
 class App extends Component {
+
+
+
   render() {
     return (
       <div className="App">
-       <SideNav/>
+      <SideNav/>
      <HeaderBar/>
-     <CategoryNav/>
-       <Headlines/>
+     <CategoryNav buttonClick={(e)=>this.props.dispatch(getCategory(e.target.name))}/>
+      <Headlines/>     
       </div>
 
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+      category: state.category.category,
+      headlines: state.category.headlines
+  };
+};
+export default connect(mapStateToProps)(App);
+
+

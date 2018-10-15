@@ -1,7 +1,7 @@
 import {CATEGORY, HEADLINES} from '../actions/category-action';
 
 const initialState = {
-    category: 'everything',
+    category: 'headlines',
     headlines:[],
 };
 

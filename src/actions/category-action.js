@@ -1,4 +1,4 @@
-
+import {API_KEY} from '../config'
 
 export const CATEGORY= 'CATEGORY';
 export const getCategory = category => ({
@@ -14,7 +14,7 @@ export const getHeadlineArticles = headlines => ({
 
 
 export const getHeadlines = ()=>(dispatch)=>{
-return fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=722e175eefa74e1f9a66e5a9f5d86a76',{
+return fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`,{
     method: 'GET'
 })
 .then(res => res.json())
