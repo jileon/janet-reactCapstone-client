@@ -23,10 +23,17 @@ getCurrentDate(){
        let headlines = this.props.headlines;
        console.log(headlines);
        const headlineList = headlines.map((article, index)=>{
+
+
+           let  imageDiv=<img src={article.urlToImage} alt={article.title}/>
+            if (article.urlToImage===null){
+                imageDiv= <div>{article.description}</div>
+            }
+
            return <li key={index}>
            <div>
-           <h3>{article.title}</h3>
-           <img src={article.urlToImage} alt={article.title}/>
+           <h2>{article.title}</h2>
+                    {imageDiv}
            <p>{article.source.name}</p>
            </div>
            
@@ -35,7 +42,7 @@ getCurrentDate(){
         return(
             <section>
                 <h2> Headlines for {this.getCurrentDate()} </h2>
-                <ul>
+                <ul className='mainUl'>
                 {headlineList}
                 </ul>
           
