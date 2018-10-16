@@ -1,14 +1,5 @@
 import React from 'react';
 export default function HeadlineLi(props){
-
-    let headlines = props.headlines;
-       const headlineList = headlines.map((article, index)=>{
-           let  imageDiv=<img src={article.urlToImage} alt={article.title}/>
-            if (article.urlToImage===null){
-                imageDiv= <div>{article.description}</div>
-            }      
-});
-
 return (
     <ul headlines={props.headlines} className={props.className}>
         {props.headlines.map((article, index) =>{

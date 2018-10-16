@@ -16,3 +16,22 @@ return {
    searchResults
 }
 }
+
+export const getSearchTerm = (search)=>(dispatch)=>{
+
+    axios({
+        method: 'get',
+        url: `${SERVER}/api/newsflash/search`,
+        params: {
+         searchTerm: search,
+        }
+      })
+
+    // axios.get(`${SERVER}/api/newsflash/search`,{hello:'hello'})
+    // .then(({data})=>{
+    //     // dispatch(getCategory('headlines'));
+    //     // dispatch(getHeadlineArticles(data.articles));  
+    //     console.log(data);
+    // })
+    .catch(error => console.log(error));
+};
