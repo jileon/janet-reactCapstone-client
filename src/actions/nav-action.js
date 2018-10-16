@@ -5,3 +5,10 @@ export const showNavigation = ()=>{
         type: SHOW_NAV
     }
 }
+
+export const HIDE_NAV= 'HIDE_NAV';
+export const hideNavigation = ()=>{
+    return {
+        type: HIDE_NAV
+    }
+}
