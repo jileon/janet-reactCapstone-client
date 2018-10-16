@@ -6,7 +6,7 @@ import './css/userMenu.css'
 
     render(){
         return(
-            <div className='userMenu'>
+            <section className='userMenu'>
                 <button type='button' onClick={()=>{
                     console.log('back button working');
                     this.props.dispatch(hideNavigation())
@@ -16,7 +16,20 @@ import './css/userMenu.css'
                 <div>
                 <h1>HELLO USER NAME</h1>
             </div>
+
+            <div className='menuButtons'>
+<               button className='dashboardButton' type='button' onClick={()=>{
+                    console.log('dashboard button working');
+                    this.props.dispatch(hideNavigation())
+                }}> Dashboard</button>
             </div>
+            <div className='folderButtons'>
+<               button className='dashboardButton' type='button' onClick={()=>{
+                    console.log('dashboard button working');
+                    this.props.dispatch(hideNavigation())
+                }}> Folder 1</button>
+            </div>
+            </section>
            
         )
     }
