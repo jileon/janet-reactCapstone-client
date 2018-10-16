@@ -47,14 +47,10 @@ getCurrentDate(){
 
 
         return(
-            <section>
+            <section className='headline-seaction'>
                 <h2> Top Headlines for {this.getCurrentDate()} </h2>
                 <h2>Category: {this.props.category}</h2>
-                <ul className='scrolling-wrapper-flexbox'>
                 {headlineList}
-                </ul>
-          
-          
             </section>
         )
     }

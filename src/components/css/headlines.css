@@ -25,20 +25,24 @@
   
   .card {
     border: 1px solid black;
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     overflow-x: auto;
-    padding: 50px;
+    padding: 30px;
   }
   
     .scrolling-wrapper-flexbox {
-        border: 1px solid blue;
-    height: 650px;
+ 
     max-width: 90%;
-    margin-left: 80px;
     list-style-type: none;
     -webkit-overflow-scrolling: touch;
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  .headline-seaction{
+    border: 1px solid blue;
+    margin-top: 50px;
+    margin-left: 100px;
   }

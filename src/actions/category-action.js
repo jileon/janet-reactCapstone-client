@@ -29,6 +29,7 @@ export const getHeadlines = ()=>(dispatch)=>{
 export const getBusHeadlines = ()=>(dispatch)=>{
     axios.get(`${SERVER}/api/newsflash/business`)
     .then(({data})=>{
+        console.log(data)
         dispatch(getHeadlineArticles(data.articles));
     })
     .catch(error => console.log(error));
@@ -38,6 +39,7 @@ export const getBusHeadlines = ()=>(dispatch)=>{
 export const getHealthHeadlines = ()=>(dispatch)=>{
     axios.get(`${SERVER}/api/newsflash/health`)
     .then(({data})=>{
+        console.log(data)
         dispatch(getHeadlineArticles(data.articles));
     })
     .catch(error => console.log(error));

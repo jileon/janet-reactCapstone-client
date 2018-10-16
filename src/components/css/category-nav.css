@@ -1,21 +1,26 @@
 
 .categoryList{
-
+    margin-top: 50px;
+   margin-bottom: 50px;
+   margin-left:100px;
 }
-.buttonList{
+.category-flex-container{
     display: flex;
-    height: 100px;
-    width: 50%;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0 auto;
     text-align: center;
+    border: dotted 1px black;
 
 }
 
-.categoryList button{
+.category-flex-container button{
  color: red;
  height: 50px;
- margin: 10px;
+ width: 80%;
  border: 1px black solid;
+ margin: 20px;
+ font-size: 15px;
+
 
 }
