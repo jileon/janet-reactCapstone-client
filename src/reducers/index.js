@@ -5,6 +5,7 @@ import navReducer from './nav-reducer';
 import userMenuReducer from './userMenu-reducer';
 import authReducer from './auth';
 import protectedDataReducer from './protected-data';
+import {reducer as formReducer} from 'redux-form';
 
 const rootReducer = combineReducers({
     category: categoryReducer,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
     nav: navReducer,
     userMenu: userMenuReducer,
     auth: authReducer,
-    protectedData: protectedDataReducer
+    protectedData: protectedDataReducer,
+    form: formReducer
 })
 
 export default rootReducer;
