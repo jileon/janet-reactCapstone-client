@@ -1,5 +1,8 @@
 import {SERVER} from '../config'
 import axios from 'axios';
+
+
+
 export const CATEGORY= 'CATEGORY';
 export const getCategory = category => ({
     type: CATEGORY,
