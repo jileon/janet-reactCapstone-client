@@ -17,15 +17,17 @@ return {
 }
 }
 
-export const getSearchTerm = (search)=>(dispatch)=>{
+export const getSearchTerm = (search, pageNum)=>(dispatch)=>{
 
     axios({
         method: 'get',
         url: `${SERVER}/api/newsflash/search`,
         params: {
          searchTerm: search,
+         page: pageNum
         }
       })
+      .then((res)=>console.log(res.data))
 
     // axios.get(`${SERVER}/api/newsflash/search`,{hello:'hello'})
     // .then(({data})=>{
