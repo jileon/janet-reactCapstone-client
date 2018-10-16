@@ -1,9 +1,7 @@
 //User Menu Actions
 
-const ADD_FOLDER= 'ADD_FOLDER';
-const addNewFolder=(folderName)=>{
-    return{
-        type:ADD_FOLDER,
-        folderName
-    }
-}
+export const ADD_FOLDER= 'ADD_FOLDER';
+export const addNewFolder = folderName => ({
+    type: ADD_FOLDER,
+    folderName
+});

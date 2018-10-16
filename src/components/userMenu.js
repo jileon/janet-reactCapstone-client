@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {hideNavigation} from '../actions/nav-action'
+import {addNewFolder} from '../actions/userMenu-actions'
 import './css/userMenu.css'
 import FolderButtonLi from '../components/folder-buttonsLi';
  class UserMenu extends React.Component{
@@ -25,19 +26,19 @@ import FolderButtonLi from '../components/folder-buttonsLi';
                 </div>
 
                 <div className='folderButtons'>
-                <FolderButtonLi className='folderButtons' folders={this.props.folders}/>
+                <FolderButtonLi ulClassName='folderButtons' liButtonClassName='dashboardButton' folders={this.props.folders}/>
                 
                    
                 </div>
 
                 <div className='folderButtons'>
-                <form>
-                    <input></input>
-                <button className='dashboardButton' type='submit' onClick={(e) => {
+                <form onSubmit={(e) => {
                     e.preventDefault()
-                        console.log('folder submit working');
-                        // this.props.dispatch(hideNavigation())
-                    }}> Add Folder</button>
+                        console.log(this.input.value);
+                        this.props.dispatch(addNewFolder(this.input.value));
+                    }}>
+                    <input type="addNewFolder" ref={input => (this.input = input)} />
+                <button className='dashboardButton' type='submit'> Add Folder</button>
                 </form>
                    
                 </div>
