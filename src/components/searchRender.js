@@ -22,7 +22,7 @@ class SearchRender extends React.Component{
             const searchRes = this.props.searchResults.map((article, index) => (
                 <li key={index}>
                 <div>
-                <a href={article.url}>
+                <a href={article.url} target="_blank" >
                 <h3> {article.source.name}</h3>
                 <h4>{article.title}</h4>
                 </a>
