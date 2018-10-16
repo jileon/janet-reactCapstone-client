@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {hideNavigation} from '../actions/nav-action'
-
+import './css/userMenu.css'
  class UserMenu extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className='userMenu'>
                 <button type='button' onClick={()=>{
                     console.log('back button working');
                     this.props.dispatch(hideNavigation())
