@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
-import {setSearchLoading} from '../actions/search-action'
+
 
 class SearchRender extends React.Component{
     // componentDidMount(){
