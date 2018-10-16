@@ -12,7 +12,7 @@ const searchReducer = (state=initialState, action)=>{
     } else if (action.type===SEARCH_TERM){
         return Object.assign({}, state, {searchTerm: action.searchTerm, loading:true})
     }else if (action.type===SEARCH_RESULTS){
-            return Object.assign({}, state, {searchResults:action.searchResults,loading:false})
+            return Object.assign({}, state, {searchResults:action.searchResults, loading:false})
         }
     return state;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Spinner from 'react-spinkit';
 import {connect} from 'react-redux';
+import Spinner from 'react-spinkit';
 import {setSearchLoading} from '../actions/search-action'
 
 class SearchRender extends React.Component{
@@ -12,18 +12,28 @@ class SearchRender extends React.Component{
         renderResults() {
             if (this.props.loading) {
                 return <Spinner spinnerName="circle" noFadeIn />;
+                // return<div>Loading..</div>
             }
     
             // if (this.props.error) {
             //     return <strong>{this.props.error}</strong>;
             // }
     
-            // const characters = this.props.characters.map((character, index) => (
-            //     <li key={index}>{character}</li>
-            // ));
+            const searchRes = this.props.searchResults.map((article, index) => (
+                <li key={index}>
+                <div>
+                <a href={article.url}>
+                <h3> {article.source.name}</h3>
+                <h4>{article.title}</h4>
+                </a>
+                <p>{article.description}</p>
+                </div>
+               
+                </li>
+            ));
        
-            // return <ul className="character-search-results">'else'</ul>;
-                return <div>ELSE</div>
+            return <ul className="article-search-results">{searchRes}</ul>;
+                
                 
     
         }
@@ -38,7 +48,8 @@ class SearchRender extends React.Component{
 const mapStateToProps = (state) => {
 	return {
         search: state.search.searchTerm,
-        loading: state.search.loading
+        loading: state.search.loading.search,
+        searchResults: state.search.searchResults
 	};
 };
 export default connect(mapStateToProps)(SearchRender);

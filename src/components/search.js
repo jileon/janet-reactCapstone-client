@@ -16,7 +16,6 @@ class SearchForm extends React.Component{
                     searchTerm=this.input.value;
                         this.props.dispatch(setSearchTerm(this.input.value));
                         this.props.dispatch(getSearchTerm(searchTerm, 2));
-                        console.log(this.props.search)
                     }}>
 
                     Search
