@@ -18,7 +18,7 @@ export const getHeadlineArticles = headlines => ({
 
 export const getHeadlines = ()=>(dispatch)=>{
 
-    axios.get(`${SERVER}/api/newsflash/everything`)
+    axios.get(`${SERVER}/newsflash/everything`)
     .then(({data})=>{
         dispatch(getCategory('headlines'));
         dispatch(getHeadlineArticles(data.articles));  
@@ -27,7 +27,7 @@ export const getHeadlines = ()=>(dispatch)=>{
 };
 
 export const getBusHeadlines = ()=>(dispatch)=>{
-    axios.get(`${SERVER}/api/newsflash/business`)
+    axios.get(`${SERVER}/newsflash/business`)
     .then(({data})=>{
         console.log(data)
         dispatch(getHeadlineArticles(data.articles));
@@ -37,7 +37,7 @@ export const getBusHeadlines = ()=>(dispatch)=>{
 };
 
 export const getHealthHeadlines = ()=>(dispatch)=>{
-    axios.get(`${SERVER}/api/newsflash/health`)
+    axios.get(`${SERVER}/newsflash/health`)
     .then(({data})=>{
         console.log(data)
         dispatch(getHeadlineArticles(data.articles));
@@ -47,7 +47,7 @@ export const getHealthHeadlines = ()=>(dispatch)=>{
 };
 
 export const getScienceHeadlines = ()=>(dispatch)=>{
-    axios.get(`${SERVER}/api/newsflash/science`)
+    axios.get(`${SERVER}/newsflash/science`)
     .then(({data})=>{
         dispatch(getHeadlineArticles(data.articles));
     })
@@ -56,7 +56,7 @@ export const getScienceHeadlines = ()=>(dispatch)=>{
 };
 
 export const getSportsHeadlines = ()=>(dispatch)=>{
-    axios.get(`${SERVER}/api/newsflash/sports`)
+    axios.get(`${SERVER}/newsflash/sports`)
     .then(({data})=>{
         dispatch(getHeadlineArticles(data.articles));
     })
@@ -64,7 +64,7 @@ export const getSportsHeadlines = ()=>(dispatch)=>{
 
 };
 export const getTechHeadlines = ()=>(dispatch)=>{
-    axios.get(`${SERVER}/api/newsflash/technology`)
+    axios.get(`${SERVER}/newsflash/technology`)
     .then(({data})=>{
         dispatch(getHeadlineArticles(data.articles));
     })
@@ -73,7 +73,7 @@ export const getTechHeadlines = ()=>(dispatch)=>{
 };
 
 export const getEntHeadlines = ()=>(dispatch)=>{
-    axios.get(`${SERVER}/api/newsflash/entertainment`)
+    axios.get(`${SERVER}/newsflash/entertainment`)
     .then(({data})=>{
         dispatch(getHeadlineArticles(data.articles));
     })

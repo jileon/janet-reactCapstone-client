@@ -28,7 +28,7 @@ export const getSearchTerm = (search, pageNum)=>(dispatch)=>{
    dispatch(setSearchLoading());
     axios({
         method: 'get',
-        url: `${SERVER}/api/newsflash/search`,
+        url: `${SERVER}/newsflash/search`,
         params: {
          searchTerm: search,
          page: pageNum

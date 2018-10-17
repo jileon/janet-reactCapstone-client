@@ -1,60 +1,58 @@
-import React, { Component } from 'react';
-import {connect } from 'react-redux';
-import './App.css';
+import React from 'react';
+import {connect} from 'react-redux';
+import {Route, withRouter} from 'react-router-dom';
+
 import HeaderBar from './components/header-bar';
-import SideNav from './components/side-nav';
-import SearchForm from './components/search';
-import MainSection from './components/main-section';
-import CategoryNav from './components/category-nav';
-import {setSearchTerm} from './actions/search-action';
-// import Headlines from './components/headlines';
-import {getCategory}from './actions/category-action';
-// import {SearchApp, Pagination} from './components/search-scratch';
-import {showNavigation} from './actions/nav-action';
-import UserMenu from './components/userMenu';
+import LandingPage from './components/landing-page';
+import Dashboard from './components/dashboard'
+import RegistrationPage from './components/registration-page';
+import {refreshAuthToken} from './actions/auth';
 
-class App extends Component {
+export class App extends React.Component {
+    componentDidUpdate(prevProps) {
+        if (!prevProps.loggedIn && this.props.loggedIn) {
+            // When we are logged in, refresh the auth token periodically
+            this.startPeriodicRefresh();
+        } else if (prevProps.loggedIn && !this.props.loggedIn) {
+            // Stop refreshing when we log out
+            this.stopPeriodicRefresh();
+        }
+    }
 
+    componentWillUnmount() {
+        this.stopPeriodicRefresh();
+    }
 
+    startPeriodicRefresh() {
+        this.refreshInterval = setInterval(
+            () => this.props.dispatch(refreshAuthToken()),
+            60 * 60 * 1000 // One hour
+        );
+    }
 
-  render() {
+    stopPeriodicRefresh() {
+        if (!this.refreshInterval) {
+            return;
+        }
 
-    if (this.props.showNav) {
-      return <UserMenu/>
-    
-  }
-    return (
+        clearInterval(this.refreshInterval);
+    }
 
-
-      <div className="App">
-      <SideNav navClick={(e)=>{
-        this.props.dispatch(showNavigation())
-       
-     }}/>
-     <HeaderBar/>
-     <CategoryNav buttonClick={(e)=>{
-       this.props.dispatch(setSearchTerm(''));
-       this.props.dispatch(getCategory(e.target.name))
-     }}/>
-     <SearchForm/>
-     <MainSection/>
-    
-  
-      </div>
-
-    
-    );
-  }
+    render() {
+        return (
+            <div className="app">
+                <Route exact path="/" component={LandingPage} />
+                <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/register" component={RegistrationPage} />
+            </div>
+        );
+    }
 }
 
-const mapStateToProps = state => {
-  return {
-      category: state.category.category,
-      headlines: state.category.headlines,
-      search: state.search.searchTerm,
-      showNav: state.nav.expandedNav
-  };
-};
-export default connect(mapStateToProps)(App);
+const mapStateToProps = state => ({
+    hasAuthToken: state.auth.authToken !== null,
+    loggedIn: state.auth.currentUser !== null
+});
 
-
+// Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
+export default withRouter(connect(mapStateToProps)(App));

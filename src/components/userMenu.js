@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {hideNavigation} from '../actions/nav-action'
-import {addNewFolder} from '../actions/userMenu-actions'
-import './css/userMenu.css'
+import {hideNavigation} from '../actions/nav-action';
+import {addNewFolder} from '../actions/userMenu-actions';
+import './css/userMenu.css';
+import {clearAuthToken} from '../local-storage';
+import {clearAuth} from '../actions/auth';
 import FolderButtonLi from '../components/folder-buttonsLi';
  class UserMenu extends React.Component{
 
@@ -23,6 +25,13 @@ import FolderButtonLi from '../components/folder-buttonsLi';
                         console.log('dashboard button working');
                         this.props.dispatch(hideNavigation())
                     }}> Dashboard</button>
+                </div>
+
+                <div className='menuButtons'>
+                    <button className='dashboardButton' type='button' onClick={() => {
+                     clearAuthToken();
+                     this.props.dispatch(clearAuth());
+                    }}> Log Out</button>
                 </div>
 
                 <div className='folderButtons'>
