@@ -16,6 +16,17 @@
 	height: 128px;
 	margin: 0 auto;
 }
+.userMenu p {
+
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 0.06em;
+	color: #ffffff;
+	margin: 0 auto;
+}
 
 .menuButtons{
     margin: 0 auto;  

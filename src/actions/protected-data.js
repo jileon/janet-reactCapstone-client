@@ -15,7 +15,7 @@ export const fetchProtectedDataError = error => ({
 
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    return fetch(`${SERVER}/protected`, {
+    return fetch(`${SERVER}/newsflash/folders/`, {
         method: 'GET',
         headers: {
             // Provide our auth token as credentials
@@ -24,7 +24,8 @@ export const fetchProtectedData = () => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(({data}) => dispatch(fetchProtectedDataSuccess(data)))
+        .then(res=>console.log(res))
+        // .then(({data}) => dispatch(fetchProtectedDataSuccess(data)))
         .catch(err => {
             dispatch(fetchProtectedDataError(err));
         });

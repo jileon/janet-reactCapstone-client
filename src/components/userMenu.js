@@ -7,7 +7,7 @@ import {clearAuthToken} from '../local-storage';
 import {clearAuth} from '../actions/auth';
 import FolderButtonLi from '../components/folder-buttonsLi';
  class UserMenu extends React.Component{
-
+  
     render(){
         return(
             <section className='userMenu'>
@@ -18,8 +18,9 @@ import FolderButtonLi from '../components/folder-buttonsLi';
 
                 <div>
                     <h1>HELLO USER NAME</h1>
+                    <p>this.props.protectedData</p>
                 </div>
-
+                
                 <div className='menuButtons'>
                     <button className='dashboardButton' type='button' onClick={() => {
                         console.log('dashboard button working');
