@@ -9,7 +9,7 @@ return (
               }    
             return <li key={index}>
                         <div className='card'>
-                            <h2>{article.title}</h2>
+                            <a href={article.url} target="_blank"><h2>{article.title}</h2></a>
                             {imageDiv}
                             <p>{article.source.name}</p>
                         </div>
