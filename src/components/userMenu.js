@@ -30,7 +30,9 @@ import FolderButtonLi from '../components/folder-buttonsLi';
                 <div className='menuButtons'>
                     <button className='dashboardButton' type='button' onClick={() => {
                      clearAuthToken();
+                     this.props.dispatch(hideNavigation());
                      this.props.dispatch(clearAuth());
+                     
                     }}> Log Out</button>
                 </div>
 
