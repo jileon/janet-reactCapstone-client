@@ -5,7 +5,7 @@ export default function FolderButtonLi(props){
             {props.folders.map((folder, index) =>{
                     
                 return <li key={index}>
-                            <button className= {props.liButtonClassName}type='button' name={folder} onClick={props.folderClick}>{folder}</button>
+                            <button className= {props.liButtonClassName}type='button' name={folder.foldername} onClick={props.folderClick}>{folder.foldername}</button>
             
                         </li>
                     

@@ -63,7 +63,7 @@ import FolderButtonLi from '../components/folder-buttonsLi';
 
 const mapStateToProps = (state) => {
 	return {
-        folders: state.userMenu.folders
+        folders: state.protectedData.data
 
 	};
 };
