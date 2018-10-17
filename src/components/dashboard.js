@@ -19,6 +19,11 @@ import Welcome from './welcome';
        componentDidMount(){
          this.props.dispatch(fetchProtectedData());
        }
+      //  componentDidUpdate(){
+      //   this.props.dispatch(fetchProtectedData());
+      // }
+
+    
 
 
   render() {
