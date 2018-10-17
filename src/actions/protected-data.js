@@ -13,6 +13,8 @@ export const fetchProtectedDataError = error => ({
     error
 });
 
+
+//fetches folders and adds folder object to protectDate in state
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     return fetch(`${SERVER}/newsflash/folders/`, {

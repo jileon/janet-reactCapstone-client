@@ -6,6 +6,7 @@ import './css/userMenu.css';
 import {clearAuthToken} from '../local-storage';
 import {clearAuth} from '../actions/auth';
 import FolderButtonLi from '../components/folder-buttonsLi';
+import{sendNewFolder} from '../actions/userMenu-actions'
  class UserMenu extends React.Component{
   
     render(){
@@ -18,7 +19,7 @@ import FolderButtonLi from '../components/folder-buttonsLi';
 
                 <div>
                     <h1>HELLO USER NAME</h1>
-                    <p>this.props.protectedData</p>
+                    
                 </div>
                 
                 <div className='menuButtons'>
@@ -47,7 +48,8 @@ import FolderButtonLi from '../components/folder-buttonsLi';
                 <form onSubmit={(e) => {
                     e.preventDefault()
                         console.log(this.input.value);
-                        this.props.dispatch(addNewFolder(this.input.value));
+                        // this.props.dispatch(addNewFolder(this.input.value));
+                        this.props.dispatch(sendNewFolder(this.input.value));
                     }}>
                     <input type="addNewFolder" ref={input => (this.input = input)} />
                 <button className='dashboardButton' type='submit'> Add Folder</button>
