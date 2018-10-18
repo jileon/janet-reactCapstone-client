@@ -36,7 +36,7 @@ import Welcome from './welcome';
       <Link to='/usermenu'>
       <SideNav/>
       </Link>
-     
+    
      <HeaderBar/>
      <Welcome username={this.props.firstName}/>
      <CategoryNav buttonClick={(e)=>{
@@ -56,14 +56,14 @@ import Welcome from './welcome';
 
 const mapStateToProps = state => {
   return {
-      category: state.category.category,
-      headlines: state.category.headlines,
-      search: state.search.searchTerm,
-      showNav: state.nav.expandedNav,
-      username: state.auth.currentUser.username,
+      // category: state.category.category,
+      // headlines: state.category.headlines,
+      // search: state.search.searchTerm,
+      // showNav: state.nav.expandedNav,
+      // username: state.auth.currentUser.username,
       firstName: state.auth.currentUser.firstName,
     //   name: `${currentUser.firstName} ${currentUser.lastName}`,
-      protectedData: state.protectedData.data
+      folders: state.protectedData.data
   };
 };
 export default requiresLogin()(connect(mapStateToProps)(Dashboard));

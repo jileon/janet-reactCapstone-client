@@ -4,16 +4,18 @@ import axios from 'axios';
 import {loadAuthToken} from '../local-storage';
 import {fetchProtectedData} from '../actions/protected-data';
 
+
+//FIXME: this doesn't do anything anymore. Fix or get rid of
 export const ADD_FOLDER= 'ADD_FOLDER';
-export const addNewFolder = folderName => ({
-    type: ADD_FOLDER,
-    folderName
-});
+// export const addNewFolder = folderName => ({
+//     type: ADD_FOLDER,
+//     folderName
+// });
 
 //takes new folder as argument and sends foldername as post request to server
 //fetchProtected data gets the new information to render in components folder-buttonsLi.js and
 //userMenu.js
-export const sendNewFolder = (foldername) => (dispatch) => {
+export const addNewFolder = (foldername) => (dispatch) => {
     const authToken = loadAuthToken();
     return axios({
         method: 'post',

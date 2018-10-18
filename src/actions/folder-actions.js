@@ -10,8 +10,8 @@ import axios from 'axios';
 export const sendArticleToFolder= (articles, folderId) => (dispatch) => {
     const authToken = loadAuthToken();
 
-    console.log(articles);
-    console.log(folderId)
+    console.log('data sent is :'+ JSON.stringify(articles));
+    // console.log(folderId)
     return axios({
         method: 'put',
         url: `${SERVER}/newsflash/folders/${folderId}`,
@@ -21,8 +21,9 @@ export const sendArticleToFolder= (articles, folderId) => (dispatch) => {
         }
       })
     .then(({data})=>{
+        console.log('data rececived===================')
        console.log(data);
-    dispatch(fetchProtectedData());
+    // dispatch(fetchProtectedData());
     })
     .catch(error => console.log(error));
 };
