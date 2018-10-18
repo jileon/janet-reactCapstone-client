@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect } from 'react-redux';
 import '../components/css/folder-addToList.css';
-
+import {sendArticleToFolder} from '../actions/folder-actions';
 
 
 function FolderAddToList(props) {
@@ -23,7 +23,12 @@ function FolderAddToList(props) {
 								 articlesource={props.articlesource} 
 								 folderid = {folder._id} 
 								 onClick={(e)=>{
-									 console.log(e.target.getAttribute('articletitle'))
+									 const folderId= e.target.getAttribute('folderid')
+									const article = [{
+										title: e.target.getAttribute('articletitle'),
+										source: e.target.getAttribute('articlesource')
+									}]
+									props.dispatch(sendArticleToFolder(article, folderId))
 									}}>
 								 {folder.foldername}
 								 </p>
