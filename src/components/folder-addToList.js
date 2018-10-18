@@ -27,10 +27,10 @@ function FolderAddToList(props) {
 								 folderid = {folder._id} 
 								 onClick={(e)=>{
 									 const folderId= e.target.getAttribute('folderid')
-									const article = [{
+									const article = {
 										title: e.target.getAttribute('articletitle'),
 										source: e.target.getAttribute('articlesource')
-									}]
+									};
 									props.dispatch(sendArticleToFolder(article, folderId))
 									}}>
 								 {folder.foldername}

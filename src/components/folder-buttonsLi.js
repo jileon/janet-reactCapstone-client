@@ -10,7 +10,7 @@ let folders;
 			{props.folders.map((folder, index) => {
 				return (
 					<li key={index}>
-						<Link to={`/folder/${folder.foldername}`}>
+						<Link to={`/folder/${folder._id}`}>
 							<button
 								className={props.liButtonClassName}
 								type="button"

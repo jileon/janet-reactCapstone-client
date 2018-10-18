@@ -7,15 +7,15 @@ import axios from 'axios';
 
 
 //Need to add handling for dupe articles
-export const sendArticleToFolder= (articles, folderId) => (dispatch) => {
+export const sendArticleToFolder= (article, folderId) => (dispatch) => {
     const authToken = loadAuthToken();
 
-    console.log('data sent is :'+ JSON.stringify(articles));
+    console.log('data sent is :'+ JSON.stringify(article));
     // console.log(folderId)
     return axios({
         method: 'put',
         url: `${SERVER}/newsflash/folders/${folderId}`,
-        data:{articles: articles},
+        data:{article: article},
         headers:{
             "Authorization": `Bearer ${authToken}`
         }
