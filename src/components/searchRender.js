@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
-
+import FolderAddToList from './folder-addToList';
 
 class SearchRender extends React.Component{
     // componentDidMount(){
@@ -29,7 +29,7 @@ class SearchRender extends React.Component{
                 </a>
                 <p>{article.description}</p>
                 </div>
-               
+           
                 </li>
             ));
        

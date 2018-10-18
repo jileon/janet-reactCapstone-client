@@ -1,4 +1,5 @@
 import React from 'react';
+import FolderAddToList from './folder-addToList';
 export default function HeadlineLi(props){
 return (
     <ul headlines={props.headlines} className={props.className}>
@@ -12,7 +13,7 @@ return (
                             <a href={article.url} target="_blank"><h2>{article.title}</h2></a>
                             {imageDiv}
                             <p>{article.source.name}</p>
-                            <button type='button'>Add to Folder</button>
+                            <FolderAddToList/>
                         </div>
                        
                     </li>
