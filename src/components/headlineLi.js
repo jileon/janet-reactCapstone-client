@@ -12,8 +12,9 @@ return (
                             <a href={article.url} target="_blank"><h2>{article.title}</h2></a>
                             {imageDiv}
                             <p>{article.source.name}</p>
+                            <button type='button'>Add to Folder</button>
                         </div>
-        
+                       
                     </li>
                 
         })}

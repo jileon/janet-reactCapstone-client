@@ -3,7 +3,7 @@ export default function Welcome(props){
  return(
     <div>
     <h2>Welcome {props.username}</h2>
-    <p>Click below to get current headlines for each topic. Or search below</p>
+    <p>Click to get current headlines for each topic. Or search below</p>
 </div>
  )
    

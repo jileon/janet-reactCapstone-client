@@ -24,6 +24,7 @@ class SearchRender extends React.Component{
                 <div>
                 <a href={article.url} target="_blank" >
                 <h3> {article.source.name}</h3>
+                <img src={article.urlToImage} alt={article.title}/>
                 <h4>{article.title}</h4>
                 </a>
                 <p>{article.description}</p>
