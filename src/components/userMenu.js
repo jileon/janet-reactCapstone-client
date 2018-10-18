@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {hideNavigation} from '../actions/nav-action';
+import { Link } from 'react-router-dom';
 // import {addNewFolder} from '../actions/userMenu-actions';
 import './css/userMenu.css';
 import {clearAuthToken} from '../local-storage';
@@ -8,15 +9,16 @@ import {clearAuth} from '../actions/auth';
 import FolderButtonLi from '../components/folder-buttonsLi';
 import{sendNewFolder} from '../actions/userMenu-actions';
 import {deleteFolder} from '../actions/userMenu-actions';
+import requiresLogin from './requires-login';
  class UserMenu extends React.Component{
   
     render(){
         return(
             <section className='userMenu'>
-                <button type='button' onClick={() => {
-                    console.log('back button working');
-                    this.props.dispatch(hideNavigation())
-                }}> BACK BUTTON</button>
+               <Link to = "/dashboard">
+               <button type='button'> BACK BUTTON</button>
+               </Link>
+                
 
                 <div>
                     <h1>HELLO {this.props.firstName}</h1>
@@ -24,19 +26,17 @@ import {deleteFolder} from '../actions/userMenu-actions';
                 </div>
                 
                 <div className='menuButtons'>
-                    <button className='dashboardButton' type='button' onClick={() => {
-                        console.log('dashboard button working');
-                        this.props.dispatch(hideNavigation())
-                    }}> Dashboard</button>
+                <Link to = "/dashboard">
+                    <button className='dashboardButton' type='button'> Dashboard</button>
+                    </Link>
                 </div>
 
                 <div className='menuButtons'>
                     <button className='dashboardButton' type='button' onClick={() => {
                      clearAuthToken();
-                     this.props.dispatch(hideNavigation());
                      this.props.dispatch(clearAuth());
-                     
-                    }}> Log Out</button>
+                    }}> Log Out
+                    </button>
                 </div>
 
                 <div className='folderButtons'>
@@ -79,4 +79,5 @@ const mapStateToProps = (state) => {
         firstName: state.auth.currentUser.firstName
 	};
 };
-export default connect(mapStateToProps)(UserMenu)
+export default requiresLogin()(connect(mapStateToProps)(UserMenu))
+

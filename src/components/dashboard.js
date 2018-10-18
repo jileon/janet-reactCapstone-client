@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import '../App.css'
 import HeaderBar from './header-bar';
 import SideNav from './side-nav';
@@ -28,18 +29,14 @@ import Welcome from './welcome';
 
   render() {
 
-    if (this.props.showNav) {
-      return <UserMenu/>
-    
-  }
     return (
 
 
       <div className="App">
-      <SideNav navClick={(e)=>{
-        this.props.dispatch(showNavigation())
-       
-     }}/>
+      <Link to='/usermenu'>
+      <SideNav/>
+      </Link>
+     
      <HeaderBar/>
      <Welcome username={this.props.firstName}/>
      <CategoryNav buttonClick={(e)=>{
