@@ -27,7 +27,7 @@ getCurrentDate(){
        let headlineList;
 
         if (this.props.category==='headlines'){
-          headlineList = <EverythingHeadlines/>
+          headlineList = <EverythingHeadlines />
        } else if (this.props.category==='business'){
         headlineList = <BusinessHeadlines/>
        }else if (this.props.category==='health'){
@@ -61,7 +61,8 @@ getCurrentDate(){
 const mapStateToProps = state => {
     return {
         category: state.category.category,
-        headlines: state.category.headlines
+        headlines: state.category.headlines,
+     
     };
 };
 export default connect(mapStateToProps)(Headlines);
