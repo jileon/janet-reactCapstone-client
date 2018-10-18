@@ -9,7 +9,7 @@ export default function FolderAddToList(props) {
 					{props.folders.map((folder, index) => {
 						return (
 							<li key={index}>
-								<p>
+								<p  headline={props.headline} folderid = {folder._id} onClick={(e)=>console.log(e.target.getAttribute('headline'))}>
 									{folder.foldername}
 								</p>
 							</li>

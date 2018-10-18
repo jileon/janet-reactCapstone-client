@@ -11,7 +11,8 @@ this.props.dispatch(getBusHeadlines());
     render(){
         return(
             <section >
-               <HeadlineLi className='scrolling-wrapper-flexbox' headlines={this.props.headlines}/>
+                 <HeadlineLi className='scrolling-wrapper-flexbox' headlines={this.props.headlines} folders={this.props.folders}
+           />
             </section>
         )
     } 
@@ -21,7 +22,8 @@ this.props.dispatch(getBusHeadlines());
 const mapStateToProps = state => {
     return {
         category: state.category.category,
-        headlines: state.category.headlines
+        headlines: state.category.headlines,
+        folders: state.protectedData.data
     };
 };
 export default connect(mapStateToProps)(BusinessHeadlines);
