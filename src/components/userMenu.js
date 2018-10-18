@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {hideNavigation} from '../actions/nav-action';
-import {addNewFolder} from '../actions/userMenu-actions';
+// import {addNewFolder} from '../actions/userMenu-actions';
 import './css/userMenu.css';
 import {clearAuthToken} from '../local-storage';
 import {clearAuth} from '../actions/auth';

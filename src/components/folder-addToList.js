@@ -1,6 +1,10 @@
 import React from 'react';
+import {connect } from 'react-redux';
 import '../components/css/folder-addToList.css';
-export default function FolderAddToList(props) {
+
+
+
+function FolderAddToList(props) {
 
 	//maps through folder objects and pulls out foldername. Props are tunnelled
 	// from Upmost component ('Everything, Science, etc')
@@ -13,9 +17,16 @@ export default function FolderAddToList(props) {
 					{props.folders.map((folder, index) => {
 						return (
 							<li key={index}>
-								<p  headline={props.headline} folderid = {folder._id} onClick={(e)=>console.log(e.target.getAttribute('headline'))}>
-									{folder.foldername}
-								</p>
+								<p  articletitle={props.articletitle} 
+								articleimage={props.articleimage}
+								 articleurl={props.articleurl} 
+								 articlesource={props.articlesource} 
+								 folderid = {folder._id} 
+								 onClick={(e)=>{
+									 console.log(e.target.getAttribute('articletitle'))
+									}}>
+								 {folder.foldername}
+								 </p>
 							</li>
 						);
 					})}
@@ -24,3 +35,5 @@ export default function FolderAddToList(props) {
 		</div>
 	);
 }
+
+export default connect()(FolderAddToList);

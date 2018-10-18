@@ -22,14 +22,18 @@ class SearchRender extends React.Component{
             const searchRes = this.props.searchResults.map((article, index) => (
                 <li key={index}>
                 <div>
-                <a href={article.url} target="_blank" >
+                <a href={article.url} target="_blank" rel="noopener noreferrer" >
                 <h3> {article.source.name}</h3>
                 <img src={article.urlToImage} alt={article.title}/>
                 <h4>{article.title}</h4>
                 </a>
                 <p>{article.description}</p>
                 </div>
-           
+                <FolderAddToList folders={this.props.folders} 
+                articletitle={article.title}
+                 articleimage={article.urlToImage} 
+                 articleurl={article.url} 
+                 articlesource={article.source.name} />
                 </li>
             ));
        
@@ -50,7 +54,8 @@ const mapStateToProps = (state) => {
 	return {
         search: state.search.searchTerm,
         loading: state.search.loading.search,
-        searchResults: state.search.searchResults
+        searchResults: state.search.searchResults,
+        folders: state.protectedData.data
 	};
 };
 export default connect(mapStateToProps)(SearchRender);
