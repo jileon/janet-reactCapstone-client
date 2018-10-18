@@ -11,11 +11,15 @@ import FolderButtonLi from '../components/folder-buttonsLi';
 import { deleteFolder } from '../actions/userMenu-actions';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
-class UserMenu extends React.Component {
 
+class UserMenu extends React.Component {
     componentDidMount(){
-		this.props.dispatch(fetchProtectedData());
-	  }
+        this.props.dispatch(fetchProtectedData());
+      }
+
+      componentDidUpdate(){
+        this.props.dispatch(fetchProtectedData());
+      }
 	render() {
 		return (
 			<section className="userMenu">
@@ -24,12 +28,13 @@ class UserMenu extends React.Component {
 				</Link>
 
 				<section>
-					<h1>HELLO</h1>
+					<h1>HELLO </h1>
 				</section>
 
 				<section className="menuButtons">
 					<Link to="/dashboard">
 						<button className="dashboardButton" type="button">
+							
 							Dashboard
 						</button>
 					</Link>
@@ -47,7 +52,16 @@ class UserMenu extends React.Component {
 				</section>
 
 				<div className="folderButtons">
-					<FolderButtonLi/>
+					<FolderButtonLi
+						ulClassName="folderButtons"
+						liButtonClassName="folder-button"
+						folders={this.props.folders}
+						deleteClick={(e) => {
+							console.log(e.target.getAttribute('folderid'));
+							this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));
+						}}
+						folderClick={() => console.log('button works')}
+					/>
 				</div>
 
 				<div className="folderButtons">
@@ -61,7 +75,7 @@ class UserMenu extends React.Component {
 					>
 						<input type="addNewFolder" ref={(input) => (this.input = input)} />
 						<button className="dashboardButton" type="submit">
-							Add Folder
+							New Folder
 						</button>
 					</form>
 				</div>
@@ -72,8 +86,8 @@ class UserMenu extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		userfolders: state.protectedData.data,
-        // firstName: state.auth.currentUser.firstName
+		folders: state.protectedData.data
+
       
 	};
 };
