@@ -9,9 +9,9 @@ export default function FolderAddToList(props) {
 					{props.folders.map((folder, index) => {
 						return (
 							<li key={index}>
-								<a href="#" >
+								<p>
 									{folder.foldername}
-								</a>
+								</p>
 							</li>
 						);
 					})}

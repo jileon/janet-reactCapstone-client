@@ -12,6 +12,14 @@
     display: inline-block;
 }
 
+.dropdown p:hover {
+    background-color: grey;
+}
+
+.dropdown ul {
+    list-style: none;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
