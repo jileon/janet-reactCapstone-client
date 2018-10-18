@@ -5,6 +5,8 @@ import {loadAuthToken} from '../local-storage';
 import axios from 'axios';
 
 
+
+//Need to add handling for dupe articles
 export const sendArticleToFolder= (articles, folderId) => (dispatch) => {
     const authToken = loadAuthToken();
 

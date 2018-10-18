@@ -14,4 +14,14 @@
 	  color : black;
 	}
 
+.burger-nav{
+  width: 55px;
+    height: 8px;
+    background-color: white;
+    margin: 9px 0;
+	}
+
+	.burger-container{
+		margin-left: 20px;
+		}
 
