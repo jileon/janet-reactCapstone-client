@@ -93,7 +93,7 @@ const mapStateToProps = (state) => {
 };
 
 //TODO: fix weird login issue
-export default connect(mapStateToProps)(UserMenu);
+// export default connect(mapStateToProps)(UserMenu);
 
 //FIXME: this messes with props
-// export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+export default requiresLogin()(connect(mapStateToProps)(UserMenu));
