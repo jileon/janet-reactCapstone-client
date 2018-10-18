@@ -4,7 +4,7 @@ export default function SideNav (props){
   //TODO: FIX BURGER ICON AND ADD ANIMATION?
     return(  
 
-    <nav className="site-nav">
+    <nav className="site-nav" onClick={props.navClick}>
       <div className='burger-container'>
       <div type= 'button' className='navButton burger-nav' onClick={props.navClick}>
     </div>

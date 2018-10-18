@@ -8,7 +8,7 @@
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
-	font-size: 40px;
+	font-size: 50px;
 	text-align: center;
 	letter-spacing: 0.06em;
 	color: #ffffff;
@@ -22,7 +22,7 @@
 	font-weight: normal;
 	line-height: normal;
 	font-size: 15px;
-	text-align: center;
+	text-align: left;
 	letter-spacing: 0.06em;
 	color: red;
 	margin: 0 auto;
@@ -37,7 +37,8 @@
 .menuButtons{
     margin: 0 auto;  
     border: 1px solid red;
-    width: 200px;
+	width: 200px;
+	border-radius: 17px;
 }
 .dashboardButton{
     background: #000000;
@@ -51,7 +52,26 @@ line-height: normal;
 font-size: 28px;
 text-align: center;
 color: #FFFFFF;
+border-radius: 17px;
 
+
+}
+
+.folder-button{
+	background: #000000;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    width: 300px;
+height: 80px;
+text-align: center;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 28px;
+text-align: center;
+color: #FFFFFF;
+margin: 20px 0;
+border-top: none;
+border-radius: 17px;
 
 }
 

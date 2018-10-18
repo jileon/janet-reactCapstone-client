@@ -19,7 +19,7 @@ import {deleteFolder} from '../actions/userMenu-actions';
                 }}> BACK BUTTON</button>
 
                 <div>
-                    <h1>HELLO USER NAME</h1>
+                    <h1>HELLO {this.props.firstName}</h1>
                     
                 </div>
                 
@@ -42,12 +42,13 @@ import {deleteFolder} from '../actions/userMenu-actions';
                 <div className='folderButtons'>
                 <FolderButtonLi 
                 ulClassName='folderButtons' 
-                liButtonClassName='dashboardButton' 
+                liButtonClassName='folder-button' 
                 folders={this.props.folders}
                 deleteClick={(e)=>{
                     console.log(e.target.getAttribute('folderid'));
                     this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));
                 }}
+                folderClick={()=>console.log('button works')}
                 />
                 
                    
@@ -74,8 +75,8 @@ import {deleteFolder} from '../actions/userMenu-actions';
 
 const mapStateToProps = (state) => {
 	return {
-        folders: state.protectedData.data
-
+        folders: state.protectedData.data,
+        firstName: state.auth.currentUser.firstName
 	};
 };
 export default connect(mapStateToProps)(UserMenu)
