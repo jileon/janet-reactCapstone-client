@@ -18,6 +18,19 @@ class FolderReadView extends React.Component {
 
 	render() {
         // console.log(this.props.currentarticles)
+        if(this.props.currentarticles.length<1){
+            return (
+                <section>
+                <Link to='/usermenu'>
+                  <SideNav/>
+                  </Link>
+                  <HeaderBar/>
+                  <section className="render-folder-lists">
+                    <h1>I'm empty. Feed me articles.</h1>
+                  </section>
+            </section>
+            )
+        }
         return(
             <section>
                 <Link to='/usermenu'>
@@ -36,7 +49,6 @@ class FolderReadView extends React.Component {
                     }}
                     articles={this.props.currentarticles}/>
                   </section>
-            <h1>hello</h1>
             </section>
                 );	
 }
