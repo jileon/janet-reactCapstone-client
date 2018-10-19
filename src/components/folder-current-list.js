@@ -10,15 +10,16 @@ export default function FolderCurrentList(props) {
 			{props.articles.map((article, index) => {
 				return (
 					<li key={index} id={article._id}>
+					
 					<section>
-                        <h3>{article.title}</h3>
+					<a href={article.url} target="_blank" rel="noopener noreferrer"><h2>{article.title}</h2></a>
 						<p>{article.source}</p>
 						<img src={article.image} alt={article.title}/>
 						<p>{article.description}</p>
 						</section>
-						<p  articleid={article._id} className="deleteLink" onClick={props.deleteClick}>
+						<button type="button" articleid={article._id} className="deleteLink" onClick={props.deleteClick}>
 									Delete
-								</p>
+								</button>
 					</li>
 				);
 			})}
