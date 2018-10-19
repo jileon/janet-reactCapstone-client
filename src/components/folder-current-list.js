@@ -9,14 +9,14 @@ export default function FolderCurrentList(props) {
 	
 			{props.articles.map((article, index) => {
 				return (
-					<li key={index}>
+					<li key={index} id={article._id}>
 					<section>
                         <h3>{article.title}</h3>
 						<p>{article.source}</p>
 						<img src={article.image} alt={article.title}/>
 						<p>{article.description}</p>
 						</section>
-						<p  className="deleteLink" onClick={props.deleteClick}>
+						<p  articleid={article._id} className="deleteLink" onClick={props.deleteClick}>
 									Delete
 								</p>
 					</li>

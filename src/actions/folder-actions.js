@@ -45,6 +45,19 @@ export const getArticlesPerFolder= (folderId) => (dispatch) => {
 };
 
 export const DELETE_ARTICLE = 'DELETE_ARTICLE';
-export const deleteArticle=(folderId)=>(dispatch)=>{
- console.log(folderId)
+export const deleteArticle=(folderId, articleId)=>(dispatch)=>{
+    const authToken = loadAuthToken();
+ console.log(folderId);
+ return axios({
+    method: 'put',
+    url: `${SERVER}/newsflash/folders/removearticle/${folderId}`,
+    data:{articleId: articleId},
+    headers:{
+        "Authorization": `Bearer ${authToken}`
+    }
+  })
+.then(({data})=>{
+dispatch(fetchProtectedData());
+})
+.catch(error => console.log(error));
 }

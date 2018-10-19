@@ -26,7 +26,7 @@ export const addNewFolder = (foldername) => (dispatch) => {
         }
       })
     .then(({data})=>{
-       console.log(data);
+    //    console.log(data);
        dispatch(fetchProtectedData());
     })
     .catch(error => console.log(error));

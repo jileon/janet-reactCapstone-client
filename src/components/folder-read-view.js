@@ -27,8 +27,12 @@ class FolderReadView extends React.Component {
                   <section className="render-folder-lists">
                     <FolderCurrentList 
                     deleteClick={(e)=>{
+                        const folderid=this.props.match.params.id;
+                        const articleid= e.target.getAttribute('articleid');
                         console.log('delete works');
-                        this.props.dispatch(deleteArticle(this.props.match.params.id))
+                        console.log(folderid);
+                        console.log(articleid);
+                        this.props.dispatch(deleteArticle(folderid,articleid));
                     }}
                     articles={this.props.currentarticles}/>
                   </section>

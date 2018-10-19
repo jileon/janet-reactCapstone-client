@@ -20,9 +20,9 @@ class UserMenu extends React.Component {
 		this.props.dispatch(fetchProtectedData());
 	}
 
-	componentDidUpdate() {
-		this.props.dispatch(fetchProtectedData());
-	}
+	// componentDidUpdate() {
+	// 	this.props.dispatch(fetchProtectedData());
+	// }
 	render() {
 		return (
 			<section className="userMenu">
