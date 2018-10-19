@@ -23,6 +23,26 @@ export const sendArticleToFolder= (article, folderId) => (dispatch) => {
     .then(({data})=>{
         console.log('data rececived===================')
        console.log(data);
+    dispatch(fetchProtectedData());
+    })
+    .catch(error => console.log(error));
+};
+
+export const getArticlesPerFolder= (folderId) => (dispatch) => {
+    const authToken = loadAuthToken();
+
+
+    // console.log(folderId)
+    return axios({
+        method: 'get',
+        url: `${SERVER}/newsflash/folders/${folderId}`,
+        headers:{
+            "Authorization": `Bearer ${authToken}`
+        }
+      })
+    .then(({data})=>{
+        console.log('data rececived===================')
+       console.log(data);
     // dispatch(fetchProtectedData());
     })
     .catch(error => console.log(error));
