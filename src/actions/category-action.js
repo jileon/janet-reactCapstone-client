@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 export const CATEGORY= 'CATEGORY';
-export const getCategory = category => ({
+export const setCategory = category => ({
     type: CATEGORY,
     category
 });
@@ -20,7 +20,7 @@ export const getHeadlines = ()=>(dispatch)=>{
 
     axios.get(`${SERVER}/newsflash/everything`)
     .then(({data})=>{
-        dispatch(getCategory('headlines'));
+        dispatch(setCategory('headlines'));
         dispatch(getHeadlineArticles(data.articles));  
     })
     .catch(error => console.log(error));

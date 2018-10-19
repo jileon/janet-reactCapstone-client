@@ -9,7 +9,7 @@ import MainSection from './main-section';
 import CategoryNav from './category-nav';
 import {setSearchTerm} from '../actions/search-action';
 // import Headlines from './components/headlines';
-import {getCategory}from '../actions/category-action';
+import {setCategory}from '../actions/category-action';
 // import {SearchApp, Pagination} from './components/search-scratch';
 import {showNavigation} from '../actions/nav-action';
 import UserMenu from './userMenu';
@@ -41,7 +41,7 @@ import Welcome from './welcome';
      <Welcome username={this.props.firstName}/>
      <CategoryNav buttonClick={(e)=>{
        this.props.dispatch(setSearchTerm(''));
-       this.props.dispatch(getCategory(e.target.name))
+       this.props.dispatch(setCategory(e.target.name))
      }}/>
      <SearchForm/>
      <MainSection/>
