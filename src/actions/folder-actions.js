@@ -10,7 +10,7 @@ import {setProtectedFolder} from '../actions/protected-data';
 export const sendArticleToFolder= (article, folderId) => (dispatch) => {
     const authToken = loadAuthToken();
 
-    console.log('data sent is :'+ JSON.stringify(article));
+    // console.log('data sent is :'+ JSON.stringify(article));
     // console.log(folderId)
     return axios({
         method: 'put',

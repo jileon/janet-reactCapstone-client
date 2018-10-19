@@ -60,10 +60,9 @@ class UserMenu extends React.Component {
 						liButtonClassName="folder-button"
 						folders={this.props.folders}
 						deleteClick={(e) => {
-							console.log(e.target.getAttribute('folderid'));
+							// console.log(e.target.getAttribute('folderid'));
 							this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));
 						}}
-						folderClick={() => console.log('button works')}
 					/>
 				</div>
 
@@ -71,7 +70,6 @@ class UserMenu extends React.Component {
 					<form
 						onSubmit={(e) => {
 							e.preventDefault();
-							console.log(this.input.value);
 							// this.props.dispatch(addNewFolder(this.input.value));
 							this.props.dispatch(addNewFolder(this.input.value));
 						}}
