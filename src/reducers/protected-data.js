@@ -1,11 +1,13 @@
 import {
     FETCH_PROTECTED_DATA_SUCCESS,
-    FETCH_PROTECTED_DATA_ERROR
+    FETCH_PROTECTED_DATA_ERROR,
+    SET_PROTECTED_ARTICLES
 } from '../actions/protected-data';
 
 const initialState = {
-    data: '',
-    error: null
+    data: [],
+    error: null,
+    currentFolderArticles:[]
 };
 
 export default function protectedDataReducer(state = initialState, action) {
@@ -18,6 +20,8 @@ export default function protectedDataReducer(state = initialState, action) {
         return Object.assign({}, state, {
             error: action.error
         });
+    }else if (action.type === SET_PROTECTED_ARTICLES) {
+        return Object.assign({}, state, {currentFolderArticles: action.articles});
     }
     return state;
 }

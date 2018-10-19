@@ -13,9 +13,17 @@ export const fetchProtectedDataError = error => ({
     error
 });
 
+
+export const SET_PROTECTED_ARTICLES= 'SET_PROTECTED_ARTICLES';
+export const setProtectedArticles = articles => ({
+    type: SET_PROTECTED_ARTICLES,
+    articles
+});
+
+//fetches folders and adds folder object to protectDate in state
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    return fetch(`${SERVER}/protected`, {
+    return fetch(`${SERVER}/newsflash/folders/`, {
         method: 'GET',
         headers: {
             // Provide our auth token as credentials
@@ -24,7 +32,7 @@ export const fetchProtectedData = () => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(({data}) => dispatch(fetchProtectedDataSuccess(data)))
+        .then((data) => dispatch(fetchProtectedDataSuccess(data)))
         .catch(err => {
             dispatch(fetchProtectedDataError(err));
         });

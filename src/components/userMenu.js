@@ -1,67 +1,104 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {hideNavigation} from '../actions/nav-action';
-import {addNewFolder} from '../actions/userMenu-actions';
+//TODO: delete if unnecessary
+// import { hideNavigation } from '../actions/nav-action';
+import { Link } from 'react-router-dom';
+import { addNewFolder } from '../actions/userMenu-actions';
 import './css/userMenu.css';
-import {clearAuthToken} from '../local-storage';
-import {clearAuth} from '../actions/auth';
+import { clearAuthToken } from '../local-storage';
+import { clearAuth } from '../actions/auth';
 import FolderButtonLi from '../components/folder-buttonsLi';
- class UserMenu extends React.Component{
+import {getArticlesPerFolder} from '../actions/folder-actions';
+//TODO: delete if unnecessary
+// import { sendNewFolder } from '../actions/userMenu-actions';
+import { deleteFolder } from '../actions/userMenu-actions';
+import requiresLogin from './requires-login';
+import { fetchProtectedData } from '../actions/protected-data';
 
-    render(){
-        return(
-            <section className='userMenu'>
-                <button type='button' onClick={() => {
-                    console.log('back button working');
-                    this.props.dispatch(hideNavigation())
-                }}> BACK BUTTON</button>
+class UserMenu extends React.Component {
+	componentDidMount() {
+		this.props.dispatch(fetchProtectedData());
+	}
 
-                <div>
-                    <h1>HELLO USER NAME</h1>
-                </div>
+	// componentDidUpdate() {
+	// 	this.props.dispatch(fetchProtectedData());
+	// }
+	render() {
+		return (
+			<section className="userMenu">
+				<Link to="/dashboard">
+					<button type="button"> BACK BUTTON</button>
+				</Link>
 
-                <div className='menuButtons'>
-                    <button className='dashboardButton' type='button' onClick={() => {
-                        console.log('dashboard button working');
-                        this.props.dispatch(hideNavigation())
-                    }}> Dashboard</button>
-                </div>
+				<section>
+					<h1>HELLO </h1>
+				</section>
 
-                <div className='menuButtons'>
-                    <button className='dashboardButton' type='button' onClick={() => {
-                     clearAuthToken();
-                     this.props.dispatch(clearAuth());
-                    }}> Log Out</button>
-                </div>
+				<section className="menuButtons">
+					<Link to="/dashboard">
+						<button className="dashboardButton" type="button">
+							Dashboard
+						</button>
+					</Link>
+				</section>
 
-                <div className='folderButtons'>
-                <FolderButtonLi ulClassName='folderButtons' liButtonClassName='dashboardButton' folders={this.props.folders}/>
-                
-                   
-                </div>
+				<section className="menuButtons">
+					<button
+						className="dashboardButton"
+						type="button"
+						onClick={() => {
+							clearAuthToken();
+							this.props.dispatch(clearAuth());
+						}}
+					>
+						Log Out
+					</button>
+				</section>
 
-                <div className='folderButtons'>
-                <form onSubmit={(e) => {
-                    e.preventDefault()
-                        console.log(this.input.value);
-                        this.props.dispatch(addNewFolder(this.input.value));
-                    }}>
-                    <input type="addNewFolder" ref={input => (this.input = input)} />
-                <button className='dashboardButton' type='submit'> Add Folder</button>
-                </form>
-                   
-                </div>
+				<div className="folderButtons">
+					<FolderButtonLi
+						ulClassName="folderButtons"
+						liButtonClassName="folder-button"
+						folders={this.props.folders}
+						folderClick={(e)=>{
+									// console.log(e.target.getAttribute('folderid'));
+							// this.props.dispatch(getArticlesPerFolder(e.target.getAttribute('folderid')));
+					
+						}}
+						deleteClick={(e) => {
+							// console.log(e.target.getAttribute('folderid'));
+							this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));
+						}}
+					/>
+				</div>
 
-            </section>
-
-        )
-    }
+				<div className="folderButtons">
+					<form
+						onSubmit={(e) => {
+							e.preventDefault();
+							// this.props.dispatch(addNewFolder(this.input.value));
+							this.props.dispatch(addNewFolder(this.input.value));
+						}}
+					>
+						<input type="addNewFolder" ref={(input) => (this.input = input)} />
+						<button className="dashboardButton" type="submit">
+							New Folder
+						</button>
+					</form>
+				</div>
+			</section>
+		);
+	}
 }
 
 const mapStateToProps = (state) => {
 	return {
-        folders: state.userMenu.folders
-
+		folders: state.protectedData.data
 	};
 };
-export default connect(mapStateToProps)(UserMenu)
+
+//TODO: fix weird login issue
+// export default connect(mapStateToProps)(UserMenu);
+
+
+export default requiresLogin()(connect(mapStateToProps)(UserMenu));

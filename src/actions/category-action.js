@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 export const CATEGORY= 'CATEGORY';
-export const getCategory = category => ({
+export const setCategory = category => ({
     type: CATEGORY,
     category
 });
@@ -20,7 +20,7 @@ export const getHeadlines = ()=>(dispatch)=>{
 
     axios.get(`${SERVER}/newsflash/everything`)
     .then(({data})=>{
-        dispatch(getCategory('headlines'));
+        dispatch(setCategory('headlines'));
         dispatch(getHeadlineArticles(data.articles));  
     })
     .catch(error => console.log(error));
@@ -29,7 +29,7 @@ export const getHeadlines = ()=>(dispatch)=>{
 export const getBusHeadlines = ()=>(dispatch)=>{
     axios.get(`${SERVER}/newsflash/business`)
     .then(({data})=>{
-        console.log(data)
+
         dispatch(getHeadlineArticles(data.articles));
     })
     .catch(error => console.log(error));
@@ -39,7 +39,7 @@ export const getBusHeadlines = ()=>(dispatch)=>{
 export const getHealthHeadlines = ()=>(dispatch)=>{
     axios.get(`${SERVER}/newsflash/health`)
     .then(({data})=>{
-        console.log(data)
+
         dispatch(getHeadlineArticles(data.articles));
     })
     .catch(error => console.log(error));
