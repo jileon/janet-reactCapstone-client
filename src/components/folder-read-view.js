@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import '../components/css/folder-lists.css';
 import {getArticlesPerFolder} from '../actions/folder-actions';
 import {deleteArticle} from '../actions/folder-actions';
+import requiresLogin from './requires-login';
 import FolderCurrentList from './folder-current-list';
 // import {fetchProtectedData} from '../actions/protected-data';
 
@@ -59,5 +60,5 @@ const mapStateToProps = (state) => {
 	};
 };
 
-export default connect(mapStateToProps)(FolderReadView);
+export default requiresLogin() (connect(mapStateToProps)(FolderReadView));
 
