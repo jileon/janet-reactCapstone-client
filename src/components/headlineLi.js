@@ -20,7 +20,13 @@ return (
                             <a href={article.url} target="_blank" rel="noopener noreferrer"><h2>{article.title}</h2></a>
                             {imageDiv}
                             <p>{article.source.name}</p>
-                            <FolderAddToList folders={props.folders} articletitle={article.title} articleimage={article.urlToImage} articleurl={article.url} articlesource={article.source.name} />
+                            <FolderAddToList 
+                            folders={props.folders} 
+                            articletitle={article.title} 
+                            articledescription={article.description} 
+                            articleimage={article.urlToImage} 
+                            articleurl={article.url} 
+                            articlesource={article.source.name} />
                         </div>
                        
                     </li>

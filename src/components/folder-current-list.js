@@ -1,4 +1,5 @@
 import React from 'react';
+import { sendArticleToFolder } from '../actions/folder-actions';
 export default function FolderCurrentList(props) {
 
 	//TODO: Add Mark as Read button that adds strike through class
@@ -12,6 +13,8 @@ export default function FolderCurrentList(props) {
 					<section>
                         <h3>{article.title}</h3>
 						<p>{article.source}</p>
+						<img src={article.image} alt={article.title}/>
+						<p>{article.description}</p>
 						</section>
 						<p>Delete</p>
 					</li>
