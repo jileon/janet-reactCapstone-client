@@ -15,6 +15,7 @@ class FolderReadView extends React.Component {
       }
 
 	render() {
+        // console.log(this.props.currentarticles)
         return(
             <section>
                 <Link to='/usermenu'>
