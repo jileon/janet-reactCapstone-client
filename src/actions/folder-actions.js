@@ -57,7 +57,8 @@ export const deleteArticle=(folderId, articleId)=>(dispatch)=>{
     }
   })
 .then(({data})=>{
-dispatch(fetchProtectedData());
+    // console.log(data)
+    dispatch(setProtectedArticles(data.articles));
 })
 .catch(error => console.log(error));
 }
