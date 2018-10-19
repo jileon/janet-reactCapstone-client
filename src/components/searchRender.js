@@ -10,10 +10,10 @@ class SearchRender extends React.Component {
 
 	renderResults() {
 		if (this.props.loading) {
-			return <Spinner spinnerName="circle" noFadeIn />;
-			// return<div>Loading..</div>
+			return <Spinner spinnername="circle" fadeIn='none' />;
 		}
 
+		//TODO: Add error handling
 		// if (this.props.error) {
 		//     return <strong>{this.props.error}</strong>;
 		// }
@@ -43,14 +43,17 @@ class SearchRender extends React.Component {
 	}
 
 	render() {
-		return <div>{this.renderResults()}</div>;
+		return <div>
+			<h2>Results For {this.props.search}</h2>
+		{this.renderResults()}
+		</div>;
 	}
 }
 
 const mapStateToProps = (state) => {
 	return {
 		search: state.search.searchTerm,
-		loading: state.search.loading.search,
+		loading: state.search.loading,
 		searchResults: state.search.searchResults,
 		folders: state.protectedData.data
 	};

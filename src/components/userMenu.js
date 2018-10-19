@@ -8,7 +8,9 @@ import './css/userMenu.css';
 import { clearAuthToken } from '../local-storage';
 import { clearAuth } from '../actions/auth';
 import FolderButtonLi from '../components/folder-buttonsLi';
-import {getArticlesPerFolder} from '../actions/folder-actions';
+
+//TODO: delete if unnecessary
+// import {getArticlesPerFolder} from '../actions/folder-actions';
 //TODO: delete if unnecessary
 // import { sendNewFolder } from '../actions/userMenu-actions';
 import { deleteFolder } from '../actions/userMenu-actions';

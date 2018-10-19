@@ -43,9 +43,6 @@ class FolderReadView extends React.Component {
                     deleteClick={(e)=>{
                         const folderid=this.props.match.params.id;
                         const articleid= e.target.getAttribute('articleid');
-                        console.log('delete works');
-                        console.log(folderid);
-                        console.log(articleid);
                         this.props.dispatch(deleteArticle(folderid,articleid));
                     }}
                     articles={this.props.currentarticles}/>

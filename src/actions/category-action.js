@@ -1,7 +1,7 @@
 import {SERVER} from '../config'
 import axios from 'axios';
 
-
+//TODO create and dispatch loading actions
 
 export const CATEGORY= 'CATEGORY';
 export const setCategory = category => ({

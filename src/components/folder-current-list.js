@@ -1,5 +1,4 @@
 import React from 'react';
-import { sendArticleToFolder } from '../actions/folder-actions';
 export default function FolderCurrentList(props) {
 
 	//TODO: Add Mark as Read button that adds strike through class
