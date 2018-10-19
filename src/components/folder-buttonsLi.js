@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-
+//USED in userMenu.js
 export default function FolderButtonLi(props) {
 
 	return (

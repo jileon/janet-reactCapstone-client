@@ -5,20 +5,16 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../components/css/folder-lists.css';
 import {getArticlesPerFolder} from '../actions/folder-actions';
+import FolderCurrentList from './folder-current-list';
 // import {fetchProtectedData} from '../actions/protected-data';
 
 class FolderReadView extends React.Component {
 
     componentDidMount(){
         this.props.dispatch(getArticlesPerFolder(this.props.match.params.id));
-        console.log(this.props.match.params.id)
       }
 
-    //   componentDidUpdate(){
-    //     this.props.dispatch(fetchProtectedData());
-    //   }
 	render() {
-
         return(
             <section>
                 <Link to='/usermenu'>
@@ -26,16 +22,16 @@ class FolderReadView extends React.Component {
                   </Link>
                   <HeaderBar/>
                   <section className="render-folder-lists">
-                 Hello
+                    <FolderCurrentList articles={this.props.currentarticles}/>
                   </section>
-            
+            <h1>hello</h1>
             </section>
                 );	
 }
 }
 const mapStateToProps = (state) => {
 	return {
-		myfolders: state.protectedData.data,      
+		currentarticles: state.protectedData.currentFolderArticles     
 	};
 };
 

@@ -6,7 +6,7 @@ import {Route, withRouter} from 'react-router-dom';
 import LandingPage from './components/landing-page';
 import Dashboard from './components/dashboard';
 import UserMenu from './components/userMenu';
-import FolderListRender from './components/folderList-render';
+import FolderReadView from './components/folder-read-view'
 import RegistrationPage from './components/registration-page';
 import {refreshAuthToken} from './actions/auth';
 
@@ -47,7 +47,7 @@ export class App extends React.Component {
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/register" component={RegistrationPage} />
                 <Route exact path="/usermenu" component={UserMenu} />
-                <Route path="/folder/:id" component={FolderListRender} />
+                <Route path="/folder/:id" component={FolderReadView} />
             </div>
         );
     }

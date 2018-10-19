@@ -1,25 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { hideNavigation } from '../actions/nav-action';
+//TODO: delete if unnecessary
+// import { hideNavigation } from '../actions/nav-action';
 import { Link } from 'react-router-dom';
-import {addNewFolder} from '../actions/userMenu-actions';
+import { addNewFolder } from '../actions/userMenu-actions';
 import './css/userMenu.css';
 import { clearAuthToken } from '../local-storage';
 import { clearAuth } from '../actions/auth';
 import FolderButtonLi from '../components/folder-buttonsLi';
+//TODO: delete if unnecessary
 // import { sendNewFolder } from '../actions/userMenu-actions';
 import { deleteFolder } from '../actions/userMenu-actions';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
+import { fetchProtectedData } from '../actions/protected-data';
 
 class UserMenu extends React.Component {
-    componentDidMount(){
-        this.props.dispatch(fetchProtectedData());
-      }
+	componentDidMount() {
+		this.props.dispatch(fetchProtectedData());
+	}
 
-      componentDidUpdate(){
-        this.props.dispatch(fetchProtectedData());
-      }
+	componentDidUpdate() {
+		this.props.dispatch(fetchProtectedData());
+	}
 	render() {
 		return (
 			<section className="userMenu">
@@ -34,7 +36,6 @@ class UserMenu extends React.Component {
 				<section className="menuButtons">
 					<Link to="/dashboard">
 						<button className="dashboardButton" type="button">
-							
 							Dashboard
 						</button>
 					</Link>
@@ -47,7 +48,9 @@ class UserMenu extends React.Component {
 						onClick={() => {
 							clearAuthToken();
 							this.props.dispatch(clearAuth());
-						}}>Log Out
+						}}
+					>
+						Log Out
 					</button>
 				</section>
 
@@ -87,8 +90,6 @@ class UserMenu extends React.Component {
 const mapStateToProps = (state) => {
 	return {
 		folders: state.protectedData.data
-
-      
 	};
 };
 

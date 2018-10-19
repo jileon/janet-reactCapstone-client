@@ -14,6 +14,12 @@ export const fetchProtectedDataError = error => ({
 });
 
 
+export const SET_PROTECTED_ARTICLES= 'SET_PROTECTED_ARTICLES';
+export const setProtectedFolder = articles => ({
+    type: SET_PROTECTED_ARTICLES,
+    articles
+});
+
 //fetches folders and adds folder object to protectDate in state
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
