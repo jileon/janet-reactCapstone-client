@@ -8,6 +8,7 @@ import './css/userMenu.css';
 import { clearAuthToken } from '../local-storage';
 import { clearAuth } from '../actions/auth';
 import FolderButtonLi from '../components/folder-buttonsLi';
+import {getArticlesPerFolder} from '../actions/folder-actions';
 //TODO: delete if unnecessary
 // import { sendNewFolder } from '../actions/userMenu-actions';
 import { deleteFolder } from '../actions/userMenu-actions';
@@ -59,6 +60,11 @@ class UserMenu extends React.Component {
 						ulClassName="folderButtons"
 						liButtonClassName="folder-button"
 						folders={this.props.folders}
+						folderClick={(e)=>{
+									// console.log(e.target.getAttribute('folderid'));
+							// this.props.dispatch(getArticlesPerFolder(e.target.getAttribute('folderid')));
+					
+						}}
 						deleteClick={(e) => {
 							// console.log(e.target.getAttribute('folderid'));
 							this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));

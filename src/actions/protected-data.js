@@ -15,7 +15,7 @@ export const fetchProtectedDataError = error => ({
 
 
 export const SET_PROTECTED_ARTICLES= 'SET_PROTECTED_ARTICLES';
-export const setProtectedFolder = articles => ({
+export const setProtectedArticles = articles => ({
     type: SET_PROTECTED_ARTICLES,
     articles
 });

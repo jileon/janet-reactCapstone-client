@@ -16,7 +16,9 @@ export default function FolderCurrentList(props) {
 						<img src={article.image} alt={article.title}/>
 						<p>{article.description}</p>
 						</section>
-						<p>Delete</p>
+						<p  className="deleteLink" onClick={props.deleteClick}>
+									Delete
+								</p>
 					</li>
 				);
 			})}
