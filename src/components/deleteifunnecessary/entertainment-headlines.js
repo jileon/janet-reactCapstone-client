@@ -1,21 +1,21 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {getHeadlines}from '../actions/category-action';
-import HeadlineLi from '../components/headlineLi';
-import './css/headlines.css'
+import {getHeadlines}from '../../actions/category-action';
+import HeadlineLi from '../headlineLi'
+// import './css/headlines.css'
  
-export class HealthHeadlines extends React.Component{
+export class EntertainmentHeadlines extends React.Component{
 componentDidMount(){
     this.props.dispatch(getHeadlines(this.props.category));
 }
 render(){
     return(
         <section >
-           <HeadlineLi className='scrolling-wrapper-flexbox' headlines={this.props.headlines} folders={this.props.folders}/>
+           <HeadlineLi className='scrolling-wrapper-flexbox' headlines={this.props.headlines} folders={this.props.folders}
+           />
         </section>
     )
-} 
-   
+}    
 }
 
 
@@ -26,4 +26,4 @@ const mapStateToProps = state => {
         folders: state.protectedData.data
     };
 };
-export default connect(mapStateToProps)(HealthHeadlines);
+export default connect(mapStateToProps)(EntertainmentHeadlines);

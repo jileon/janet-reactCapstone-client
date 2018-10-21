@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {getHeadlines}from '../actions/category-action';
-import HeadlineLi from '../components/headlineLi';
+import {getHeadlines}from '../../actions/category-action';
+import HeadlineLi from '../headlineLi';
 // import './css/headlines.css'
  
 export class ScienceHeadlines extends React.Component{
