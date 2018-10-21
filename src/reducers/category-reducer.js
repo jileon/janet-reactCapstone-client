@@ -12,11 +12,11 @@ const initialState = {
 const categoryReducer = (state=initialState, action)=>{
     if (action.type===HEADLINES_LOADING){
         return Object.assign({}, state, {loading: false})
+    }else if(action.type===HEADLINES){
+        return Object.assign({}, state, {headlines:action.headlines, loading: false})
     }else if (action.type===CATEGORY){
-        return Object.assign({}, state, {category:action.category, loading: true})
-    } else if(action.type===HEADLINES){
-        return Object.assign({}, state, {headlines:action.headlines, loading:false})
-    }
+        return Object.assign({}, state, {category:action.category, loading: false})
+    } 
     return state;
 }
 

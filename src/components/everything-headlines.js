@@ -6,7 +6,7 @@ import './css/headlines.css';
  
 export class EverythingHeadlines extends React.Component{
 componentDidMount(){
-this.props.dispatch(getHeadlines());
+this.props.dispatch(getHeadlines(this.props.category));
 }
 render(){
     return(

@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {getSportsHeadlines}from '../actions/category-action';
+import {getHeadlines}from '../actions/category-action';
 import HeadlineLi from '../components/headlineLi'
 // import './css/headlines.css'
  
 export class SportsHeadlines extends React.Component{
 componentDidMount(){
-this.props.dispatch(getSportsHeadlines());
+    this.props.dispatch(getHeadlines(this.props.category));
 }
 
 render(){

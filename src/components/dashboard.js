@@ -10,7 +10,7 @@ import CategoryNav from './category-nav';
 import {resetSearchLoading } from '../actions/search-action';
 //TODO: clean up functions that are no longer needed;
 // import Headlines from './components/headlines';
-import { setCategory, loadheadlines } from '../actions/category-action';
+import { setCategory, loadheadlines, getHeadlines } from '../actions/category-action';
 //TODO: clean up functions that are no longer needed;
 // import {SearchApp, Pagination} from './components/search-scratch';
 
@@ -41,8 +41,9 @@ export class Dashboard extends React.Component {
 				<Welcome username={this.props.firstName} />
 				<CategoryNav buttonClick={(e) => {
 						this.props.dispatch(resetSearchLoading());
-						this.props.dispatch(loadheadlines());
 						this.props.dispatch(setCategory(e.target.name));
+						this.props.dispatch(getHeadlines(e.target.name));
+
 					}}/>
 				<SearchForm />
 				<MainSection />

@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {getBusHeadlines}from '../actions/category-action'
+import {getHeadlines}from '../actions/category-action';
 // import './css/headlines.css'
 import HeadlineLi from '../components/headlineLi'
  
 export class BusinessHeadlines extends React.Component{
 componentDidMount(){
-this.props.dispatch(getBusHeadlines());
+    this.props.dispatch(getHeadlines(this.props.category));
 }
     render(){
         return(
