@@ -29,7 +29,7 @@ export class Headlines extends React.Component {
 
 	render() {
 	
-		if(this.props.categoryloading===true){
+		if(this.props.categoryloading){
 			return (<Spinner spinnername="circle" fadeIn='none' />);
 		} else {
 			return (<section className="headline-seaction">
