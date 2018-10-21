@@ -17,6 +17,7 @@ import { deleteFolder } from '../actions/userMenu-actions';
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
 
+
 class UserMenu extends React.Component {
 	componentDidMount() {
 		this.props.dispatch(fetchProtectedData());
@@ -51,6 +52,7 @@ class UserMenu extends React.Component {
 						onClick={() => {
 							clearAuthToken();
 							this.props.dispatch(clearAuth());
+							this.props.dispatch(clearAuthToken());
 						}}
 					>
 						Log Out

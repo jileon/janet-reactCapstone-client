@@ -53,7 +53,7 @@ class SearchRender extends React.Component {
 const mapStateToProps = (state) => {
 	return {
 		search: state.search.searchTerm,
-		loading: state.search.loading,
+		loading: state.search.searchloading,
 		searchResults: state.search.searchResults,
 		folders: state.protectedData.data
 	};

@@ -11,6 +11,7 @@ export const setAuthToken = authToken => ({
     authToken
 });
 
+//TODO: export this user action to userMENU logout and app js so current user is clear when component unmounts and logs out
 export const CLEAR_AUTH = 'CLEAR_AUTH';
 export const clearAuth = () => ({
     type: CLEAR_AUTH

@@ -15,9 +15,15 @@ export const getHeadlineArticles = headlines => ({
     headlines
 });
 
+export const HEADLINES_LOADING= 'HEADLINES_LOADING';
+export const loadheadlines = () => ({
+    type: HEADLINES_LOADING,
+
+});
+
 
 export const getHeadlines = ()=>(dispatch)=>{
-
+    dispatch(loadheadlines());
     axios.get(`${SERVER}/newsflash/everything`)
     .then(({data})=>{
         dispatch(setCategory('headlines'));
@@ -27,6 +33,7 @@ export const getHeadlines = ()=>(dispatch)=>{
 };
 
 export const getBusHeadlines = ()=>(dispatch)=>{
+    dispatch(loadheadlines());
     axios.get(`${SERVER}/newsflash/business`)
     .then(({data})=>{
 
@@ -37,6 +44,7 @@ export const getBusHeadlines = ()=>(dispatch)=>{
 };
 
 export const getHealthHeadlines = ()=>(dispatch)=>{
+    dispatch(loadheadlines());
     axios.get(`${SERVER}/newsflash/health`)
     .then(({data})=>{
 
@@ -47,6 +55,7 @@ export const getHealthHeadlines = ()=>(dispatch)=>{
 };
 
 export const getScienceHeadlines = ()=>(dispatch)=>{
+    dispatch(loadheadlines());
     axios.get(`${SERVER}/newsflash/science`)
     .then(({data})=>{
         dispatch(getHeadlineArticles(data.articles));
@@ -56,6 +65,7 @@ export const getScienceHeadlines = ()=>(dispatch)=>{
 };
 
 export const getSportsHeadlines = ()=>(dispatch)=>{
+    dispatch(loadheadlines());
     axios.get(`${SERVER}/newsflash/sports`)
     .then(({data})=>{
         dispatch(getHeadlineArticles(data.articles));
@@ -64,6 +74,7 @@ export const getSportsHeadlines = ()=>(dispatch)=>{
 
 };
 export const getTechHeadlines = ()=>(dispatch)=>{
+    dispatch(loadheadlines());
     axios.get(`${SERVER}/newsflash/technology`)
     .then(({data})=>{
         dispatch(getHeadlineArticles(data.articles));
@@ -73,6 +84,7 @@ export const getTechHeadlines = ()=>(dispatch)=>{
 };
 
 export const getEntHeadlines = ()=>(dispatch)=>{
+    dispatch(loadheadlines());
     axios.get(`${SERVER}/newsflash/entertainment`)
     .then(({data})=>{
         dispatch(getHeadlineArticles(data.articles));

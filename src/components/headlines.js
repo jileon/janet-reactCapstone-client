@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Spinner from 'react-spinkit';
 // import {getHeadlines}from '../actions/category-action';
 import EverythingHeadlines from '../components/everything-headlines';
 import BusinessHeadlines from '../components/business-headlines';
@@ -21,8 +22,9 @@ export class Headlines extends React.Component {
 	}
 
 	render() {
+		//FIXME: Refactor to switch?
 		let headlineList;
-
+		 
 		if (this.props.category === 'headlines') {
 			headlineList = <EverythingHeadlines />;
 		} else if (this.props.category === 'business') {
@@ -39,20 +41,25 @@ export class Headlines extends React.Component {
 			headlineList = <EntertainmentHeadlines />;
 		}
 
-		return (
-			<section className="headline-seaction">
-				<h2> Top Headlines for {this.getCurrentDate()} </h2>
-				<h2>Category: {this.props.category}</h2>
-				{headlineList}
-			</section>
-		);
+		if(this.props.categoryloading){
+			return (<Spinner spinnername="circle" fadeIn='none' />);
+		} else {
+			return (<section className="headline-seaction">
+			<h2> Top Headlines for {this.getCurrentDate()} </h2>
+			<h2>Category: {this.props.category}</h2>
+			{headlineList}
+		</section>
+	)
+		}
+		
 	}
 }
 
 const mapStateToProps = (state) => {
 	return {
 		category: state.category.category,
-		headlines: state.category.headlines
+		headlines: state.category.headlines,
+		categoryloading: state.category.loading
 	};
 };
 export default connect(mapStateToProps)(Headlines);

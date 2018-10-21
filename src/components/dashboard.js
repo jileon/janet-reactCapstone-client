@@ -7,10 +7,10 @@ import SideNav from './side-nav';
 import SearchForm from './search';
 import MainSection from './main-section';
 import CategoryNav from './category-nav';
-import { setSearchTerm } from '../actions/search-action';
+import {resetSearchLoading } from '../actions/search-action';
 //TODO: clean up functions that are no longer needed;
 // import Headlines from './components/headlines';
-import { setCategory } from '../actions/category-action';
+import { setCategory, loadheadlines } from '../actions/category-action';
 //TODO: clean up functions that are no longer needed;
 // import {SearchApp, Pagination} from './components/search-scratch';
 
@@ -19,6 +19,7 @@ import { setCategory } from '../actions/category-action';
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
 import Welcome from './welcome';
+
 export class Dashboard extends React.Component {
 	componentDidMount() {
 		this.props.dispatch(fetchProtectedData());
@@ -26,6 +27,8 @@ export class Dashboard extends React.Component {
 	//  componentDidUpdate(){
 	//   this.props.dispatch(fetchProtectedData());
 	// }
+
+
 
 	render() {
 		return (
@@ -37,7 +40,8 @@ export class Dashboard extends React.Component {
 				<HeaderBar />
 				<Welcome username={this.props.firstName} />
 				<CategoryNav buttonClick={(e) => {
-						this.props.dispatch(setSearchTerm(''));
+						this.props.dispatch(resetSearchLoading());
+						this.props.dispatch(loadheadlines());
 						this.props.dispatch(setCategory(e.target.name));
 					}}/>
 				<SearchForm />
