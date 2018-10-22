@@ -10,7 +10,7 @@ export class EverythingHeadlines extends React.Component{
 render(){
     return(
         <section >
-           <HeadlineLi className='scrolling-wrapper-flexbox' headlines={this.props.headlines}  folders={this.props.folders} />
+           <HeadlineLi headlines={this.props.headlines}  folders={this.props.folders} />
         </section>
     )
 } 
