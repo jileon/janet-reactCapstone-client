@@ -70,7 +70,6 @@ class UserMenu extends React.Component {
 					
 						}}
 						deleteClick={(e) => {
-							// console.log(e.target.getAttribute('folderid'));
 							this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));
 						}}
 					/>
