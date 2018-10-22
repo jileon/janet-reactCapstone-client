@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Spinner from 'react-spinkit';
-// import {getHeadlines}from '../actions/category-action';
 import EverythingHeadlines from '../components/everything-headlines';
 import { getHeadlines } from '../actions/category-action';
 
