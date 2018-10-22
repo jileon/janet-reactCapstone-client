@@ -20,7 +20,7 @@ export default function HeadlineLi(props) {
                     <a href={article.url} target="_blank" rel="noopener noreferrer">
 						<div className="image">{imageDiv}</div>
 						<figcaption>
-							
+						<p>{article.source.name}</p>
 							<h4>
 								
 									{article.title}}
@@ -30,12 +30,23 @@ export default function HeadlineLi(props) {
 							<p>
                             {article.description}
 							</p>
-                            <footer>
-							{article.source.name}
-							</footer>
+                           
 						</figcaption>
+			
+						
                         {/* <a href="#" /> */}
                         </a>
+
+							<footer>
+							<FolderAddToList 
+                            folders={props.folders} 
+                            articletitle={article.title} 
+                            articledescription={article.description} 
+                            articleimage={article.urlToImage} 
+                            articleurl={article.url} 
+                            articlesource={article.source.name} />
+							</footer>
+							
 					</figure>
 				);
 			})}

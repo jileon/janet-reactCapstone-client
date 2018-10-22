@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Spinner from 'react-spinkit';
 import EverythingHeadlines from '../components/everything-headlines';
 import { getHeadlines } from '../actions/category-action';
-import './css/headlines-scratch.css';
+import './css/headlines.css';
 
 //FIXME: DELTE NO LONGER NECESSARY
 // import BusinessHeadlines from '../components/business-headlines';

@@ -1,13 +1,15 @@
 .dropbtn {
-    background-color: grey;
-
-    padding: 16px;
-    font-size: 16px;
+    background-color: pink;
+    padding: 1px;
+    font-size: 15px;
     border: none;
     width: 100%;
-    /* position: relative;
-    left: 100px; */
+    position: relative;
+    left: 209px;
+    top: -20px;
     z-index: 2;
+    height: 20px;
+
 }
 
 .dropdown {
@@ -27,8 +29,10 @@
     display: none;
     position: absolute;
     background-color: grey;
-    min-width: 160px;
+    min-width: 130px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: 178px;
+    top: 0px;
     z-index: 1;
 }
 
