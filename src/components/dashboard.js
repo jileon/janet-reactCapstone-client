@@ -38,16 +38,17 @@ export class Dashboard extends React.Component {
 				<Link to="/usermenu">
 					<SideNav />
 				</Link>
-
 				<HeaderBar />
-				<Welcome username={this.props.firstName} />
+				
 				<CategoryNav buttonClick={(e) => {
 						this.props.dispatch(resetSearchLoading());
 						this.props.dispatch(setCategory(e.target.name));
 						this.props.dispatch(getHeadlines(e.target.name));
 
 					}}/>
-				<SearchForm />
+						<SearchForm />
+					
+			
 				<MainSection />
 			</div>
 		);

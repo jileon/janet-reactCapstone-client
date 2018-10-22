@@ -16,6 +16,7 @@ export default function HeadlineLi(props) {
 				}
 				return (
 					<figure className="figurecard" key={index}>
+					<article>
 						<a href={article.url} target="_blank" rel="noopener noreferrer">
 							<div className="image">{imageDiv}</div>
 							<figcaption>
@@ -27,7 +28,7 @@ export default function HeadlineLi(props) {
 
 							{/* <a href="#" /> */}
 						</a>
-
+						</article>
 						<footer>
 							<FolderAddToList
 								folders={props.folders}

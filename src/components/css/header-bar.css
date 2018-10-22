@@ -3,7 +3,11 @@
 .content-header {
 	margin-left: 100px; /* Same as the width of the sidenav */
 	padding: 0px 10px;
-	border: 1px solid black;
+
+}
+
+.content-header a {
+text-decoration: none;
 }
 
 .header-title {
@@ -13,6 +17,6 @@
 	font-size: 4.0em;
 	text-align: center;
 	font-weight: 100;
-
 	margin: 0 auto;
 }
+

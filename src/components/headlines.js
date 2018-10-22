@@ -34,9 +34,13 @@ export class Headlines extends React.Component {
 		if(this.props.categoryloading){
 			return (<Spinner spinnername="circle" fadeIn='none' />);
 		} else {
-			return (<section className="headline-seaction">
+			return (<section className="headline-section">
+
+			<section className='topStories'>
 			<h2> Top Headlines for {this.getCurrentDate()} </h2>
 			<h2>Category: {this.props.category}</h2>
+			</section>
+			
 			<EverythingHeadlines/>
 		</section>
 	)
