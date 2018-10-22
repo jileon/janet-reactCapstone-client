@@ -52,7 +52,6 @@ class UserMenu extends React.Component {
 						onClick={() => {
 							clearAuthToken();
 							this.props.dispatch(clearAuth());
-							this.props.dispatch(clearAuthToken());
 						}}
 					>
 						Log Out

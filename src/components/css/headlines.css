@@ -141,6 +141,11 @@
     color:black;
 }
 
+.figurecard a:hover{
+  text-decoration: none;
+  color:white;
+}
+
 /* Demo purposes only */
 
 body {
