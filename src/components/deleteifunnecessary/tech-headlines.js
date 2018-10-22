@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {getTechHeadlines}from '../actions/category-action';
+import {getHeadlines}from '../../actions/category-action';
 // import './css/headlines.css'
-import HeadlineLi from '../components/headlineLi';
+import HeadlineLi from '../headlineLi';
  
 export class TechHeadlines extends React.Component{
 componentDidMount(){
-this.props.dispatch(getTechHeadlines());
+    this.props.dispatch(getHeadlines(this.props.category));
 }
 
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {getEntHeadlines}from '../actions/category-action';
-import HeadlineLi from '../components/headlineLi'
+import {getHeadlines}from '../../actions/category-action';
+import HeadlineLi from '../headlineLi'
 // import './css/headlines.css'
  
 export class EntertainmentHeadlines extends React.Component{
 componentDidMount(){
-this.props.dispatch(getEntHeadlines());
+    this.props.dispatch(getHeadlines(this.props.category));
 }
 render(){
     return(

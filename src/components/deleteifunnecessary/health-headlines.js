@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {getScienceHeadlines}from '../actions/category-action';
-import HeadlineLi from '../components/headlineLi';
-// import './css/headlines.css'
+import {getHeadlines}from '../../actions/category-action';
+import HeadlineLi from '../headlineLi';
+import './css/headlines.css'
  
-export class ScienceHeadlines extends React.Component{
+export class HealthHeadlines extends React.Component{
 componentDidMount(){
-this.props.dispatch(getScienceHeadlines());
+    this.props.dispatch(getHeadlines(this.props.category));
 }
 render(){
     return(
@@ -26,4 +26,4 @@ const mapStateToProps = state => {
         folders: state.protectedData.data
     };
 };
-export default connect(mapStateToProps)(ScienceHeadlines);
+export default connect(mapStateToProps)(HealthHeadlines);

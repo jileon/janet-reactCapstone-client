@@ -16,7 +16,10 @@ return {
    searchResults
 }
 }
-
+export const SEARCH_RESET = 'SEARCH_RESET';
+export const resetSearchLoading = ()=>({
+    type:SEARCH_RESET
+});
 
 export const SEARCH_LOADING = 'SEARCH_LOADING';
 export const setSearchLoading = ()=>({

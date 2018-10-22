@@ -5,9 +5,8 @@ import HeadlineLi from '../components/headlineLi';
 import './css/headlines.css';
  
 export class EverythingHeadlines extends React.Component{
-componentDidMount(){
-this.props.dispatch(getHeadlines());
-}
+
+    
 render(){
     return(
         <section >

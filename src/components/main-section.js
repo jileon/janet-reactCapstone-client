@@ -15,7 +15,7 @@ function MainSection(props) {
 const mapStateToProps = (state) => {
 	return {
         search: state.search.searchTerm,
-        loading: state.search.loading
+        loading: state.search.searchloading
 	};
 };
 export default connect(mapStateToProps)(MainSection);
