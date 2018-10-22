@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Spinner from 'react-spinkit';
 // import {getHeadlines}from '../actions/category-action';
 import EverythingHeadlines from '../components/everything-headlines';
+import { getHeadlines } from '../actions/category-action';
 
 //FIXME: DELTE NO LONGER NECESSARY
 // import BusinessHeadlines from '../components/business-headlines';
@@ -15,7 +16,8 @@ import './css/headlines.css';
 
 export class Headlines extends React.Component {
 	componentDidMount(){
-		console.log('hello')
+		this.props.dispatch(getHeadlines(this.props.category));
+		console.log(this.props.category);
 		}
 
 	getCurrentDate() {
