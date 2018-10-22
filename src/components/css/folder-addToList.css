@@ -1,10 +1,13 @@
 .dropbtn {
     background-color: grey;
-    color: white;
+
     padding: 16px;
     font-size: 16px;
     border: none;
-    width: 100%
+    width: 100%;
+    /* position: relative;
+    left: 100px; */
+    z-index: 2;
 }
 
 .dropdown {
@@ -13,7 +16,7 @@
 }
 
 .dropdown p:hover {
-    background-color: grey;
+    background-color: black;
 }
 
 .dropdown ul {
@@ -23,7 +26,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: grey;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;

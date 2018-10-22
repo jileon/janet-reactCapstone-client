@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Spinner from 'react-spinkit';
 import EverythingHeadlines from '../components/everything-headlines';
 import { getHeadlines } from '../actions/category-action';
+import './css/headlines-scratch.css';
 
 //FIXME: DELTE NO LONGER NECESSARY
 // import BusinessHeadlines from '../components/business-headlines';
@@ -11,7 +12,7 @@ import { getHeadlines } from '../actions/category-action';
 // import SportsHeadlines from './sports-headlines';
 // import TechHeadlines from './tech-headlines';
 // import EntertainmentHeadlines from './entertainment-headlines';
-import './css/headlines.css';
+
 
 export class Headlines extends React.Component {
 	componentDidMount(){

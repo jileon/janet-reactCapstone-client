@@ -10,6 +10,9 @@ import FolderReadView from './components/folder-read-view'
 import RegistrationPage from './components/registration-page';
 import {refreshAuthToken} from './actions/auth';
 import {clearAuth} from './actions/auth';
+
+
+
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
         if (!prevProps.loggedIn && this.props.loggedIn) {

@@ -10,7 +10,7 @@ function FolderAddToList(props) {
 
 	//Need to add handling for dupe articles
 	return (
-		<div className="dropdown">
+		<section className="dropdown">
 			<button className="dropbtn">Add to Folder</button>
 			<div className="dropdown-content">
 				<ul folders={props.folders}>
@@ -43,7 +43,7 @@ function FolderAddToList(props) {
 					})}
 				</ul>
 			</div>
-		</div>
+		</section>
 	);
 }
 
