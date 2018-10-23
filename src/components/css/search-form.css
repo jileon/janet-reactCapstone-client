@@ -6,8 +6,8 @@ width: 50%;
 height: 54px;
 overflow: hidden;
 margin: 0 auto;
+margin-top: 100px;
 position: relative;
-width: 400px;
 height: 54px;
 
 }
@@ -38,6 +38,9 @@ height: 54px;
 
 .submitButton p{
     color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
 }
 
 

@@ -16,7 +16,7 @@ function FolderAddToList(props) {
 				<ul folders={props.folders}>
 					{props.folders.map((folder, index) => {
 						return (
-							<li key={index}>
+							<li className="addLi" key={index}>
 								<p className='blink-2'
 									articletitle={props.articletitle}
 									articleimage={props.articleimage}
