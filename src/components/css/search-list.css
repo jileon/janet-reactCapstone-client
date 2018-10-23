@@ -1,0 +1,13 @@
+.article-search-results{
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.article-search-results img{
+float: left;
+width: 200px;
+margin-right: 20px;
+
+}

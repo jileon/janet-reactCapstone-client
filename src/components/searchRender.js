@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Spinner from 'react-spinkit';
 import FolderAddToList from './folder-addToList';
-
+import "./css/search-list.css"
 class SearchRender extends React.Component {
 	// componentDidMount(){
 	//     this.props.dispatch(setSearchLoading());
@@ -19,16 +19,15 @@ class SearchRender extends React.Component {
 		// }
 
 		const searchRes = this.props.searchResults.map((article, index) => (
-			<li key={index}>
+			<li key={index} className='searchResult'>
 				<div>
+					<img src={article.urlToImage}></img>
 					<a href={article.url} target="_blank" rel="noopener noreferrer">
-						<h3> {article.source.name}</h3>
-						<img src={article.urlToImage} alt={article.title} />
-						<h4>{article.title}</h4>
+					<h4>{article.title}</h4>
 					</a>
+						<h3> {article.source.name}</h3>		
 					<p>{article.description}</p>
-				</div>
-				<FolderAddToList
+					<FolderAddToList
 					folders={this.props.folders}
 					articletitle={article.title}
 					articledescription={article.description}
@@ -36,7 +35,11 @@ class SearchRender extends React.Component {
 					articleurl={article.url}
 					articlesource={article.source.name}
 				/>
+				</div>
+			
 			</li>
+
+
 		));
 
 		return <ul className="article-search-results">{searchRes}</ul>;
