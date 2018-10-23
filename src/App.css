@@ -5,6 +5,10 @@
 
 }
 
+.AppWithSide{
+  margin-left: 400px;
+}
+
 /* .pagi{
   display: flex;
   list-style:none;

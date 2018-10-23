@@ -10,35 +10,26 @@ import CategoryNav from './category-nav';
 import {resetSearchLoading } from '../actions/search-action';
 import UserMenu from './userMenu';
 import { setCategory, getHeadlines } from '../actions/category-action';
-
+import UserMenuScratch from './sidenavscratch'
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
 import Welcome from './welcome';
 
-//TODO: clean up functions that are no longer needed;
-// import {SearchApp, Pagination} from './components/search-scratch';
-//TODO: clean up functions that are no longer needed;
-// import Headlines from './components/headlines';
-//TODO: clean up functions that are no longer needed;
-// import {showNavigation} from '../actions/nav-action';
 
-import DashboardwithMenu from './dashboardwithusermenu';
-
-export class Dashboard extends React.Component {
+export class DashboardwithMenu extends React.Component {
 	componentDidMount() {
 		this.props.dispatch(fetchProtectedData());
 	}
-	//  componentDidUpdate(){
-	//   this.props.dispatch(fetchProtectedData());
-	// }
+
+
 
 
 
 	render() {
 		return (
-			<div className="App">
-				{/* <Link to="/usermenu">
-					<SideNav />
+			<div className="AppWithSide">
+				<Link to="/usermenu">
+					<UserMenuScratch/>
 				</Link>
 				<HeaderBar />
 				
@@ -51,10 +42,7 @@ export class Dashboard extends React.Component {
 						<SearchForm />
 					
 			
-				<MainSection /> */}
-
-				<DashboardwithMenu/>
-
+				<MainSection />
 			</div>
 		);
 	}
@@ -62,14 +50,10 @@ export class Dashboard extends React.Component {
 //TODO: clean up state properties that are no longer needed
 const mapStateToProps = (state) => {
 	return {
-		// category: state.category.category,
-		// headlines: state.category.headlines,
-		// search: state.search.searchTerm,
-		// showNav: state.nav.expandedNav,
-		// username: state.auth.currentUser.username,
+
 		firstName: state.auth.currentUser.firstName,
-		//   name: `${currentUser.firstName} ${currentUser.lastName}`,
+
 		folders: state.protectedData.data
 	};
 };
-export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+export default requiresLogin()(connect(mapStateToProps)(DashboardwithMenu ));
