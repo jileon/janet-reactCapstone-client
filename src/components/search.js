@@ -16,12 +16,14 @@ class SearchForm extends React.Component {
 
 						<button
 							type="submit"
+
 							className="submitButton"
 							onClick={(e) => {
 								e.preventDefault();
 								searchTerm = this.input.value;
-								this.props.dispatch(setSearchTerm(this.input.value));
+								this.props.dispatch(setSearchTerm(searchTerm));
 								this.props.dispatch(getSearchTerm(searchTerm, 1));
+								this.input.value=''
 							}}
 						>
 							<p> Search</p>

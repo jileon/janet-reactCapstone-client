@@ -20,12 +20,12 @@ class SearchRender extends React.Component {
 
 		const searchRes = this.props.searchResults.map((article, index) => (
 			<li key={index} className='searchResult'>
-				<div>
+				<article>
 					<img src={article.urlToImage}></img>
 					<a href={article.url} target="_blank" rel="noopener noreferrer">
 					<h4>{article.title}</h4>
 					</a>
-						<h3> {article.source.name}</h3>		
+						<p><strong>{article.source.name} </strong> </p>		
 					<p>{article.description}</p>
 					<FolderAddToList
 					folders={this.props.folders}
@@ -35,7 +35,7 @@ class SearchRender extends React.Component {
 					articleurl={article.url}
 					articlesource={article.source.name}
 				/>
-				</div>
+				</article>
 			
 			</li>
 
@@ -46,10 +46,14 @@ class SearchRender extends React.Component {
 	}
 
 	render() {
-		return <div>
-			<h2>Results For {this.props.search}</h2>
+		return <section className='search-results-section'>
+
+			<div  className='search-results-title'>
+			<h2>Results For:  <strong>{this.props.search}</strong></h2>
+				</div>
+		
 		{this.renderResults()}
-		</div>;
+		</section>;
 	}
 }
 
