@@ -8,12 +8,10 @@ import SearchForm from './search';
 import MainSection from './main-section';
 import CategoryNav from './category-nav';
 import {resetSearchLoading } from '../actions/search-action';
-import UserMenu from './userMenu';
 import { setCategory, getHeadlines } from '../actions/category-action';
-
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
-import Welcome from './welcome';
+
 
 //TODO: clean up functions that are no longer needed;
 // import {SearchApp, Pagination} from './components/search-scratch';
@@ -22,7 +20,6 @@ import Welcome from './welcome';
 //TODO: clean up functions that are no longer needed;
 // import {showNavigation} from '../actions/nav-action';
 
-import DashboardwithMenu from './dashboardwithusermenu';
 
 export class Dashboard extends React.Component {
 	componentDidMount() {

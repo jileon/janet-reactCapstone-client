@@ -1,32 +1,73 @@
 .userMenu {
-	background: #181b24;
+
 	position:relative;
-
 	animation:animateleft 1s;
-
-
+	width: 100%;
+	margin: 0 auto;
+	
 
 }
-
-
-
-
 	@keyframes animateleft{from
-		{
-		
-
+		{		
 			opacity:0}
 	 to{
-		
-
 		opacity:1}
-
 }
 
+.container {
+	min-width: 260px;
+
+	  background:url(https://images.unsplash.com/photo-1521453290429-5592b95d2b7b?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjM5OTI2fQ&s=b88f7d0967da5f40998fdf7a69467538) no-repeat;
+		background-size: 100%;
+		filter: brightness(80%);
+		background-position: center right; 
+		height: 350px;
+			
+		box-shadow:0 4px 3px #333;
+		border-radius: 5px 5px 0 0;
+		position: relative;
+		
+	}
+	
+	.header-wrapper{
+
+	
+	
+	}
+	
+.userMenu nav {
+	position: relative;
+	height: 10%;
+	padding: 1em;
+  }
+  
+  .userMenu nav ul li {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.2em;
+	list-style: none;
+  }
+  
+  .userMenu  nav ul li:first-child {
+position: absolute;
+top: 0;
+left: 0;
+  }
+  
+  .userMenu nav ul li {
+	position: absolute;
+	top: 0;
+	right: 0;
+  }
 
 
+  .title{
+	  background-color: black;
+	  opacity: .8;
+	  height: 100px;
 
-
+	  width: 100%;
+  }
 .userMenu h1 {
 	font-family: Monofett;
 	font-style: normal;
@@ -34,9 +75,8 @@
 	line-height: normal;
 	font-size: 50px;
 	text-align: center;
-	letter-spacing: 0.06em;
-	color: #ffffff;
-	width: 221px;
+	letter-spacing: .1em;
+	color: white;
 	height: 128px;
 	margin: 0 auto;
 
@@ -49,19 +89,20 @@
 	font-size: 15px;
 	text-align: left;
 	letter-spacing: 0.06em;
-	color: red;
+	color: black;
 	margin: 0 auto;
 	padding: 2px;
 	margin-top: 2px;
 }
 
 .deleteLink:hover{
-	background-color: yellow;
+	background:rgb(3, 2, 2);
+	color:white;
 }
 
 .menuButtons{
     margin: 0 auto;  
-    border: 1px solid red;
+
 	width: 200px;
 	border-radius: 17px;
 }
@@ -103,7 +144,46 @@ border-radius: 17px;
 .folderButtons{
     margin-top: 100px;
     padding-top: 50px;
-    border-top: 1px solid red;
     width: 100%;
+}
+
+.folderSection{
+
+	width: 90%;
+	margin: 0 auto;
 
 }
+.folderForm{
+	margin-left: 60px;
+	border-bottom: black 1px solid;
+}
+
+.folderForm form{
+	margin-bottom: 0px;
+}
+
+.folderForm h2{
+	color: purple;
+}
+
+.folderForm form input{
+	width: 100%;
+	height:40px;
+	border: none;
+	font-size: 30px;
+
+}
+
+
+
+.folderForm form input:focus{
+	width: 100%;
+	height:40px;
+	border: none;
+	outline: none;
+}
+
+.folderForm form button{
+visibility: hidden;
+}
+

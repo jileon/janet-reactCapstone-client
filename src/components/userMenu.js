@@ -17,7 +17,6 @@ import { deleteFolder } from '../actions/userMenu-actions';
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
 
-
 class UserMenu extends React.Component {
 	componentDidMount() {
 		this.props.dispatch(fetchProtectedData());
@@ -29,44 +28,66 @@ class UserMenu extends React.Component {
 	render() {
 		return (
 			<section className="userMenu">
-				<Link to="/dashboard">
-					<button type="button"> BACK BUTTON</button>
-				</Link>
 
-				<section>
-					<h1>HELLO </h1>
-				</section>
+				<header className="container">
+				<div className="title">
+							<h1>HELLO {this.props.currentUser} </h1>
+						</div>
+					<nav className="header-wrapper">
+						<ul className="clearfix">
+							<li>
+								<Link to="/dashboard">
+									<button className="navButton" type="button">
+										Back
+									</button>
+								</Link>
+							</li>
+							<li>
+								<button
+									className="navButton"
+									type="button"
+									onClick={() => {
+										clearAuthToken();
+										this.props.dispatch(clearAuth());
+									}}
+								>
+									Log Out
+								</button>
+							</li>
+						</ul>
+					
+					</nav>
+				</header>
 
-				<section className="menuButtons">
-					<Link to="/dashboard">
-						<button className="dashboardButton" type="button">
-							Dashboard
-						</button>
-					</Link>
-				</section>
 
-				<section className="menuButtons">
-					<button
-						className="dashboardButton"
-						type="button"
-						onClick={() => {
-							clearAuthToken();
-							this.props.dispatch(clearAuth());
-						}}
-					>
-						Log Out
-					</button>
-				</section>
+
+				<section className='folderSection'>
+			
+			
 
 				<div className="folderButtons">
+				<div className= 'folderForm'>
+				<form 
+						onSubmit={(e) => {
+							e.preventDefault();
+							// this.props.dispatch(addNewFolder(this.input.value));
+							this.props.dispatch(addNewFolder(this.input.value));
+						}}
+					>
+						<input type="addNewFolder" placeholder='Click here to add a new folder' ref={(input) => (this.input = input)} />
+						<button className="addNewFolder" type="submit">
+							New Folder
+						</button>
+					</form>
+					</div>
+
 					<FolderButtonLi
 						ulClassName="folderButtons"
 						liButtonClassName="folder-button"
 						folders={this.props.folders}
-						folderClick={(e)=>{
-									console.log(e.target.getAttribute('folderid'));
+						folderClick={(e) => {
+							console.log(e.target.getAttribute('folderid'));
 							// this.props.dispatch(getArticlesPerFolder(e.target.getAttribute('folderid')));
-					
 						}}
 						deleteClick={(e) => {
 							this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));
@@ -74,20 +95,7 @@ class UserMenu extends React.Component {
 					/>
 				</div>
 
-				<div className="folderButtons">
-					<form
-						onSubmit={(e) => {
-							e.preventDefault();
-							// this.props.dispatch(addNewFolder(this.input.value));
-							this.props.dispatch(addNewFolder(this.input.value));
-						}}
-					>
-						<input type="addNewFolder" ref={(input) => (this.input = input)} />
-						<button className="dashboardButton" type="submit">
-							New Folder
-						</button>
-					</form>
-				</div>
+				</section>
 			</section>
 		);
 	}
@@ -95,12 +103,12 @@ class UserMenu extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		folders: state.protectedData.data
+		folders: state.protectedData.data,
+		currentUser: state.auth.currentUser.firstName
 	};
 };
 
 //TODO: fix weird login issue
 // export default connect(mapStateToProps)(UserMenu);
-
 
 export default requiresLogin()(connect(mapStateToProps)(UserMenu));
