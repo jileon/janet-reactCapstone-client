@@ -20,8 +20,9 @@ class SearchForm extends React.Component {
 							onClick={(e) => {
 								e.preventDefault();
 								searchTerm = this.input.value;
-								this.props.dispatch(setSearchTerm(this.input.value));
+								this.props.dispatch(setSearchTerm(searchTerm));
 								this.props.dispatch(getSearchTerm(searchTerm, 1));
+								this.input.value='';
 							}}
 						>
 							<p> Search</p>

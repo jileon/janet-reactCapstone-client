@@ -16,7 +16,7 @@
 }
 
 .userControls{
-	width: 90%;
+	width: 100%;
 	background-color: #181b24;
 	margin: 0 auto;
 }
@@ -141,6 +141,7 @@ border-radius: 17px;
 .folderForm{
 	margin-left: 60px;
 	border-bottom: black 1px solid;
+	width: 85%;
 }
 
 .folderForm form{
@@ -162,7 +163,10 @@ border-radius: 17px;
 
 }
 
-
+.folderSection{
+	width: 90%;
+	margin-left: 120px;
+}
 
 .folderForm form input:focus{
 	width: 100%;

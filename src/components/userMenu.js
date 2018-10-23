@@ -63,9 +63,11 @@ class UserMenu extends React.Component {
 				<div className= 'folderForm'>
 				<form 
 						onSubmit={(e) => {
+							let newFolder=this.input.value;
 							e.preventDefault();
 							// this.props.dispatch(addNewFolder(this.input.value));
-							this.props.dispatch(addNewFolder(this.input.value));
+							this.props.dispatch(addNewFolder(newFolder));
+							this.input.value='';
 						}}
 					>
 						<input type="addNewFolder" placeholder='Click here to add a new folder' ref={(input) => (this.input = input)} />
