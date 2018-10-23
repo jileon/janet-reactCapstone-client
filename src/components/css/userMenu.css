@@ -1,16 +1,24 @@
 .userMenu {
 	background: #181b24;
-	height: 1600px;
-
 	position:relative;
-	animation:animateleft 1s}
-	@keyframes animateleft
-	{from
+
+	animation:animateleft 1s;
+
+
+
+}
+
+
+
+
+	@keyframes animateleft{from
 		{
-			left:-300px;
+		
+
 			opacity:0}
 	 to{
-		 left:0;
+		
+
 		opacity:1}
 
 }

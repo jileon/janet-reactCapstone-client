@@ -1,5 +1,6 @@
 .dropbtn {
-    background-color: pink;
+    background-color: black;
+    color:white;
     padding: 1px;
     font-size: 15px;
     border: none;
@@ -18,7 +19,7 @@
 }
 
 .dropdown p:hover {
-    background-color: black;
+    background-color: pink;
 
   
 }
