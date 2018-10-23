@@ -37,7 +37,7 @@ export class Dashboard extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				{/* <Link to="/usermenu">
+				<Link to="/usermenu">
 					<SideNav />
 				</Link>
 				<HeaderBar />
@@ -51,9 +51,8 @@ export class Dashboard extends React.Component {
 						<SearchForm />
 					
 			
-				<MainSection /> */}
+				<MainSection />
 
-				<DashboardwithMenu/>
 
 			</div>
 		);

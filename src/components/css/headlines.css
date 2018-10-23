@@ -95,14 +95,13 @@
 .figurecard  footer {
   padding: 0 25px;
   color: rgb(36, 32, 32);
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 50px;
   text-align: left;
   position: absolute;
   top: 0;
   width: 100%;
-  width: 100%;
-  z-index: 3;
+  z-index: 1;
   visibility: hidden;
 
 }

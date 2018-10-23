@@ -3,12 +3,12 @@
     padding: 1px;
     font-size: 15px;
     border: none;
-    width: 100%;
+    width: 150px;
     position: relative;
-    left: 209px;
-    top: -20px;
-    z-index: 2;
-    height: 20px;
+    left: 155px;
+    top: 160px;
+    z-index: 1;
+    height: 40px;
 
 }
 
@@ -19,7 +19,11 @@
 
 .dropdown p:hover {
     background-color: black;
+
+  
 }
+
+
 
 .dropdown ul {
     list-style: none;
@@ -29,11 +33,12 @@
     display: none;
     position: absolute;
     background-color: grey;
-    min-width: 130px;
+    min-width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    left: 178px;
-    top: 0px;
+    left: 155px;
+    top: 200px;
     z-index: 1;
+
 }
 
 .dropdown-content a {
@@ -48,3 +53,4 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: pink;}
+

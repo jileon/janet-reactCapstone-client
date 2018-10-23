@@ -11,13 +11,13 @@ function FolderAddToList(props) {
 	//Need to add handling for dupe articles
 	return (
 		<section className="dropdown">
-			<button className="dropbtn">Add to Folder</button>
+			<button className="dropbtn">&#9733; Add to Folder</button>
 			<div className="dropdown-content">
 				<ul folders={props.folders}>
 					{props.folders.map((folder, index) => {
 						return (
 							<li key={index}>
-								<p
+								<p classname='blink-2'
 									articletitle={props.articletitle}
 									articleimage={props.articleimage}
 									articleurl={props.articleurl}

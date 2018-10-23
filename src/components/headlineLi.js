@@ -12,7 +12,8 @@ export default function HeadlineLi(props) {
 			{props.headlines.map((article, index) => {
 				let imageDiv = <img className="card-image" src={article.urlToImage} alt={article.title} />;
 				if (article.urlToImage === null) {
-					imageDiv = <div>{article.description}</div>;
+					imageDiv = <img className="card-image" src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjM5OTI2fQ&s=c8a8a0c9e5cb794cb7edfd7f97c0749b' alt={article.title} />;;
+					
 				}
 				return (
 					<figure className="figurecard" key={index}>
