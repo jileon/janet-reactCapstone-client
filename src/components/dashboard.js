@@ -37,19 +37,20 @@ export class Dashboard extends React.Component {
 				<Link to="/usermenu">
 					<SideNav />
 				</Link>
+				<section className='mainsection1'> 
 				<HeaderBar />
-				
+				<SearchForm />
 				<CategoryNav buttonClick={(e) => {
 						this.props.dispatch(resetSearchLoading());
 						this.props.dispatch(setCategory(e.target.name));
 						this.props.dispatch(getHeadlines(e.target.name));
 
 					}}/>
-						<SearchForm />
+						
 					
 			
 				<MainSection />
-
+				</section>
 
 			</div>
 		);

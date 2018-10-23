@@ -10,30 +10,31 @@
     list-style: none;
     margin: 0 auto;
     text-align: center;
-
+    margin-top: 30px;
     justify-content: center;
 
 }
 
 .category-flex-container button{
- color: black;
- height: 50px;
+ color:black;
+ height: 30px;
  width: 80%;
- border: none;
+ border-right: 1px solid black;
+ border-radius:1px;
  margin: 20px;
- font-size: 15px;
+ font-size: 18px;
 }
 .catagory-nav {
     background-color: none;
     border: none;
 
 }
-.catagory-nav:hover {
+.category-flex-container button:hover  {
     background: -moz-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
     background: -webkit-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
     background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
     opacity: 0.9;
-    background-color:none;
+    background-color:purple;
     color: white;
 
 }
