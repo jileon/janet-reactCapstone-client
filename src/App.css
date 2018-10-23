@@ -1,7 +1,8 @@
 
 .App {
   text-align: center;
-
+  border: 1px pink solid;
+  height: 1600px;
 
 }
 

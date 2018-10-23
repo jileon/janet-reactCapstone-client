@@ -6,6 +6,7 @@
     border: none;
     width: 150px;
     position: relative;
+
     z-index: 1;
     height: 40px;
 
@@ -17,8 +18,8 @@
 }
 
 .dropdown p:hover {
-    background-color: pink;
-
+    background-color:white;
+    color: black;
   
 }
 
@@ -26,14 +27,18 @@
 
 .dropdown ul {
     list-style: none;
+    width: 100%;
 }
+
 
 .dropdown-content {
     display: none;
+    list-style-type: none;
     position: absolute;
-    background-color: grey;
+    background-color: #181b24;
     min-width: 150px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);xs
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
     z-index: 1;
 
 }
@@ -45,11 +50,9 @@
     display: block;
 }
 
-.dropdown-content a:hover {background-color: pink;;}
+.dropdown-content a:hover {background-color: purple;;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: pink;}
+.dropdown:hover .dropbtn {background-color: purple;}
 
-
- 
