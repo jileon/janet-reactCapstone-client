@@ -29,36 +29,30 @@ class UserMenu extends React.Component {
 		return (
 			<section className="userMenu">
 
-				<header className="container">
-				<div className="title">
-							<h1>HELLO {this.props.currentUser} </h1>
-						</div>
-					<nav className="header-wrapper">
-						<ul className="clearfix">
-							<li>
-								<Link to="/dashboard">
-									<button className="navButton" type="button">
-										Back
-									</button>
-								</Link>
-							</li>
-							<li>
-								<button
-									className="navButton"
-									type="button"
-									onClick={() => {
-										clearAuthToken();
-										this.props.dispatch(clearAuth());
-									}}
-								>
-									Log Out
-								</button>
-							</li>
-						</ul>
-					
-					</nav>
-				</header>
+			<section className='userControls'>
+				<h1>HELLO {this.props.currentUser} </h1>
+			
 
+
+			<section className="menuButtons">
+			<Link to="/dashboard">
+					<button className="dashboardButton" type="button">
+						Back to Main
+					</button>
+				</Link>
+				<button
+					className="dashboardButton"
+					type="button"
+					onClick={() => {
+						clearAuthToken();
+						this.props.dispatch(clearAuth());
+						this.props.dispatch(clearAuthToken());
+					}}
+				>
+					Log Out
+				</button>
+			</section>
+			
 
 
 				<section className='folderSection'>
@@ -94,6 +88,7 @@ class UserMenu extends React.Component {
 						}}
 					/>
 				</div>
+				</section>
 
 				</section>
 			</section>
