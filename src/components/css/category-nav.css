@@ -11,22 +11,28 @@
     margin: 0 auto;
     text-align: center;
     margin-top: 30px;
-    justify-content: center;
+    justify-content: left;
+    width: 50%;
 
 }
 
 .category-flex-container button{
  color:black;
  height: 30px;
- width: 80%;
+ width: 150px;
  border-right: 1px solid black;
  border-radius:1px;
  margin: 20px;
  font-size: 18px;
+
+
+
+ 
 }
 .catagory-nav {
     background-color: none;
     border: none;
+
 
 }
 .category-flex-container button:hover  {
