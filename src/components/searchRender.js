@@ -21,7 +21,7 @@ class SearchRender extends React.Component {
 		const searchRes = this.props.searchResults.map((article, index) => (
 			<li key={index} className='searchResult'>
 				<div>
-					<img src={article.urlToImage}></img>
+					<img src={article.urlToImage} alt={article.title}></img>
 					<a href={article.url} target="_blank" rel="noopener noreferrer">
 					<h4>{article.title}</h4>
 					</a>

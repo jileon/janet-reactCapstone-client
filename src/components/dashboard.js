@@ -5,6 +5,7 @@ import { resetSearchLoading } from '../actions/search-action';
 import { setCategory, getHeadlines } from '../actions/category-action';
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
+import {modalOn, modalOff} from '../actions/modal-actions';
 import HeaderBar from './header-bar';
 import SideNav from './side-nav';
 import SearchForm from './search';
@@ -16,49 +17,18 @@ import '../App.css';
 
 
 export class Dashboard extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			showModal: false
-		};
-
-		this.handleOpenModal = this.handleOpenModal.bind(this);
-		this.handleCloseModal = this.handleCloseModal.bind(this);
-	}
-
-	handleOpenModal() {
-		this.setState({ showModal: true });
-	}
-
-	handleCloseModal() {
-		sessionStorage.setItem('firstVisit', 'ok')
-		this.setState({ showModal: false });
-	}
-
-	getfirstVisit(){
-
-		if (!this.state.showModal && !sessionStorage.getItem('firstVisit')){
-		
-			this.setState({ showModal: true },)
-
-		}
-
-		
-	}
 
 	componentDidMount() {
-		this.props.dispatch(fetchProtectedData());
-	this.getfirstVisit();
-	
+		this.props.dispatch(fetchProtectedData());	
 	}
 
 
 	render() {
-	
-
 		return (
 			<div className="App">
-			        <button onClick={this.handleOpenModal}>Trigger Modal</button>
+			        <button onClick={()=>{this.props.dispatch(modalOn())}}>
+							
+							Trigger Modal</button>
 				<Link to="/usermenu">
 					<SideNav />
 				</Link>
@@ -70,40 +40,30 @@ export class Dashboard extends React.Component {
 							this.props.dispatch(resetSearchLoading());
 							this.props.dispatch(setCategory(e.target.name));
 							this.props.dispatch(getHeadlines(e.target.name));
-						}}
-					/>
+						}}/>
 
 					<MainSection />
 
-
-
-					<ReactModal
-					
-						isOpen={this.state.showModal}
+					<ReactModal					
+						isOpen={this.props.modal}
 						contentLabel="onRequestClose Example"
 						onRequestClose={this.handleCloseModal}
 						shouldCloseOnOverlayClick={false}
-						className="Modal"
-					>
+						className="Modal">
 						<p>Modal text!</p>
-						<button onClick={()=>{
-								this.handleCloseModal();
-
-						}
-						
-							}>Got It</button>
+						<button onClick={()=>{this.props.dispatch(modalOff())}}>Got It</button>
 					</ReactModal>
 				</section>
 			</div>
 		);
 	}
 }
-//TODO: clean up state properties that are no longer needed
+
 const mapStateToProps = (state) => {
 	return {
-		// modal: state.category.category,
 		firstName: state.auth.currentUser.firstName,
-		folders: state.protectedData.data
+		folders: state.protectedData.data,
+		modal: state.modal.showModal
 	};
 };
 
