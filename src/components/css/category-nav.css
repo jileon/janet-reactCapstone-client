@@ -11,19 +11,21 @@
     margin: 0 auto;
     text-align: center;
     margin-top: 30px;
-    justify-content: left;
-    width: 50%;
+    justify-content: center;
+    width: 90%;
 
 }
 
 .category-flex-container button{
- color:black;
- height: 30px;
+ color:white;
+ height: 40px;
  width: 150px;
  border-right: 1px solid black;
- border-radius:1px;
+ border: 1px solid black;
+ border-radius:15px;
  margin: 20px;
  font-size: 18px;
+ background: rgb(80, 79, 79);
 
 
 
