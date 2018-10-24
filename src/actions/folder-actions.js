@@ -14,7 +14,7 @@ export const sendArticleToFolder= (article, folderId) => (dispatch) => {
     // console.log(folderId)
     return axios({
         method: 'put',
-        url: `${SERVER}/newsflash/folders/${folderId}`,
+        url: `${SERVER}/api/newsflash/folders/${folderId}`,
         data:{article: article},
         headers:{
             "Authorization": `Bearer ${authToken}`
@@ -51,7 +51,7 @@ export const deleteArticle=(folderId, articleId)=>(dispatch)=>{
     const authToken = loadAuthToken();
  return axios({
     method: 'put',
-    url: `${SERVER}/newsflash/folders/removearticle/${folderId}`,
+    url: `${SERVER}/api/newsflash/folders/removearticle/${folderId}`,
     data:{articleId: articleId},
     headers:{
         "Authorization": `Bearer ${authToken}`

@@ -13,3 +13,15 @@ export const clearAuthToken = () => {
         localStorage.removeItem('authToken');
     } catch (e) {}
 };
+
+export const setSession = () => {
+    try {
+        sessionStorage.setItem('firstVisit', true);
+    } catch (e) {}
+}
+
+export const setSession1 = () => {
+    try {
+        sessionStorage.setItem('firstVisit', '1');
+    } catch (e) {}
+}

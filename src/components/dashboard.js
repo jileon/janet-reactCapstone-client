@@ -11,13 +11,16 @@ import SearchForm from './search';
 import MainSection from './main-section';
 import CategoryNav from './category-nav';
 import ReactModal from 'react-modal';
+import {setSession1} from '../local-storage'
 import '../App.css';
+
+
 
 export class Dashboard extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			showModal: true
+			showModal: false
 		};
 
 		this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -29,14 +32,31 @@ export class Dashboard extends React.Component {
 	}
 
 	handleCloseModal() {
+		sessionStorage.setItem('firstVisit', 'ok')
 		this.setState({ showModal: false });
+	}
+
+	getfirstVisit(){
+
+		if (!this.state.showModal && !sessionStorage.getItem('firstVisit')){
+		
+			this.setState({ showModal: true },)
+
+		}
+
+		
 	}
 
 	componentDidMount() {
 		this.props.dispatch(fetchProtectedData());
+	this.getfirstVisit();
+	
 	}
 
+
 	render() {
+	
+
 		return (
 			<div className="App">
 				<Link to="/usermenu">
@@ -58,6 +78,7 @@ export class Dashboard extends React.Component {
 
 
 					<ReactModal
+					
 						isOpen={this.state.showModal}
 						contentLabel="onRequestClose Example"
 						onRequestClose={this.handleCloseModal}
@@ -65,7 +86,12 @@ export class Dashboard extends React.Component {
 						className="Modal"
 					>
 						<p>Modal text!</p>
-						<button onClick={this.handleCloseModal}>Got It</button>
+						<button onClick={()=>{
+								this.handleCloseModal();
+
+						}
+						
+							}>Got It</button>
 					</ReactModal>
 				</section>
 			</div>
@@ -80,4 +106,6 @@ const mapStateToProps = (state) => {
 		folders: state.protectedData.data
 	};
 };
+
+ReactModal.setAppElement('#root');
 export default requiresLogin()(connect(mapStateToProps)(Dashboard));
