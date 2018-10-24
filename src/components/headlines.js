@@ -17,7 +17,7 @@ import './css/headlines.css';
 export class Headlines extends React.Component {
 	componentDidMount(){
 		this.props.dispatch(getHeadlines(this.props.category));
-		console.log(this.props.category);
+
 		}
 
 	getCurrentDate() {

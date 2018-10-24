@@ -8,6 +8,7 @@ import {getArticlesPerFolder} from '../actions/folder-actions';
 import {deleteArticle} from '../actions/folder-actions';
 import requiresLogin from './requires-login';
 import FolderCurrentList from './folder-current-list';
+import './css/headlines.css';
 // import {fetchProtectedData} from '../actions/protected-data';
 
 class FolderReadView extends React.Component {
