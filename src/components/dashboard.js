@@ -11,7 +11,6 @@ import SearchForm from './search';
 import MainSection from './main-section';
 import CategoryNav from './category-nav';
 import ReactModal from 'react-modal';
-import {setSession1} from '../local-storage'
 import '../App.css';
 
 

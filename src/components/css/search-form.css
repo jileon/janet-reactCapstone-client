@@ -14,12 +14,12 @@ text-align: center;
 
 .searchInput{
     width: 100%;
+    width: 100%;
     border: none;
     height:34px;
     margin-left:0px;
     display: inline-block;
     border-radius:15px;
-    margin-left: 20px;
 }
 .submitButton{
     border-radius: 1px;
