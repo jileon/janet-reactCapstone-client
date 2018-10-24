@@ -21,7 +21,7 @@ export default function HeadlineLi(props) {
 					<article>
 						<a href={article.url} target="_blank" rel="noopener noreferrer">
 							<div className="image">{imageDiv}</div>
-							<figcaption>
+							<figcaption className='highlight'>
 								<p>{article.source.name}</p>
 								<h3>{article.title}}</h3>
 

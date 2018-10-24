@@ -58,6 +58,7 @@ export class Dashboard extends React.Component {
 
 		return (
 			<div className="App">
+			        <button onClick={this.handleOpenModal}>Trigger Modal</button>
 				<Link to="/usermenu">
 					<SideNav />
 				</Link>
