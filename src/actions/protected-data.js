@@ -30,7 +30,7 @@ export const setProtectedFolder = folder => ({
 //fetches folders and adds folder object to protectDate in state
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    return fetch(`${SERVER}/newsflash/folders/`, {
+    return fetch(`${SERVER}/api/newsflash/folders/`, {
         method: 'GET',
         headers: {
             // Provide our auth token as credentials

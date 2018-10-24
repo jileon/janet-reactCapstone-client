@@ -19,7 +19,7 @@ export const addNewFolder = (foldername) => (dispatch) => {
     const authToken = loadAuthToken();
     return axios({
         method: 'post',
-        url: `${SERVER}/newsflash/folders`,
+        url: `${SERVER}/api/newsflash/folders`,
         data:{foldername:foldername},
         headers:{
             "Authorization": `Bearer ${authToken}`
@@ -36,7 +36,7 @@ export const deleteFolder = (folderId) => (dispatch) => {
     const authToken = loadAuthToken();
     return axios({
         method: 'delete',
-        url: `${SERVER}/newsflash/folders/${folderId}`,
+        url: `${SERVER}/api/newsflash/folders/${folderId}`,
         headers:{
             "Authorization": `Bearer ${authToken}`
         }

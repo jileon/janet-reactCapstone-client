@@ -33,7 +33,7 @@ export const getArticlesPerFolder= (folderId) => (dispatch) => {
     // console.log(folderId)
     return axios({
         method: 'get',
-        url: `${SERVER}/newsflash/folders/${folderId}`,
+        url: `${SERVER}/api/newsflash/folders/${folderId}`,
         headers:{
             "Authorization": `Bearer ${authToken}`
         }

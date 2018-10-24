@@ -4,7 +4,7 @@ import {SERVER} from '../config';
 import {normalizeResponseErrors} from './utils';
 
 export const registerUser = user => dispatch => {
-    return fetch(`${SERVER}/users`, {
+    return fetch(`${SERVER}/api/users`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

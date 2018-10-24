@@ -24,7 +24,7 @@ export const loadheadlines = () => ({
 
 export const getHeadlines = (category)=>(dispatch)=>{
     dispatch(loadheadlines());
-    axios.get(`${SERVER}/newsflash/${category}`)
+    axios.get(`${SERVER}/api/newsflash/${category}`)
     .then(({data})=>{
         dispatch(setCategory(category));
         dispatch(getHeadlineArticles(data.articles));  
