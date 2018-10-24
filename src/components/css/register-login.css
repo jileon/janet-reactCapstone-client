@@ -1,0 +1,40 @@
+.home{
+    position: relative;
+    width: 100%;
+}
+
+.forblur {
+    background-image: 
+    url(https://images.unsplash.com/photo-1527449201379-32dff30f6a33?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjM5OTI2fQ&s=20026505f26ea14448df7c26b58a5f0c);
+    background-size: contain;
+    height: 1800px;
+    filter: blur(5px) grayscale(100%);
+    z-index: -1;
+    position: relative;
+  }
+  
+
+.on-top-container{
+    position: absolute;
+    color: black;
+    z-index: 10;
+    border: 2px solid black;
+    width: 90%;
+    top: 0;
+    margin-right: 20px;
+
+}
+
+.login-form{
+    right: 1;
+    position: absolute;
+	/* top: calc(90% 8px);
+	left: calc(50% - 50px); */
+	height: 150px;
+	width: 350px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 320px;
+}
+
+
