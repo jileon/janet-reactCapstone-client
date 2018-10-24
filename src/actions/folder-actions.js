@@ -3,7 +3,7 @@ import {SERVER} from '../config';
 import {fetchProtectedData} from '../actions/protected-data';
 import {loadAuthToken} from '../local-storage';
 import axios from 'axios';
-import {setProtectedArticles} from '../actions/protected-data';
+import {setProtectedArticles, setProtectedFolder} from '../actions/protected-data';
 
 
 //Need to add handling for dupe articles
@@ -39,6 +39,8 @@ export const getArticlesPerFolder= (folderId) => (dispatch) => {
         }
       })
     .then(({data})=>{
+        console.log(data.foldername);
+        dispatch(setProtectedFolder(data.foldername))
     dispatch(setProtectedArticles(data.articles));
     })
     .catch(error => console.log(error));

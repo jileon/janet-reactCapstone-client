@@ -34,11 +34,16 @@ class FolderReadView extends React.Component {
             )
         }
         return(
+        
             <section>
+    
                 <Link to='/usermenu'>
                   <SideNav/>
                   </Link>
                   <HeaderBar/>
+                  <section className='searchHeader'>
+			<h2>Folder: {this.props.folder} </h2>
+			</section>
                   <section className="render-folder-lists">
                     <FolderCurrentList 
                     deleteClick={(e)=>{
@@ -54,7 +59,8 @@ class FolderReadView extends React.Component {
 }
 const mapStateToProps = (state) => {
 	return {
-		currentarticles: state.protectedData.currentFolderArticles     
+        currentarticles: state.protectedData.currentFolderArticles ,
+        folder: state.protectedData.currentFolder   
 	};
 };
 

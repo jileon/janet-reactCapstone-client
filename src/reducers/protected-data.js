@@ -1,13 +1,15 @@
 import {
     FETCH_PROTECTED_DATA_SUCCESS,
     FETCH_PROTECTED_DATA_ERROR,
-    SET_PROTECTED_ARTICLES
+    SET_PROTECTED_ARTICLES,
+    SET_PROTECTED_FOLDERNAME
 } from '../actions/protected-data';
 
 const initialState = {
     data: [],
     error: null,
-    currentFolderArticles:[]
+    currentFolderArticles:[],
+    currentFolder:''
 };
 
 export default function protectedDataReducer(state = initialState, action) {
@@ -22,6 +24,8 @@ export default function protectedDataReducer(state = initialState, action) {
         });
     }else if (action.type === SET_PROTECTED_ARTICLES) {
         return Object.assign({}, state, {currentFolderArticles: action.articles});
+    }else if (action.type === SET_PROTECTED_FOLDERNAME) {
+        return Object.assign({}, state, {currentFolder: action.folder});
     }
     return state;
 }
