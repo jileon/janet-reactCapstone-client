@@ -2,6 +2,7 @@
 .App {
   text-align: center;
   background: #faf7f4;
+  position: relative;
 
 }
 
@@ -9,8 +10,21 @@
 margin-left: 50px;
 }
 
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: black;
+  width:500px;
+  height:400px;
+  margin-left: 200px;
+  z-index: 100;
+  opacity: .9;
+}
 
-.pagination {
+/* .pagination {
   display: inline-block;
 }
 
@@ -30,4 +44,4 @@ margin-left: 50px;
 .pagination a:hover:not(.active) {
   background-color: #ddd;
   border-radius: 5px;
-}
+} */
