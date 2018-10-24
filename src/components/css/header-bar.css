@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Monofett');
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+@import url('https://fonts.googleapis.com/css?family=Bitter:700');
 
 .content-header {
 	margin-left: 10px; /* Same as the width of the sidenav */
@@ -12,13 +13,14 @@ text-decoration: none;
 }
 
 .header-title {
-	letter-spacing: 0.08em;
-	font-family: 'Monofett', cursive;
+	letter-spacing: -5px;
+	font-family: 'Bitter', serif;
 	color: #000000;
 	font-size: 90px;;
 	text-align: center;
 	font-weight: 100;
 	margin: 0 auto;
+	text-transform: lowercase;
 }
 
 
@@ -32,11 +34,12 @@ text-decoration: none;
 }
 
 .header-title-black {
-	letter-spacing: 0.08em;
-	font-family: 'Monofett', cursive;
+
+	font-family: 'Bitter', serif;
 	color: white;
 	font-size: 90px;;
 	text-align: center;
 	font-weight: 100;
 	margin: 0 auto;
+	text-transform: lowercase;
 }
