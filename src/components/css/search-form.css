@@ -2,15 +2,14 @@
 border: 1px solid #5f5f5f;
 box-sizing: border-box;
 border-radius: 15px;
-width: 40%;
+width: 60%;
+max-width: 300px;
 overflow: hidden;
 margin: 0 auto;
 margin-top: 20px;
 position: relative;
 height: 34px;
-width: 350px;
 text-align: center;
-
 }
 
 .searchInput{
@@ -20,6 +19,7 @@ text-align: center;
     margin-left:0px;
     display: inline-block;
     border-radius:15px;
+    margin-left: 20px;
 }
 .submitButton{
     border-radius: 1px;
@@ -30,7 +30,7 @@ text-align: center;
     right: 0;
     display: inline;
     border: none;
-    width: 105px;
+    max-width: 90px;
     height: 60px;
     margin-top: -15px;
     background-color:  #5f5f5f;

@@ -18,13 +18,13 @@
 
 .category-flex-container button{
  color:white;
- height: 40px;
+ height: 30px;
  width: 150px;
  border-right: 1px solid black;
  border: 1px solid black;
- border-radius:15px;
- margin: 20px;
- font-size: 18px;
+ border-radius:2px;
+ margin: 8px;
+ font-size: 16px;
  background: rgb(80, 79, 79);
 
 
