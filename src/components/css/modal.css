@@ -1,0 +1,52 @@
+.Modal {
+    position: relative;
+    top: 40px;
+    left: 0px;
+    background-color: black;
+    width:50%;
+    height:700px;
+margin: 0 auto;
+    z-index: 100;
+    overflow: scroll !important;
+    opacity: .9;
+
+  }
+
+  .modal-close{
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .modal-close button{
+    background: purple;
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    color: white;
+    font-size: 19px;
+  }
+
+  .about-newsflash{
+      color:white;
+      text-align: justify;
+      margin:50px;
+      text-indent: 50px;
+      margin: 0 auto;
+
+  }
+
+  .about-newsflash p{
+   padding: 10px;
+  }
+
+  .about-newsflash h1{
+    color:white;
+    text-align:  right;
+
+	font-family: 'Bitter', serif;
+	font-size: 40px;;
+    font-weight: 100;
+    text-transform: lowercase;
+
+
+}
