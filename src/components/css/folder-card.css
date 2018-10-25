@@ -11,22 +11,23 @@
         flex-wrap: wrap;
         padding-left: 0px;
         display: block;
+        width: 100%;
     }
 
     .folder-list-item{
-    border-bottom: white 1px solid;
+    border-bottom:  black 1px solid;
 
     }
 
     .folder-item{
-      border-bottom: white 1px solid;
+
       position: relative;
     }
 
     .folderButton{
       background: none;
       border:none;
-      width: 100px;
+      width: 100%;
 
       text-align: center;
 

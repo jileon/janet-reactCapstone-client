@@ -1,13 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-//TODO: delete if unnecessary
 import { hideNavigation } from '../actions/nav-action';
-import { modalOn, modalOff } from '../actions/modal-actions';
-import { Link } from 'react-router-dom';
 import { addNewFolder } from '../actions/userMenu-actions';
 import { clearAuthToken } from '../local-storage';
 import { clearAuth } from '../actions/auth';
 import FolderButtonLi from '../components/folder-buttonsLi';
+import BurgerButtonX from './burgerbuttonX';
 import { deleteFolder } from '../actions/userMenu-actions';
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
@@ -22,8 +20,8 @@ class SideMenuExpanded extends React.Component {
 		return (
 			<section className="side-menu-expanded">
 				<section className="userControls">
-                <button onClick={()=>this.props.dispatch(hideNavigation())}>Back</button>
-					<h1>HELLO {this.props.currentUser} </h1>
+<BurgerButtonX onClick={()=>this.props.dispatch(hideNavigation())}/>
+					<h1>Hello {this.props.currentUser} </h1>
 
 					<section className="menuButtons">
 
@@ -40,7 +38,7 @@ class SideMenuExpanded extends React.Component {
 					</section>
 					<section className="folderSection">
 						<div className="folderButtons">
-							<div className="folderForm">
+							<section className="folderForm">
 								<form
 									onSubmit={(e) => {
 										let newFolder = this.input.value;
@@ -51,14 +49,14 @@ class SideMenuExpanded extends React.Component {
 									}}>
 									<input
 										type="addNewFolder"
-										placeholder="Type a new folder and press enter"
+										placeholder="Click here to type a new folder and press enter"
 										ref={(input) => (this.input = input)}/>
 									<button className="addNewFolder" type="submit">
 										New Folder
 									</button>
 								</form>
-							</div>
-
+							</section>
+							<h3>Folders:</h3>
 							<FolderButtonLi
 								ulClassName="folderButtons"
 								liButtonClassName="folder-button"
