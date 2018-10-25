@@ -86,5 +86,5 @@ const mapStateToProps = (state) => {
 	};
 };
 
-ReactModal.setAppElement('#root');
+// ReactModal.setAppElement('App');
 export default requiresLogin()(connect(mapStateToProps)(Dashboard));
