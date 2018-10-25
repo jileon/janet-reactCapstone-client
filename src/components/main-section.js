@@ -13,6 +13,12 @@ export class MainSection extends React.Component {
 	if((this.props.search === '' && this.props.expandedNav)){
 		return <Headlines className="main-section-expanded"/>
 	}
+	if((this.props.search !== '' && !this.props.expandedNav)){
+		return <SearchRender className="search-section"/>
+	}
+	if((this.props.search !== '' && this.props.expandedNav)){
+		return <SearchRender className="search-section-expanded"/>
+	}
 	
 	}
 }
