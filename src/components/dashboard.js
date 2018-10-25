@@ -29,7 +29,7 @@ export class Dashboard extends React.Component {
 			<div className="App">
 			        <button onClick={()=>{this.props.dispatch(modalOn())}}>
 							
-							Trigger Modal</button>
+							About </button>
 				<Link to="/usermenu">
 					<SideNav />
 				</Link>
