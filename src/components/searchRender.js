@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Spinner from 'react-spinkit';
 import FolderAddToList from './folder-addToList';
 import "./css/search-list.css"
+
+
 class SearchRender extends React.Component {
 
 	renderResults() {
@@ -44,10 +46,6 @@ class SearchRender extends React.Component {
 
 	render() {
 		return <div className={this.props.className}>
-			<section className='searchHeader'>
-			<h2>Results For:</h2>
-			<h2>{this.props.search}</h2>
-			</section>
 		{this.renderResults()}
 		</div>;
 	}

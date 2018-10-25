@@ -1,0 +1,25 @@
+
+  .mainHeader{
+    width: 85%;
+    text-align: left;
+    margin-left: 120px;
+    margin-top:40px;
+}
+
+.mainHeader h2{
+    text-transform: capitalize;
+}
+
+
+.mainHeader-reduced { 
+    width: 85%;
+    text-align: left;
+    margin-left: 320px;
+    margin-top:40px;
+}
+
+.mainHeader-reduced h2{
+    text-transform: capitalize;
+}
+
+

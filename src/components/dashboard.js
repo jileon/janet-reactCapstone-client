@@ -14,6 +14,7 @@ import SearchForm from './search';
 import MainSection from './main-section';
 import CategoryNav from './category-nav';
 import UserMenu from './userMenu'
+import MainSectionHeader from './main-view-header'
 
 import requiresLogin from './requires-login';
 import '../App.css';
@@ -56,8 +57,8 @@ export class Dashboard extends React.Component {
 						}}
 					/>
 				
-				<SearchForm />
-					
+				<MainSectionHeader  mainHeaderClass= {this.props.expandedNav?'mainHeader-reduced':'mainHeader'}/>
+
 					<MainSection />
 
 					<ReactModal
@@ -110,7 +111,8 @@ const mapStateToProps = (state) => {
 		firstName: state.auth.currentUser.firstName,
 		folders: state.protectedData.data,
 		modal: state.modal.showModal,
-		expandedNav: state.nav.expandedNav
+		expandedNav: state.nav.expandedNav,
+		category: state.category.category
 	};
 };
 
