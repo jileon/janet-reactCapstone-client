@@ -16,7 +16,6 @@ render(){
 
 const mapStateToProps = state => {
     return {
-        category: state.category.category,
         headlines: state.category.headlines,
         folders: state.protectedData.data
     };
