@@ -8,6 +8,7 @@ import { fetchProtectedData } from '../actions/protected-data';
 import {modalOn, modalOff} from '../actions/modal-actions';
 import HeaderBar from './header-bar';
 import SideNav from './side-nav';
+import SideMenu from './side-menu';
 import SearchForm from './search';
 import MainSection from './main-section';
 import CategoryNav from './category-nav';
@@ -30,9 +31,7 @@ export class Dashboard extends React.Component {
 			        <button onClick={()=>{this.props.dispatch(modalOn())}}>
 							
 							About </button>
-				<Link to="/usermenu">
-					<SideNav />
-				</Link>
+<SideMenu/>
 				<section className="mainsection1">
 					<HeaderBar />
 					<SearchForm />

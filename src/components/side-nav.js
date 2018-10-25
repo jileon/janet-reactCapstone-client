@@ -11,12 +11,7 @@ export default function SideNav (props){
  
     
     <div className='burger-container'>
-      <div type= 'button' className='navButton burger-nav' onClick={props.navClick}>
-    </div>
-    <div type= 'button' className='navButton burger-nav' onClick={props.navClick}>
-    </div>
-    <div type= 'button' className='navButton burger-nav' onClick={props.navClick}>
-    </div>
+   <button type='button' onClick={props.onClick}>Close SideBar</button>
       </div>
 
      
