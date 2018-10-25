@@ -8,7 +8,7 @@ export default function SideNav(props) {
 		<nav className="side-nav" onClick={props.navClick}>
 			<div className="burger-container">
 				<button type="button" onClick={props.onClick}>
-					Close SideBar
+					Open Me
 				</button>
 			</div>
 		</nav>
