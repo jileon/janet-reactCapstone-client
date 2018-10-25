@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 //TODO: delete if unnecessary
 import { hideNavigation } from '../actions/nav-action';
+import { modalOn, modalOff } from '../actions/modal-actions';
 import { Link } from 'react-router-dom';
 import { addNewFolder } from '../actions/userMenu-actions';
 import { clearAuthToken } from '../local-storage';
@@ -25,6 +26,8 @@ class SideMenuExpanded extends React.Component {
 					<h1>HELLO {this.props.currentUser} </h1>
 
 					<section className="menuButtons">
+
+					
 						<button
 							className="dashboardButton"
 							type="button"

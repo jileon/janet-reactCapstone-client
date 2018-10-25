@@ -31,17 +31,21 @@ export class Dashboard extends React.Component {
 		
 		return (
 			<div className="App">
-				<button
+			<div className='About-Section'>
+			<button className='about-button'
 					onClick={() => {
 						this.props.dispatch(modalOn());
 					}}
 				>
 					About
 				</button>
+				
+			</div>
+			
 				<SideMenu />
+				
 				<section className="mainsection1">
-					<HeaderBar />
-					<SearchForm />
+					<HeaderBar headerClass= {this.props.expandedNav?'content-header-reduced ':'content-header-expanded'} />
 					<CategoryNav
 					navClass= {this.props.expandedNav?'catagory-nav-expanded':'catagory-nav-collapsed'}
 					
@@ -51,7 +55,9 @@ export class Dashboard extends React.Component {
 							this.props.dispatch(getHeadlines(e.target.name));
 						}}
 					/>
-						<div></div>
+				
+				<SearchForm />
+					
 					<MainSection />
 
 					<ReactModal

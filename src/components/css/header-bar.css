@@ -2,15 +2,34 @@
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
 @import url('https://fonts.googleapis.com/css?family=Bitter:700');
 
-.content-header {
-	margin-left: 10px; /* Same as the width of the sidenav */
+.content-header-reduced {
+	margin-left: 350px; /* Same as the width of the sidenav */
+	width:50%;
 	padding: 0px 10px;
 
+
 }
 
-.content-header a {
+.content-header-expanded {
+	margin-left: 10px; /* Same as the width of the sidenav */
+	padding: 0px 10px;
+	background: aqua;
+
+
+}
+
+.content-header-expanded a {
 text-decoration: none;
 }
+
+.content-header-reduced  a{
+	text-decoration: none;
+}
+
+
+
+
+
 
 .header-title {
 	letter-spacing: -5px;
@@ -22,6 +41,7 @@ text-decoration: none;
 	margin: 0 auto;
 	text-transform: lowercase;
 	padding-left: 20px;
+
 }
 
 

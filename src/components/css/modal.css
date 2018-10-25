@@ -1,21 +1,4 @@
-.Modal {
-    position: relative;
-    top: 40px;
-    left: 0px;
-    background-color: black;
-    width:50%;
-    height:700px;
-margin: 0 auto;
-    z-index: 100;
-    overflow: scroll !important;
-    opacity: .9;
 
-  }
-
-  .modal-close{
-      margin: 0 auto;
-      text-align: center;
-  }
 
   .modal-close button{
     background: purple;
@@ -41,12 +24,63 @@ margin: 0 auto;
 
   .about-newsflash h1{
     color:white;
-    text-align:  right;
+    text-align:  left;
 
 	font-family: 'Bitter', serif;
 	font-size: 40px;;
     font-weight: 100;
     text-transform: lowercase;
+}
 
 
+@media only screen and (min-width: 320px) {
+    .Modal {
+        position: absolute;
+
+        background-color: black;
+        width:50%;
+        height:550px;   
+        top: 10%;
+        right:10%;
+        z-index: 100;
+        overflow: scroll !important;
+        opacity: .9;
+        padding:20px;    
+      }
+    
+      .modal-close{
+          margin: 0 auto;
+          text-align: center;
+      }
+
+      .about-newsflash h1{
+        color:white;
+        text-align:  right;
+    
+        font-family: 'Bitter', serif;
+        font-size: 30px;;
+        font-weight: 100;
+        text-transform: lowercase;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .Modal {
+        position: absolute;
+        background-color: black;
+        width:50%;
+        height:550px;
+     
+        top: 10%;
+        right:20%;
+        z-index: 100;
+        overflow: scroll !important;
+        opacity: .9;
+        padding:20px;    
+      }
+    
+      .modal-close{
+          margin: 0 auto;
+          text-align: center;
+      }
 }

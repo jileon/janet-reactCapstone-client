@@ -4,7 +4,30 @@
   background: #faf7f4;
   position: relative;
 
+
 }
+
+
+
+.About-Section{
+  border: color 1px cornflowerblue;
+  background: aqua;
+  text-align: right;
+
+}
+.about-button{
+  text-align: right;
+  right: 0;
+  top: 0;
+  height:50px;
+  width:100px;
+  font-size:  20px;
+  background: none;
+  border: none;
+  display: inline-block;
+  
+}
+
 
 .mainsection1{
 margin-left: 50px;
