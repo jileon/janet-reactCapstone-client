@@ -10,7 +10,7 @@ import FolderButtonLi from '../components/folder-buttonsLi';
 import { deleteFolder } from '../actions/userMenu-actions';
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
-import './css/userMenu.css';
+import './css/side-menu-expanded.css';
 
 class SideMenuExpanded extends React.Component {
 	componentDidMount() {

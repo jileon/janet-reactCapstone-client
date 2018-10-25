@@ -3,19 +3,25 @@ import { connect } from 'react-redux';
 import Headlines from './headlines';
 import SearchRender from './searchRender'
 
-function MainSection(props) {
-	if (props.search === '') {
-		return (<Headlines/>)
-	}else{
-        return (<SearchRender/>)
+export class MainSection extends React.Component {
+	render(){
 
-    }
+
+	if (this.props.search === '' && !this.props.expandedNav) {
+	return <Headlines className="main-section-collapsed"/>
+	}	
+	if((this.props.search === '' && this.props.expandedNav)){
+		return <Headlines className="main-section-expanded"/>
+	}
+	
+	}
 }
-
-const mapStateToProps = (state) => {
+	
+	const mapStateToProps = (state) => {
 	return {
         search: state.search.searchTerm,
-        loading: state.search.searchloading
+	loading: state.search.searchloading,
+	expandedNav: state.nav.expandedNav
 	};
-};
-export default connect(mapStateToProps)(MainSection);
+	};
+	export default connect(mapStateToProps)(MainSection);

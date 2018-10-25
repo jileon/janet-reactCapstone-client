@@ -46,7 +46,7 @@ class SearchRender extends React.Component {
 	}
 
 	render() {
-		return <div>
+		return <div className={this.props.className}>
 			<section className='searchHeader'>
 			<h2>Results For:</h2>
 			<h2>{this.props.search}</h2>

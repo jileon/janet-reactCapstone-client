@@ -10,6 +10,7 @@
     "react-flickity-component": "^3.1.0",
     "react-modal": "^3.6.1",
     "react-redux": "^5.0.7",
+    "react-responsive": "^5.0.0",
     "react-responsive-carousel": "^3.1.43",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
