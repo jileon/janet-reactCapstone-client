@@ -24,6 +24,10 @@ export class Dashboard extends React.Component {
 	}
 
 	render() {
+		if(this){
+
+		}
+		
 		return (
 			<div className="App">
 				<button
@@ -31,13 +35,15 @@ export class Dashboard extends React.Component {
 						this.props.dispatch(modalOn());
 					}}
 				>
-					About{' '}
+					About
 				</button>
 				<SideMenu />
 				<section className="mainsection1">
 					<HeaderBar />
 					<SearchForm />
 					<CategoryNav
+					navClass= {this.props.expandedNav?'catagory-nav-expanded':'catagory-nav-collapsed'}
+					
 						buttonClick={(e) => {
 							this.props.dispatch(resetSearchLoading());
 							this.props.dispatch(setCategory(e.target.name));
@@ -96,7 +102,8 @@ const mapStateToProps = (state) => {
 	return {
 		firstName: state.auth.currentUser.firstName,
 		folders: state.protectedData.data,
-		modal: state.modal.showModal
+		modal: state.modal.showModal,
+		expandedNav: state.nav.expandedNav
 	};
 };
 

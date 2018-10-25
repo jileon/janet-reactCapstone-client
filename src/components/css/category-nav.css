@@ -1,4 +1,13 @@
+.catagory-nav-expanded{
+margin-left:270px;
+width: 65%;
+}
 
+
+
+.catagory-nav-collapsed{
+    background: aqua;
+}
 .categoryList{
     margin-top: 50px;
    margin-bottom: 50px;
@@ -31,7 +40,7 @@
 
  
 }
-.catagory-nav {
+.catagory-nav-button {
     background-color: none;
     border: none;
 
