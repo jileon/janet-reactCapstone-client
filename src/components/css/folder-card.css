@@ -10,8 +10,64 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding-left: 0px;
+        display: block;
     }
 
+    .folder-list-item{
+    border-bottom: white 1px solid;
+
+    }
+
+    .folder-item{
+      border-bottom: white 1px solid;
+      position: relative;
+    }
+
+    .folderButton{
+      background: none;
+      border:none;
+      width: 100px;
+
+      text-align: center;
+
+
+    }
+
+    .deleteLink {
+
+      font-style: normal;
+      position: absolute;
+      top:0;
+      right:0;
+      visibility: hidden;
+      color: black;
+
+    }
+    
+    .deleteLink:hover{
+      background:rgb(3, 2, 2);
+      color:white;
+
+    }
+
+    .folder-list-item:hover{
+      background: -moz-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+      background: -webkit-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+      background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+      position: relative;
+    }
+
+    .folder-list-item:hover .deleteLink{
+      font-style: normal;
+      position: absolute;
+      top:0;
+      right:0;
+      visibility:visible;
+    }
+
+
+  
+/* 
 
 
 .folderCard  {
@@ -99,7 +155,7 @@
 }
 
   
-
+ */
 
   
   

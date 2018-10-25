@@ -6,7 +6,7 @@ import './css/header-bar.css';
 export default function HeaderBar(props) {
 	return (
 		<header className={props.headerClass}>
-			<Link to="/dashboard">
+			<Link to="/news">
 				<h1 className="header-title">News Flash</h1>
 			</Link>
 		</header>

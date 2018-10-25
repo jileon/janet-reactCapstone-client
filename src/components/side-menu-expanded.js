@@ -51,7 +51,7 @@ class SideMenuExpanded extends React.Component {
 									}}>
 									<input
 										type="addNewFolder"
-										placeholder="Click here to add a new folder then press enter"
+										placeholder="Type a new folder and press enter"
 										ref={(input) => (this.input = input)}/>
 									<button className="addNewFolder" type="submit">
 										New Folder

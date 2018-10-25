@@ -67,6 +67,7 @@ export class Dashboard extends React.Component {
 						onRequestClose={this.handleCloseModal}
 						shouldCloseOnOverlayClick={false}
 						className="Modal"
+						ariaHideApp={false}
 					>
 						<section className="about-newsflash">
 							<h1>About Newsflash</h1>
@@ -116,5 +117,4 @@ const mapStateToProps = (state) => {
 	};
 };
 
-// ReactModal.setAppElement('App');
 export default requiresLogin()(connect(mapStateToProps)(Dashboard));
