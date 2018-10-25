@@ -5,7 +5,6 @@ import {Route, withRouter} from 'react-router-dom';
 // import HeaderBar from './components/header-bar';
 import LandingPage from './components/landing-page';
 import Dashboard from './components/dashboard';
-import UserMenu from './components/userMenu';
 import FolderReadView from './components/folder-read-view'
 import RegistrationPage from './components/registration-page';
 import {refreshAuthToken} from './actions/auth';
@@ -48,7 +47,7 @@ export class App extends React.Component {
         return (
             <div className="app">
                 <Route exact path="/" component={LandingPage} />
-                <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/news" component={Dashboard} />
                 <Route exact path="/registeruser" component={RegistrationPage} />
                 <Route path="/folder/:id" component={FolderReadView} />
             </div>

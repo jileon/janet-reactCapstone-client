@@ -1,7 +1,7 @@
 import React from 'react';
 import FolderAddToList from './folder-addToList';
 
-export default function HeadlineLi(props) {
+export default function HeadlinesList(props) {
 	//maps through headlines passed from parent component (Everything, science, etc)
 	//Renders a 'card' for each headlines
 	//contains Add to Folder Button

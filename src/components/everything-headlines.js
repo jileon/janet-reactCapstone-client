@@ -1,13 +1,13 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import HeadlineLi from '../components/headlineLi';
+import HeadlineList from './headlineList';
  
 export class EverythingHeadlines extends React.Component{
 
 render(){
     return(
         <section >
-           <HeadlineLi headlines={this.props.headlines}  folders={this.props.folders} />
+           <HeadlineList headlines={this.props.headlines}  folders={this.props.folders} />
         </section>
     )
 }   

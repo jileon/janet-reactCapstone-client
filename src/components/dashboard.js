@@ -13,6 +13,7 @@ import SideMenu from './side-menu';
 import SearchForm from './search';
 import MainSection from './main-section';
 import CategoryNav from './category-nav';
+import UserMenu from './userMenu'
 
 import requiresLogin from './requires-login';
 import '../App.css';

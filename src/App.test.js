@@ -18,10 +18,7 @@ describe('<App />', () => {
    <App/>
    </BrowserRouter>);
    const Routes = wrapper.dive().dive().find('Route')
-    expect(Routes).toHaveLength(4);
-
-   console.log(Routes.debug());
- 
+    expect(Routes).toHaveLength(4); 
 });
 
 });

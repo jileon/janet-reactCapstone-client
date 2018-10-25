@@ -4,9 +4,6 @@ import Spinner from 'react-spinkit';
 import FolderAddToList from './folder-addToList';
 import "./css/search-list.css"
 class SearchRender extends React.Component {
-	// componentDidMount(){
-	//     this.props.dispatch(setSearchLoading());
-	//     }
 
 	renderResults() {
 		if (this.props.loading) {
