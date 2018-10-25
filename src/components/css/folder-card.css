@@ -40,15 +40,21 @@
       position: absolute;
       top:0;
       right:0;
-      visibility: hidden;
-      color: black;
+      visibility: visible;
+      width: 30px;
+height: 30px;
+      background:rgb(3, 2, 2);
+      color:white;
+
+      border-radius: 50%;
 
     }
     
     .deleteLink:hover{
-      background:rgb(3, 2, 2);
-      color:white;
-
+      background: -moz-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+      background: -webkit-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+      background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+      visibility: visible;
     }
 
     .folder-list-item:hover{
@@ -58,7 +64,7 @@
       position: relative;
     }
 
-    .folder-list-item:hover .deleteLink{
+    .folder-list-item:hover .deleteLink {
       font-style: normal;
       position: absolute;
       top:0;
@@ -68,7 +74,7 @@
 
 
   
-/* 
+
 
 
 .folderCard  {
@@ -156,7 +162,7 @@
 }
 
   
- */
+
 
   
   

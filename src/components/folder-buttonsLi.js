@@ -22,37 +22,6 @@ export default function FolderButtonLi(props) {
 										</button>
 								
 									</div>
-							{/* <figure className="folderCard">
-							<Link to={`/folder/${folder._id}`}>
-
-								<figcaption>
-
-									<h3>{folder.foldername}</h3>
-									</figcaption>
-									</Link>
-									<footer>
-										<p folderid={folder._id} className="deleteLink" onClick={props.deleteClick}>
-											Delete
-										</p>
-									</footer>
-							
-							</figure> */}
-						
-							{/* <figure className="figurecard" key={index}>
-							<footer folderid={folder._id}
-								className={props.liButtonClassName}
-					
-								onClick={props.folderClick}>
-								<p folderid={folder._id}  onClick={props.folderClick}>
-								{folder.foldername}
-								</p>
-							
-							</footer>
-							</figure> */}
-{/* 						
-						<p folderid={folder._id} className="deleteLink" onClick={props.deleteClick}>
-							Delete
-						</p> */}
 					</li>
 				);
 			})}

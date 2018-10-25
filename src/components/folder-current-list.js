@@ -29,7 +29,7 @@ export default function FolderCurrentList(props) {
 								{/* <a href="#" /> */}
 							</a>
 						</article>
-						<div className='deleteHeadline'>
+						<div className='deletearticle'>
 						<button
 							type="button"
 							articleid={article._id}

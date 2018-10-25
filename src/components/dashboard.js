@@ -8,12 +8,9 @@ import { setCategory, getHeadlines } from '../actions/category-action';
 import { fetchProtectedData } from '../actions/protected-data';
 import { modalOn, modalOff } from '../actions/modal-actions';
 import HeaderBar from './header-bar';
-import SideNav from './side-nav';
 import SideMenu from './side-menu';
-import SearchForm from './search';
 import MainSection from './main-section';
 import CategoryNav from './category-nav';
-import UserMenu from './userMenu'
 import MainSectionHeader from './main-view-header'
 
 import requiresLogin from './requires-login';

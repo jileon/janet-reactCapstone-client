@@ -1,7 +1,6 @@
 import React from 'react';
 import SideNav from './side-nav';
 import HeaderBar from './header-bar';
-import SideMenu from './side-menu';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../components/css/folder-lists.css';
@@ -24,10 +23,10 @@ class FolderReadView extends React.Component {
         if(this.props.currentarticles.length<1){
             return (
                 <section>
-                <Link to='/usermenu'>
+                <Link to='/news'>
                   <SideNav/>
                   </Link>
-                  <HeaderBar headerClass= {this.props.expandedNav?'content-header-reduced ':'content-header-expanded'} />
+                  <HeaderBar/>
                   <section className="render-folder-lists">
                     <h1>I'm empty. Feed me articles.</h1>
                   </section>
@@ -37,9 +36,11 @@ class FolderReadView extends React.Component {
         return(
         
             <section>
-				<SideMenu />
-
-                  <HeaderBar headerClass= {this.props.expandedNav?'content-header-reduced ':'content-header-expanded'} />
+    
+                <Link to='/news'>
+                  <SideNav/>
+                  </Link>
+                  <HeaderBar/>
                   <section className='searchHeader'>
 			<h2>Folder: {this.props.folder} </h2>
 			</section>
@@ -60,7 +61,6 @@ const mapStateToProps = (state) => {
 	return {
         currentarticles: state.protectedData.currentFolderArticles ,
         folder: state.protectedData.currentFolder,
-        expandedNav: state.nav.expandedNav,
 	};
 };
 
