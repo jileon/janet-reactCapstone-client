@@ -216,6 +216,9 @@ top:-7px;
 }
 
 .folderForm form button{
-visibility: visible;
+visibility: hidden;
 }
 
+.addNewFolder{
+	visibility: hidden;
+}
