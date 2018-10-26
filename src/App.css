@@ -46,7 +46,7 @@ margin-left: 50px;
   width: 100%;
   margin-top: 150px;
   background: #faf7f4;
-  margin-left:50px;
+  margin-left:20px;
 }
 
 .main-section-expanded{
@@ -112,5 +112,43 @@ margin: 0 auto;
 		background-color: #42454d;
 		overflow-x: hidden;
 
-	}
+  }
+  
+  @media only screen and (min-width: 315px) {
+    .side-menu-expanded{
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #42454d;
+      overflow-x: hidden;
+  
+    }
+  }
 }
+
+
+@media only screen and (min-width: 915px) {
+	.side-menu-expanded{
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #42454d;
+		overflow-x: hidden;
+
+  }
+  
+  .main-section-collapsed{
+    text-align: left;
+    width: 100%;
+    margin-top: 150px;
+    background: #faf7f4;
+    margin-left:60px;
+  }
+  
+}
+
+
