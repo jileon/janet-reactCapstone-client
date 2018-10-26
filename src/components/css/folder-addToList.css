@@ -29,15 +29,10 @@
 
   
 }
-
-
-
 .dropdown ul {
     list-style: none;
     width: 100%;
 }
-
-
 .dropdown-content {
     display: none;
     list-style-type: none;
