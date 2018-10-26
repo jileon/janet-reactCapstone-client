@@ -22,7 +22,7 @@ export default function HeadlinesList(props) {
 						<a href={article.url} target="_blank" rel="noopener noreferrer">
 							<div className="image">{imageDiv}</div>
 							<figcaption className='highlight'>
-								<p>{article.source.name}</p>
+								<h5 className='article-source'>{article.source.name}</h5>
 								<h3>{article.title}}</h3>
 
 								<p>{article.description}</p>

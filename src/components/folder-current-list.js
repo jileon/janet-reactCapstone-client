@@ -1,8 +1,10 @@
 import React from 'react';
+import './css/folder-lists.css';
+
 export default function FolderCurrentList(props) {
 
 	return (
-		<section articles={props.articles} className="headline-cards">
+		<section articles={props.articles} className="folder-headline-cards">
 			{props.articles.map((article, index) => {
 				let imageDiv = <img className="card-image" src={article.image} alt={article.title} />;
 				if (article.image === null) {
@@ -15,12 +17,12 @@ export default function FolderCurrentList(props) {
 					);
 				}
 				return (
-					<figure className="figurecard" key={index}>
+					<figure className="folder-figurecard" key={index}>
 						<article>
 							<a href={article.url} target="_blank" rel="noopener noreferrer">
 								<div className="image">{imageDiv}</div>
 								<figcaption>
-									<p>{article.source}</p>
+								<h5 className='article-source'>{article.source}</h5>
 									<h3>{article.title}}</h3>
 
 									<p>{article.description}</p>
