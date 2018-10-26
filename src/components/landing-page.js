@@ -25,7 +25,11 @@ export function LandingPage(props) {
                 <LoginForm />
         
                 <Link to="/registeruser">Register</Link>
-               
+                <section className='demo'>
+                    <p>DEMO</p>
+                    <p>username: demouser</p>
+                    <p>password: demouser123</p>
+                </section>
             </div>
         </div>
 
