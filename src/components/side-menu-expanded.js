@@ -63,8 +63,6 @@ class SideMenuExpanded extends React.Component {
 								liButtonClassName="folder-button"
 								folders={this.props.folders}
 								folderClick={(e) => {
-									console.log(e.target.getAttribute('folderid'));
-				
 									this.props.dispatch(getArticlesPerFolder(e.target.getAttribute('folderid')));
 								}}
 								deleteClick={(e) => {
