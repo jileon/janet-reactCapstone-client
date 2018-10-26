@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter:700');
+
+
+.folderPage{
+  background: #faf7f4;
+}
+
 .render-folder-lists{
     margin-left:  120px;
 }
