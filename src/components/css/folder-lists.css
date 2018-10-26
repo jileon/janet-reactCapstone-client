@@ -14,7 +14,7 @@
 
 
 .folder-header-reduced {
-	width:80%;
+  width:80%;
     padding: 0px 10px;
     background:purple;
    text-align: left;
@@ -190,41 +190,22 @@ color: black;
 
 }
 
-.deleteLink {
+.deleteFolderLink {
 
-  font-style: normal;
-  position: absolute;
-  top:0;
-  right:0;
-  visibility: visible;
-  width: 30px;
-  height: 30px;
-  background:rgb(3, 2, 2);
-  color:white;
-  font-size: 20px;
-
-  border-radius: 20%;
-
-}
-
-
-.deleteFolder {
-font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   position: absolute;
   top:0;
   right:0;
   visibility: hidden;
-  width: 25px;
+  width: 150px;
   height: 25px;
   background:rgb(3, 2, 2);
   color:white;
   font-size: 20px;
-  text-align: left;
-  font-weight: 300;
-  border-radius: 10%;
-}
+font-weight: 500;
+  border-radius: 2%;
 
+}
 
 
 
@@ -263,9 +244,16 @@ font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   color:white;
 }
+.folder-figurecard:hover .deleteFolderLink{
+  visibility: visible;
+
+}
 
 
-
+.deleteFolderLink:hover {
+  background: purple;
+  color:white;
+}
 
 .deleteHeadline button{
 
@@ -435,8 +423,8 @@ background-color: red;
 
   .folder-headline-cards{
     list-style-type: none;
-
-    margin-left: 130px;
+width: 90%;
+    margin-left: 99px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -450,20 +438,20 @@ background-color: red;
     /* overflow: hidden; */
     margin: 10px 1%;
     min-width: 150px;
-    max-width: 330px;
+    max-width: 200px;
     width: 100%;
   overflow: scroll;
     color: #000000;
     text-align: left;
     font-size: 16px;
     box-shadow: 9px 2px 18px rgba(0, 0, 0, 0.534);
-    height: 550px;
+    height: 450px;
     border-radius: 17px;
   
   }
 }
 
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 1030px) {
   .folder-figurecard {
     font-family: 'Open Sans', Arial, sans-serif;
     position: relative;

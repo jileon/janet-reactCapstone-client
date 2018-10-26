@@ -33,10 +33,10 @@ export default function FolderCurrentList(props) {
 						<button
 							type="button"
 							articleid={article._id}
-							className="deleteLink"
+							className="deleteFolderLink"
 							onClick={props.deleteClick}
 						>
-							x
+							Delete
 						</button>
 
 						</div>
