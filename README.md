@@ -28,6 +28,7 @@ https://newsflashapp.herokuapp.com/
 - Create a folder by typing into the form and press enter. 
 - To see each folder's content, click on the title of the button. 
 
+- This app is best used on a desktop browser. If issues arise while logging in on a mobile device, please try again when back at desktop computer. 
 
 ### Demo User
 - username: demouser
