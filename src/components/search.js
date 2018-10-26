@@ -11,7 +11,7 @@ class SearchForm extends React.Component {
 				<form className="search">
 
 				<label htmlFor="search">Search</label>
-				<input name = 'Search' placeholder='Click here to type and search a topic' className='searchInput' type="search" ref={(input) => (this.input = input)} />
+				<input name = 'Search' placeholder='Click here to type' className='searchInput' type="search" ref={(input) => (this.input = input)} />
     
 						<button
 							type="submit"

@@ -2,17 +2,17 @@
 ### by Janet Leon
 
 ## About
-News Flash is an app designed to get your news and save articles all in one place. Multiple sources are searcged using the api from
+News Flash is an app designed to get your news and save articles all in one place. Multiple sources are searched using the api from
 https://newsapi.org/.
 
 MVC Features:
-Get Top Headlines By Category
-Search Topics
-Create New Folders to save Articles
-Delete Folders
-Add Articles to Folders
-Delete Articles from Folders
-Add Articles to Multiple Folders
+- Get Top Headlines By Category
+- Search Topics
+- Create New Folders to save Articles
+- Delete Folders
+- Add Articles to Folders
+- Delete Articles from Folders
+- Add Articles to Multiple Folders
 
 ## Deployed version
 https://newsflashapp.herokuapp.com/
@@ -20,7 +20,7 @@ https://newsflashapp.herokuapp.com/
 
 ## How to Use
 - Create a new username and password or use the demo account details provided below.
-- To read about the app,click the about link on the top right corner found on the main page with directory 'https://newsflashapp.herokuapp.com/news'
+- To read about the app, click the about link on the top right corner found on the main page with directory 'https://newsflashapp.herokuapp.com/news'
 - Click on each navigation item at the top to get headlines for each topic
 - Search a topic using the search form below the navigation
 - Hover over an item and scroll for any overflow. Hovering an item also reaveal the 'Add to Folder Button' Click to add to a folder.
@@ -43,6 +43,7 @@ https://newsflashapp.herokuapp.com/
 - Enzyme and Jest for testing
 
 ### The Back
+- Server info can be found here https://github.com/jileon/janet-reactCapstone-server
 - Node.js
 - Express.js
 - Mongoose
