@@ -42,7 +42,7 @@ class FolderReadView extends React.Component {
 					<section className={this.props.expandedNav ? 'folder-header-reduced ' : 'folder-header-expanded'}>
 						<h2><span>{this.props.folder}</span> </h2>
 					</section>
-					<section className="render-folder-lists">
+					<section className={this.props.expandedNav ? 'folder-section-reduced ' : 'folder-section-expanded'}>
 						<FolderCurrentList
 							deleteClick={(e) => {
 								const folderid = this.props.match.params.id;
@@ -68,7 +68,7 @@ class FolderReadView extends React.Component {
 					<section className={this.props.expandedNav ? 'folder-header-reduced ' : 'folder-header-expanded'}>
 						<h2><span>{this.props.folder}</span> </h2>
 					</section>
-				<section className="render-folder-lists">
+					<section className={this.props.expandedNav ? 'folder-section-reduced ' : 'folder-section-expanded'}>
 					<FolderCurrentList
 						deleteClick={(e) => {
 							const folderid = this.props.match.params.id;

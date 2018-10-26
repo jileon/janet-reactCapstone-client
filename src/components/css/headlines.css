@@ -9,11 +9,10 @@
 .headline-cards{
     list-style-type: none;
 
-   margin-left: -30px;
+   margin-left: 205px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
 }
 .figurecard  {
   font-family: 'Open Sans', Arial, sans-serif;
@@ -208,6 +207,15 @@ background-color: red;
    
 
   }
+
+  .headline-cards{
+    list-style-type: none;
+
+   margin-left: 135px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 }
 
 @media only screen and (min-width: 520px) {
