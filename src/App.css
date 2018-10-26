@@ -68,6 +68,7 @@ margin: 0 auto;
 .burger-container {
   cursor: pointer;
   margin-top: 0px;
+  padding-top:20px;
 }
 
 .bar1, .bar2, .bar3 {
