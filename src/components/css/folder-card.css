@@ -50,6 +50,28 @@ height: 30px;
       border-radius: 20%;
 
     }
+
+
+    .deleteFolder {
+font-family: Arial, Helvetica, sans-serif;
+      font-style: normal;
+      position: absolute;
+      top:0;
+      right:0;
+      visibility: hidden;
+      width: 25px;
+      height: 25px;
+      background:rgb(3, 2, 2);
+      color:white;
+      font-size: 20px;
+      text-align: left;
+      font-weight: 300;
+      border-radius: 10%;
+    }
+
+    .folder-list-item:hover button{
+      visibility: visible;
+    }
     
     .deleteLink:hover{
       background: -moz-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);

@@ -17,7 +17,7 @@ export default function FolderButtonLi(props) {
 						<h3>{folder.foldername}</h3>
 					</Link>
 					</button>
-					<button folderid={folder._id} className="deleteLink" onClick={props.deleteClick}>
+					<button folderid={folder._id} className="deleteFolder" onClick={props.deleteClick}>
 					X
 										</button>
 								
