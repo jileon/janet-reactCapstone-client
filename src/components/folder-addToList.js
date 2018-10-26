@@ -4,16 +4,12 @@ import '../components/css/folder-addToList.css';
 import { sendArticleToFolder } from '../actions/folder-actions';
 
 function FolderAddToList(props) {
-	//maps through folder objects and pulls out foldername. Props are tunnelled
-	// from Upmost component ('Everything, Science, etc')
-	//EG everything-headlines ->headlineLi ->folder-addToList(here)
 
-	//Need to add handling for dupe articles
 	return (
 		<section className="dropdown">
 			<button className="dropbtn">&#9733; Add to Folder</button>
 			<div className="dropdown-content">
-				<ul folders={props.folders}>
+				<ul folders={props.folders} className='dropdown-list-section'>
 					{props.folders.map((folder, index) => {
 						return (
 							<li className="addLi" key={index}>
