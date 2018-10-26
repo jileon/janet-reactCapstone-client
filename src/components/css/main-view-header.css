@@ -2,7 +2,7 @@
   .mainHeader{
     width: 85%;
     text-align: left;
-    margin-left: 100px;
+    margin-left: 90px;
     margin-top:40px;
 
 }
@@ -41,17 +41,45 @@
   .mainHeader{
     width: 85%;
     text-align: left;
-    margin-left: 80px;
+    margin-left: 20px;
     margin-top:40px;
 
 }
     
 }
 
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 400px) {
     .mainHeader h2{
         text-transform: capitalize;
 
         font-size: 20px;
+    }
+
+
+    .mainHeader{
+        width: 85%;
+        text-align: left;
+        margin-left: 20px;
+        margin-top:40px;
+    }
+}
+
+
+@media only screen and (min-width: 700px) {
+
+    .mainHeader{
+        width: 85%;
+        text-align: left;
+        margin-left: 80px;
+        margin-top:40px;
+    }
+
+
+    .mainHeader-reduced { 
+        width: 85%;
+        text-align: left;
+        margin-left: 280px;
+        margin-top:40px;
+    
     }
 }
