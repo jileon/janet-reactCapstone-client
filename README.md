@@ -33,6 +33,15 @@ https://newsflashapp.herokuapp.com/
 - username: demouser
 - password: demouser123
 
+## Screenshots
+
+![Desktop](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/Desktop.png)
+![Desktop](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/desktop-folder-contents.png)
+![iPad Pro](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/ipadPro.png)
+![Mobile](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/mobile.png)
+![Mobile](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/mobile-folder-menu.png)
+
+
 
 ## Tech Stack
 ### The Front
@@ -54,11 +63,4 @@ https://newsflashapp.herokuapp.com/
 - mLab for data storage
 
 
-## Screenshots
-Desktop:
 
-![Desktop](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/Desktop.png)
-![Desktop](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/desktop-folder-contents.png)
-![iPad Pro](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/ipadPro.png)
-![Mobile](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/mobile.png)
-![Mobile](https://github.com/jileon/janet-reactCapstone-client/blob/master/screenshots/mobile-folder-menu.png)
