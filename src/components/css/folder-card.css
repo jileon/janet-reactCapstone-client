@@ -17,10 +17,10 @@
     .folder-list-item{
     border-bottom:  black 1px solid;
 
+
     }
 
     .folder-item{
-
       position: relative;
     }
 
@@ -42,7 +42,7 @@
       right:0;
       visibility: visible;
       width: 30px;
-height: 30px;
+      height: 30px;
       background:rgb(3, 2, 2);
       color:white;
       font-size: 20px;

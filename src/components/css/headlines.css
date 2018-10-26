@@ -8,7 +8,8 @@
   
 .headline-cards{
     list-style-type: none;
-    margin-top: 20px;
+
+   margin-left: -30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,10 +20,11 @@
   position: relative;
   /* overflow: hidden; */
   margin: 10px 1%;
-  min-width: 250px;
+  margin: 0 auto;
+  min-width: 150px;
   max-width: 330px;
   width: 100%;
-
+overflow: scroll;
   color: #000000;
   text-align: left;
   font-size: 16px;
@@ -103,8 +105,8 @@
   text-align: left;
   position: absolute;
   top: 0;
-  margin-left: 160px;
-  margin-top: -10px;
+  margin-left: -25px;
+  margin-top: -5px;
   width: 100%;
   z-index: 2;
   visibility: hidden;
@@ -162,3 +164,97 @@ font-size: 20px;
 background-color: red;
 }
 
+@media only screen and (min-width: 320px) {
+  .figurecard  {
+    font-family: 'Open Sans', Arial, sans-serif;
+    position: relative;
+    /* overflow: hidden; */
+    margin: 10px 1%;
+    min-width: 150px;
+    max-width: 230px;
+    width: 100%;
+  overflow: scroll;
+    color: #000000;
+    text-align: left;
+    font-size: 16px;
+    box-shadow: 9px 2px 18px rgba(0, 0, 0, 0.534);
+    height: 350px;
+    border-radius: 17px;
+  
+  }
+
+
+  .figurecard  figcaption {
+    padding: 70% 10% 10% 10%;
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    /* background-color: rgb(231, 219, 219); */
+    vertical-align: top;
+    left: 0;
+    top:0;
+    border-radius: 17px;
+   
+
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .figurecard  {
+    font-family: 'Open Sans', Arial, sans-serif;
+    position: relative;
+    /* overflow: hidden; */
+    margin: 10px 1%;
+    min-width: 150px;
+    max-width: 330px;
+    width: 100%;
+  overflow: scroll;
+    color: #000000;
+    text-align: left;
+    font-size: 16px;
+    box-shadow: 9px 2px 18px rgba(0, 0, 0, 0.534);
+    height: 550px;
+    border-radius: 17px;
+  
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .figurecard  {
+    font-family: 'Open Sans', Arial, sans-serif;
+    position: relative;
+    /* overflow: hidden; */
+    margin: 10px 1%;
+    min-width: 150px;
+    max-width: 330px;
+    width: 100%;
+  overflow: scroll;
+    color: #000000;
+    text-align: left;
+    font-size: 16px;
+    box-shadow: 9px 2px 18px rgba(0, 0, 0, 0.534);
+    height: 550px;
+    border-radius: 17px;
+  
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .figurecard  {
+    font-family: 'Open Sans', Arial, sans-serif;
+    position: relative;
+    /* overflow: hidden; */
+    margin: 10px 1%;
+    min-width: 150px;
+    max-width: 330px;
+    width: 100%;
+  overflow: scroll;
+    color: #000000;
+    text-align: left;
+    font-size: 16px;
+    box-shadow: 9px 2px 18px rgba(0, 0, 0, 0.534);
+    height: 550px;
+    border-radius: 17px;
+  
+  }
+}
