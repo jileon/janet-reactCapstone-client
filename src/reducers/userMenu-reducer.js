@@ -1,5 +1,3 @@
-//userMenu Reducers
-//FIXME: this doesn't do anything anymore. Fix or get rid of
 import {ADD_FOLDER} from '../actions/userMenu-actions'
 const initialState={
     folders:['Reading List']

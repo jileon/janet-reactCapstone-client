@@ -10,7 +10,4 @@ describe('<EverythingHeadlines />', () => {
       shallow(<EverythingHeadlines dispatch={dispatch}/>);
  
   });
-
-  
-
 });
