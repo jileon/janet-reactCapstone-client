@@ -75,14 +75,14 @@
 	-ms-animation-name: flash;
 	-o-animation-name: flash;
 	animation-name: flash;
-	-webkit-animation-duration: 1s;
-	-moz-animation-duration: 1s;
-	-ms-animation-duration: 1s;
-	-o-animation-duration: 1s;
-	animation-duration: 1s;       
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	-o-animation-duration: 2s;
+	animation-duration: 2s;       
 }
 @-webkit-keyframes flash {
-	0%, 50%, 100% {opacity: 1;}	
+	0%, 50%, 100% {opacity: .8;}	
 	25%, 75% {opacity: 0;}
 }
 

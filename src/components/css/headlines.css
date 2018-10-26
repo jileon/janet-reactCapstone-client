@@ -34,6 +34,8 @@ overflow: scroll;
 
 }
 
+
+
 .figurecard  figcaption {
     padding: 220px 20px 30px;
     width: 100%;
@@ -115,6 +117,15 @@ overflow: scroll;
 
 
 
+.figurecard:hover::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+.figurecard::-webkit-scrollbar-thumb {
+  background: purple; 
+  border-radius: 12px;
+  opacity: .1;
+}
 .figurecard:hover {
     background: -moz-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
     background: -webkit-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);

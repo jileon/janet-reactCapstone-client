@@ -3,15 +3,13 @@
   text-align: center;
   background: #faf7f4;
   position: relative;
-
-
 }
 
 
 
 .About-Section{
   border: color 1px cornflowerblue;
-  background: aqua;
+  background: purple;
   text-align: right;
 
 }
@@ -25,8 +23,15 @@
   background: none;
   border: none;
   display: inline-block;
-  
+  color: #faf7f4;
 }
+
+
+.about-button:hover{
+
+  color: black;
+}
+
 
 
 .mainsection1{

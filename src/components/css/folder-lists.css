@@ -1,5 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter:700');
 .render-folder-lists{
-    margin-left:120px;
+    margin-left:  120px;
+}
+
+.imEmpty{
+
+}
+
+.folderHeader{
+    font-family: 'Bitter', serif;
+	color: #000000;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+.folder-header-reduced {
+	width:80%;
+    padding: 0px 10px;
+    background:purple;
+   text-align: left;
+   margin-left:200px;
+}
+
+.folder-header-reduced h2 {
+color: white;
+text-align: left;
+margin-left:120px;
+margin-top:30px;
+
+}
+
+.folder-header-expanded {
+	width:100%;
+    padding: 0px 10px;
+    background: purple;
+   text-align: center;
+}
+.folder-header-expanded h2 {
+color: white;
+text-align: left;
+margin-left:120px;
+margin-top:30px;
+}
+
+
+.folder-header-expanded a {
+text-decoration: none;
+}
+
+.folder-header-reduced  a{
+	text-decoration: none;
+}
+
+.folderName{
+    color:purple;
 }
 
 

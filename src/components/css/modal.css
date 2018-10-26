@@ -39,15 +39,25 @@
 
         background-color: black;
         width:50%;
-        height:550px;   
+        height:590px;   
         top: 10%;
         right:10%;
         z-index: 100;
         overflow: scroll !important;
+        
         opacity: .9;
         padding:20px;    
       }
     
+      .Modal::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+      }
+      .Modal::-webkit-scrollbar-thumb {
+        background: purple; 
+        border-radius: 10px;
+        opacity: .1;
+    }
       .modal-close{
           margin: 0 auto;
           text-align: center;
@@ -64,12 +74,13 @@
     }
 }
 
+
 @media only screen and (min-width: 700px) {
     .Modal {
         position: absolute;
         background-color: black;
         width:50%;
-        height:550px;
+        height:570px;
      
         top: 10%;
         right:20%;

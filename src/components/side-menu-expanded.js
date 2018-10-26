@@ -64,6 +64,7 @@ class SideMenuExpanded extends React.Component {
 								folders={this.props.folders}
 								folderClick={(e) => {
 									this.props.dispatch(getArticlesPerFolder(e.target.getAttribute('folderid')));
+									this.props.dispatch(hideNavigation());
 								}}
 								deleteClick={(e) => {
 									this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));

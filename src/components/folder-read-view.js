@@ -8,7 +8,7 @@ import requiresLogin from './requires-login';
 import FolderCurrentList from './folder-current-list';
 import './css/headlines.css';
 import '../components/css/folder-lists.css';
-
+import './css/folder-lists.css';
 class FolderReadView extends React.Component {
 
 	componentDidMount() {
@@ -21,11 +21,10 @@ class FolderReadView extends React.Component {
 				<section>
 					<SideMenu />
 
-					<HeaderBar
-						headerClass={this.props.expandedNav ? 'content-header-reduced ' : 'content-header-expanded'}
+					<HeaderBar headerClass={this.props.expandedNav ? 'content-header-reduced ' : 'content-header-expanded'}
 					/>
-					<section className="render-folder-lists">
-						<h1>I'm empty. Feed me articles.</h1>
+					<section className={this.props.expandedNav ? 'folder-header-reduced ' : 'folder-header-expanded'}>
+						<h2><span className='imEmpty'>{this.props.folder}: <br/><br/>I'm empty. Feed me articles.</span> </h2>
 					</section>
 				</section>
 			);
@@ -40,8 +39,8 @@ class FolderReadView extends React.Component {
 						headerClass={this.props.expandedNav ? 'content-header-reduced ' : 'content-header-expanded'}
 					/>
 
-					<section className="searchHeader">
-						<h2>Folder: {this.props.folder} </h2>
+					<section className={this.props.expandedNav ? 'folder-header-reduced ' : 'folder-header-expanded'}>
+						<h2><span>{this.props.folder}</span> </h2>
 					</section>
 					<section className="render-folder-lists">
 						<FolderCurrentList
@@ -65,9 +64,10 @@ class FolderReadView extends React.Component {
 					headerClass={this.props.expandedNav ? 'content-header-reduced ' : 'content-header-expanded'}
 				/>
 
-				<section className="searchHeader">
-					<h2>Folder: {this.props.folder} </h2>
-				</section>
+
+					<section className={this.props.expandedNav ? 'folder-header-reduced ' : 'folder-header-expanded'}>
+						<h2><span>{this.props.folder}</span> </h2>
+					</section>
 				<section className="render-folder-lists">
 					<FolderCurrentList
 						deleteClick={(e) => {
@@ -85,7 +85,8 @@ class FolderReadView extends React.Component {
 const mapStateToProps = (state) => {
 	return {
 		currentarticles: state.protectedData.currentFolderArticles,
-		folder: state.protectedData.currentFolder
+        folder: state.protectedData.currentFolder,
+        expandedNav: state.nav.expandedNav
 	};
 };
 

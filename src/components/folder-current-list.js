@@ -1,6 +1,6 @@
 import React from 'react';
 export default function FolderCurrentList(props) {
-	//TODO: Add Mark as Read button that adds strike through class
+
 	return (
 		<section articles={props.articles} className="headline-cards">
 			{props.articles.map((article, index) => {
@@ -25,8 +25,6 @@ export default function FolderCurrentList(props) {
 
 									<p>{article.description}</p>
 								</figcaption>
-
-								{/* <a href="#" /> */}
 							</a>
 						</article>
 						<div className='deletearticle'>
