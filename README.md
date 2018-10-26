@@ -19,6 +19,8 @@ https://newsflashapp.herokuapp.com/
 
 
 ## How to Use
+- This app is best used on a desktop browser. If issues arise while logging in on a mobile device, please try again when back at desktop computer. 
+- Works best on Goodle Chrome
 - Create a new username and password or use the demo account details provided below.
 - To read about the app, click the about link on the top right corner found on the main page with directory 'https://newsflashapp.herokuapp.com/news'
 - Click on each navigation item at the top to get headlines for each topic
@@ -28,7 +30,7 @@ https://newsflashapp.herokuapp.com/
 - Create a folder by typing into the form and press enter. 
 - To see each folder's content, click on the title of the button. 
 
-- This app is best used on a desktop browser. If issues arise while logging in on a mobile device, please try again when back at desktop computer. 
+
 
 ### Demo User
 - username: demouser
