@@ -60,12 +60,14 @@ text-decoration: none;
 margin-left:200px;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
 .folder-section-expanded{
     margin: 0 auto;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
 
 .folder-figurecard * {
     -webkit-box-sizing: border-box;
@@ -188,6 +190,42 @@ color: black;
 
 }
 
+.deleteLink {
+
+  font-style: normal;
+  position: absolute;
+  top:0;
+  right:0;
+  visibility: visible;
+  width: 30px;
+  height: 30px;
+  background:rgb(3, 2, 2);
+  color:white;
+  font-size: 20px;
+
+  border-radius: 20%;
+
+}
+
+
+.deleteFolder {
+font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  position: absolute;
+  top:0;
+  right:0;
+  visibility: hidden;
+  width: 25px;
+  height: 25px;
+  background:rgb(3, 2, 2);
+  color:white;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 300;
+  border-radius: 10%;
+}
+
+
 
 
 .folder-figurecard:hover::-webkit-scrollbar {
@@ -248,7 +286,79 @@ font-size: 20px;
 background-color: red;
 }
 
+
+
+
+
+
 @media only screen and (min-width: 318px) {
+  .folder-figurecard {
+    font-family: 'Open Sans', Arial, sans-serif;
+    position: relative;
+    /* overflow: hidden; */
+    margin: 10px 1%;
+    min-width: 150px;
+    max-width: 230px;
+    width: 100%;
+  overflow: scroll;
+    color: #000000;
+    text-align: left;
+    box-shadow: 9px 2px 18px rgba(0, 0, 0, 0.534);
+    height: 250px;
+    border-radius: 17px;
+  
+  }
+
+
+  .folder-figurecard figcaption {
+    padding: 55% 10% 10% 10%;
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    /* background-color: rgb(231, 219, 219); */
+    vertical-align: top;
+    left: 0;
+    top:0;
+    border-radius: 17px;
+   
+
+  }
+  .folder-headline-cards{
+    list-style-type: none;
+
+   margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.article-source{
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+
+}
+
+
+@media only screen and (min-width: 370px) {
+
+  .folder-headline-cards{
+    list-style-type: none;
+   margin-left: 130px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+}
+
+
+
+
+@media only screen and (min-width: 410px) {
   .folder-figurecard {
     font-family: 'Open Sans', Arial, sans-serif;
     position: relative;
@@ -297,6 +407,11 @@ background-color: red;
 }
 
 }
+
+
+
+
+
 
 
 @media only screen and (min-width: 520px) {

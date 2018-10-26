@@ -17,7 +17,7 @@ text-align: center;
 
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 315px) {
 	.side-menu-expanded{
 		height: 100%;
 		width: 100%;

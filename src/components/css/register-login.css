@@ -110,11 +110,13 @@ font-size: 19px;
 
 .demo{
     border-top: 1px solid white;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     margin-left: 0px;
     text-align: center;
     color: white;
     margin-top: 70px;
+
 }
 
 

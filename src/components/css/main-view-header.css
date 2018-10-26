@@ -2,13 +2,15 @@
   .mainHeader{
     width: 85%;
     text-align: left;
-    margin-left: 120px;
+    margin-left: 100px;
     margin-top:40px;
+
 }
 
 .mainHeader h2{
     text-transform: capitalize;
     color: purple;
+    font-size: 20px;
 }
 
 
@@ -17,10 +19,39 @@
     text-align: left;
     margin-left: 320px;
     margin-top:40px;
+
 }
 
 .mainHeader-reduced h2{
     text-transform: capitalize;
+    color: purple;
+    font-size: 20px;
 }
 
 
+@media only screen and (min-width: 315px) {
+    .mainHeader h2{
+        text-transform: capitalize;
+        color: purple;
+        font-size: 14px;
+        width:90%
+    }
+
+
+  .mainHeader{
+    width: 85%;
+    text-align: left;
+    margin-left: 80px;
+    margin-top:40px;
+
+}
+    
+}
+
+@media only screen and (min-width: 420px) {
+    .mainHeader h2{
+        text-transform: capitalize;
+        color: purple;
+        font-size: 20px;
+    }
+}
