@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { hideNavigation } from '../actions/nav-action';
 import { addNewFolder } from '../actions/userMenu-actions';
 import { clearAuthToken } from '../local-storage';
@@ -22,11 +23,14 @@ class SideMenuExpanded extends React.Component {
 			<section className="side-menu-expanded">
 				<section className="userControls">
 <BurgerButtonX onClick={()=>this.props.dispatch(hideNavigation())}/>
-					<h1>Hello {this.props.currentUser} </h1>
+					<h1 className='userWelcome'>Hello {this.props.currentUser} </h1>
 
 					<section className="menuButtons">
-
-					
+					<Link to="/news">
+							<button className="dashboardButton" type="button" onClick={()=>this.props.dispatch(hideNavigation())}>
+							Main
+						</button>
+						</Link>
 						<button
 							className="dashboardButton"
 							type="button"
@@ -57,7 +61,7 @@ class SideMenuExpanded extends React.Component {
 									</button>
 								</form>
 							</section>
-							<h3>Folders:</h3>
+							<h4>Folders:</h4>
 							<FolderButtonLi
 								ulClassName="folderButtons"
 								liButtonClassName="folder-button"

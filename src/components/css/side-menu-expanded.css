@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter:700');
 .side-menu-expanded{
     height: 100%;
 	width: 30%;
@@ -179,6 +180,11 @@ text-align: left;
 	margin-bottom: 0px;
 }
 
+.folderButtons h4{
+	color: rgb(255, 249, 249);
+	font-size: 20px;
+}
+
 
 
 .folderForm form input{
@@ -198,6 +204,8 @@ text-align: left;
 white-space:pre-line;  
 position:relative;
 top:-7px;
+color: rgb(189, 189, 189);
+font-style: italic;
 }
 
 
@@ -222,4 +230,9 @@ visibility: hidden;
 
 .addNewFolder{
 	visibility: hidden;
+}
+
+.userControls h1{
+	color: white;
+	font-size: 20px;
 }

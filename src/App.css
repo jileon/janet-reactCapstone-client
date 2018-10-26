@@ -3,6 +3,7 @@
   text-align: center;
   background: #faf7f4;
   position: relative;
+  overflow: hidden;
 }
 
 
@@ -66,7 +67,7 @@ margin: 0 auto;
 
 .burger-container {
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .bar1, .bar2, .bar3 {

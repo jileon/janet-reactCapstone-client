@@ -82,7 +82,7 @@
 	animation-duration: 2s;       
 }
 @-webkit-keyframes flash {
-	0%, 50%, 100% {opacity: .8;}	
+	0%, 20%, 40% {opacity: 0;}	
 	25%, 75% {opacity: 0;}
 }
 
