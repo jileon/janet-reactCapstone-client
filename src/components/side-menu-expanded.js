@@ -9,6 +9,7 @@ import BurgerButtonX from './burgerbuttonX';
 import { deleteFolder } from '../actions/userMenu-actions';
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
+import { getArticlesPerFolder } from '../actions/folder-actions';
 import './css/side-menu-expanded.css';
 
 class SideMenuExpanded extends React.Component {
@@ -63,7 +64,8 @@ class SideMenuExpanded extends React.Component {
 								folders={this.props.folders}
 								folderClick={(e) => {
 									console.log(e.target.getAttribute('folderid'));
-									// this.props.dispatch(getArticlesPerFolder(e.target.getAttribute('folderid')));
+				
+									this.props.dispatch(getArticlesPerFolder(e.target.getAttribute('folderid')));
 								}}
 								deleteClick={(e) => {
 									this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));

@@ -60,7 +60,6 @@ margin: 0 auto;
 
 
 .burger-container {
-  display: inline-block;
   cursor: pointer;
   margin-top: 20px;
 }

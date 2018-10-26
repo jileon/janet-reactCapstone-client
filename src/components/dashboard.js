@@ -1,8 +1,6 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import ReactModal from 'react-modal';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { resetSearchLoading } from '../actions/search-action';
 import { setCategory, getHeadlines } from '../actions/category-action';
 import { fetchProtectedData } from '../actions/protected-data';
@@ -11,8 +9,8 @@ import HeaderBar from './header-bar';
 import SideMenu from './side-menu';
 import MainSection from './main-section';
 import CategoryNav from './category-nav';
-import MainSectionHeader from './main-view-header'
-
+import MainSectionHeader from './main-view-header';
+import About from './about';
 import requiresLogin from './requires-login';
 import '../App.css';
 import './css/modal.css';
@@ -23,39 +21,33 @@ export class Dashboard extends React.Component {
 	}
 
 	render() {
-		if(this){
-
-		}
-		
 		return (
-			<div className="App">
-			<div className='About-Section'>
-			<button className='about-button'
-					onClick={() => {
-						this.props.dispatch(modalOn());
-					}}
-				>
-					About
-				</button>
-				
-			</div>
-			
+			<section className="App">
+				<section className="About-Section">
+					<button
+						className="about-button"
+						onClick={() => {
+							this.props.dispatch(modalOn());
+						}}
+					>
+						About
+					</button>
+				</section>
 				<SideMenu />
-				
 				<section className="mainsection1">
-					<HeaderBar headerClass= {this.props.expandedNav?'content-header-reduced ':'content-header-expanded'} />
+					<HeaderBar
+						headerClass={this.props.expandedNav ? 'content-header-reduced ' : 'content-header-expanded'}
+					/>
 					<CategoryNav
-					navClass= {this.props.expandedNav?'catagory-nav-expanded':'catagory-nav-collapsed'}
-					
+						navClass={this.props.expandedNav ? 'catagory-nav-expanded' : 'catagory-nav-collapsed'}
 						buttonClick={(e) => {
 							this.props.dispatch(resetSearchLoading());
 							this.props.dispatch(setCategory(e.target.name));
 							this.props.dispatch(getHeadlines(e.target.name));
 						}}
 					/>
-				
-				<MainSectionHeader  mainHeaderClass= {this.props.expandedNav?'mainHeader-reduced':'mainHeader'}/>
 
+					<MainSectionHeader mainHeaderClass={this.props.expandedNav ? 'mainHeader-reduced' : 'mainHeader'} />
 					<MainSection />
 
 					<ReactModal
@@ -66,40 +58,10 @@ export class Dashboard extends React.Component {
 						className="Modal"
 						ariaHideApp={false}
 					>
-						<section className="about-newsflash">
-							<h1>About Newsflash</h1>
-							<p>
-								Newsflash to save and get updated news for topics that interest you. You can browse
-								headlines by category using the buttons at the top of the header.
-							</p>
-							<p>
-								You can save an article by creating customized folders. To create a new folder, click on
-								the side navigation bar to open the folder display. Create a new folder by typing a name
-								in the input and press enter. Go back to the main page, hover over an article you'd like
-								to save, and you will see a button pop up called 'Add to Folder'. Hover over that button
-								to see a drop down menu of all your folders.
-							</p>
-
-							<p>
-								To view what's in your folders, click on the side navigation bar. You can see a card
-								view list of all your folders. Click on each folder to open up a page with every article
-								saved to that folder. When you decide you no longer need that article, delete it by
-								hovering over the article card and click the delete button at the top.
-							</p>
-						</section>
-
-						<div className="modal-close">
-							<button
-								onClick={() => {
-									this.props.dispatch(modalOff());
-								}}
-							>
-								Got It
-							</button>
-						</div>
+						<About ModalOff={() => this.props.dispatch(modalOff())} />
 					</ReactModal>
 				</section>
-			</div>
+			</section>
 		);
 	}
 }

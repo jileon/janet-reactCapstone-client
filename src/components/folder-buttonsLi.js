@@ -12,9 +12,9 @@ export default function FolderButtonLi(props) {
 				return (
 					<li key={index} className='folder-list-item'>
 					<div className='folder-item'>
-					<button className="folderButton" type="button">
+					<button className="folderButton" type="button" folderid={folder._id} onClick={props.folderClick}>
 					<Link to={`/folder/${folder._id}`}>
-						<h3>{folder.foldername}</h3>
+						<h3 folderid={folder._id} >{folder.foldername}</h3>
 					</Link>
 					</button>
 					<button folderid={folder._id} className="deleteFolder" onClick={props.deleteClick}>
