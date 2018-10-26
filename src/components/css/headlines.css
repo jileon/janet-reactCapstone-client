@@ -6,10 +6,8 @@
     box-sizing: border-box;
   }
   
-.headline-cards{
+.headline-cards-list{
     list-style-type: none;
-
-   margin-left: 205px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -206,15 +204,7 @@ background-color: red;
    
 
   }
-  .headline-cards{
-    list-style-type: none;
 
-   margin-left: -50px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 12px;
-}
 
 .article-source{
   font-size: 20px;
@@ -244,14 +234,6 @@ background-color: red;
   
   }
 
-  .headline-cards{
-    list-style-type: none;
-
-   margin-left: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 }
 
 @media only screen and (min-width: 620px) {

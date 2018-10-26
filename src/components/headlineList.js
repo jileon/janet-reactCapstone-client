@@ -8,7 +8,7 @@ export default function HeadlinesList(props) {
 
 	//EG everything-headlines ->headlineLi(here)
 	return (
-		<section headlines={props.headlines} className="headline-cards">
+		<section headlines={props.headlines} className="headline-cards-list">
 			{props.headlines.map((article, index) => {
 				let imageDiv = <img className="card-image" src={article.urlToImage} alt={article.title} />;
 				if (article.urlToImage === null) {
