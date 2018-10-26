@@ -19,20 +19,20 @@ export class MainSectionHeader extends React.Component {
         if (this.props.search===''){
             return (
 
-                <section className={this.props.mainHeaderClass}>
+                <header role= 'banner' className={this.props.mainHeaderClass}>
                 <h2> Top Headlines for {this.getCurrentDate()} </h2>
                 <h2>Category: {this.props.category}</h2>
                 <SearchForm/>
-            </section>
+            </header>
         )
         } else{
             return (
 
-<section className={this.props.mainHeaderClass}>
+<header role = 'banner' className={this.props.mainHeaderClass}>
 			<h2>Results For:</h2>
 			<h2>{this.props.search}</h2>
 			<SearchForm/>
-			</section>
+			</header>
         )
         }
 		

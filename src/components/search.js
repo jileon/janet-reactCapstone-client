@@ -6,15 +6,13 @@ class SearchForm extends React.Component {
 	render() {
 		let searchTerm;
 		return (
-			<div className="character-search wrap">
-				{/* When this form is submitted you should submit the
-                    searchCharacters action */}
-				<form className="search">
-					
-						<input placeholder='Click here to type and search a topic' className='searchInput' type="search" ref={(input) => (this.input = input)} />
-    
+			<section className="character-search wrap">
 
-						
+				<form className="search">
+
+				<label htmlFor="search">Search</label>
+				<input name = 'Search' placeholder='Click here to type and search a topic' className='searchInput' type="search" ref={(input) => (this.input = input)} />
+    
 						<button
 							type="submit"
 							className="submitButton"
@@ -30,7 +28,7 @@ class SearchForm extends React.Component {
 						</button>
 				</form>
 			
-			</div>
+			</section>
 		);
 	}
 }

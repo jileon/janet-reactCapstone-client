@@ -12,14 +12,10 @@ class SearchRender extends React.Component {
 			return <Spinner spinnername="circle" fadeIn='none' />;
 		}
 
-		//TODO: Add error handling
-		// if (this.props.error) {
-		//     return <strong>{this.props.error}</strong>;
-		// }
 
 		const searchRes = this.props.searchResults.map((article, index) => (
 			<li key={index} className='searchResult'>
-				<div>
+				<article>
 					<img src={article.urlToImage} alt={article.title}></img>
 					<a href={article.url} target="_blank" rel="noopener noreferrer">
 					<h4>{article.title}</h4>
@@ -34,7 +30,7 @@ class SearchRender extends React.Component {
 					articleurl={article.url}
 					articlesource={article.source.name}
 				/>
-				</div>
+				</article>
 			
 			</li>
 

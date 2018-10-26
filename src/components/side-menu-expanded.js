@@ -5,15 +5,15 @@ import { hideNavigation } from '../actions/nav-action';
 import { addNewFolder } from '../actions/userMenu-actions';
 import { clearAuthToken } from '../local-storage';
 import { clearAuth } from '../actions/auth';
-import FolderButtonLi from '../components/folder-buttonsLi';
-import BurgerButtonX from './burgerbuttonX';
-import { deleteFolder } from '../actions/userMenu-actions';
-import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
 import { getArticlesPerFolder } from '../actions/folder-actions';
+import { deleteFolder } from '../actions/userMenu-actions';
+import requiresLogin from './requires-login';
+import FolderButtonLi from '../components/folder-buttonsLi';
+import BurgerButtonX from './burgerbuttonX';
 import './css/side-menu-expanded.css';
 
-class SideMenuExpanded extends React.Component {
+export class SideMenuExpanded extends React.Component {
 	componentDidMount() {
 		this.props.dispatch(fetchProtectedData());
 	}
@@ -22,14 +22,18 @@ class SideMenuExpanded extends React.Component {
 		return (
 			<section className="side-menu-expanded">
 				<section className="userControls">
-<BurgerButtonX onClick={()=>this.props.dispatch(hideNavigation())}/>
-					<h1 className='userWelcome'>Hello {this.props.currentUser} </h1>
+					<BurgerButtonX onClick={() => this.props.dispatch(hideNavigation())} />
+					<h1 className="userWelcome">Hello {this.props.currentUser} </h1>
 
 					<section className="menuButtons">
-					<Link to="/news">
-							<button className="dashboardButton" type="button" onClick={()=>this.props.dispatch(hideNavigation())}>
-							Main
-						</button>
+						<Link to="/news">
+							<button
+								className="dashboardButton"
+								type="button"
+								onClick={() => this.props.dispatch(hideNavigation())}
+							>
+								Main
+							</button>
 						</Link>
 						<button
 							className="dashboardButton"
@@ -37,12 +41,13 @@ class SideMenuExpanded extends React.Component {
 							onClick={() => {
 								clearAuthToken();
 								this.props.dispatch(clearAuth());
-							}}>
+							}}
+						>
 							Log Out
 						</button>
 					</section>
 					<section className="folderSection">
-						<div className="folderButtons">
+						<section className="folderButtons">
 							<section className="folderForm">
 								<form
 									onSubmit={(e) => {
@@ -51,11 +56,14 @@ class SideMenuExpanded extends React.Component {
 										// this.props.dispatch(addNewFolder(this.input.value));
 										this.props.dispatch(addNewFolder(newFolder));
 										this.input.value = '';
-									}}>
+									}}
+								>
+									<label htmlFor="Add New Folder">Add New Folder</label>
 									<input
 										type="addNewFolder"
 										placeholder="Click here to type a new folder and press enter"
-										ref={(input) => (this.input = input)}/>
+										ref={(input) => (this.input = input)}
+									/>
 									<button className="addNewFolder" type="submit">
 										New Folder
 									</button>
@@ -74,7 +82,7 @@ class SideMenuExpanded extends React.Component {
 									this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));
 								}}
 							/>
-						</div>
+						</section>
 					</section>
 				</section>
 			</section>

@@ -12,6 +12,14 @@ text-align: center;
 z-index: 0;
 }
 
+.search label{
+    text-align: left;
+    color: black;
+    border-bottom: black 1px solid;
+   position: relative;
+   display: block;
+}
+
 .searchInput{
     width: 100%;
     border: none;

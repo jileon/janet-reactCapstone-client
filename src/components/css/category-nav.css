@@ -19,26 +19,21 @@ width: 65%;
     list-style: none;
     margin: 0 auto;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 10px;
     justify-content: center;
     width: 90%;
 
 }
 
 .category-flex-container button{
- color:white;
+ color: purple;
  height: 30px;
- width: 150px;
- border-right: 1px solid black;
- border: 1px solid black;
+ width: 120px;
+ border-left: 2px solid rgb(0, 0, 0);
  border-radius:2px;
  margin: 8px;
  font-size: 16px;
- background: rgb(80, 79, 79);
-
-
-
- 
+ background: #faf7f4;
 }
 .catagory-nav-button {
     background-color: none;

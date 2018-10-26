@@ -3,22 +3,24 @@ import './css/category-nav.css';
 
 export default function CategoryNav(props) {
 	return (
-		<div className={props.navClass}>
-		<ul className="category-flex-container">
-			<div>
+		<nav role="navigation" className={props.navClass}>
+			<ul className="category-flex-container">
 				<li>
 					<button className="catagory-nav-button" type="button" name="headlines" onClick={props.buttonClick}>
 						Everything
 					</button>
 				</li>
 				<li>
-					<button className="catagory-nav-button" type="button" name="entertainment" onClick={props.buttonClick}>
+					<button
+						className="catagory-nav-button"
+						type="button"
+						name="entertainment"
+						onClick={props.buttonClick}
+					>
 						Entertainment
 					</button>
 				</li>
-			</div>
 
-			<div>
 				<li>
 					<button className="catagory-nav-button" type="button" name="business" onClick={props.buttonClick}>
 						Business
@@ -29,9 +31,7 @@ export default function CategoryNav(props) {
 						Health
 					</button>
 				</li>
-			</div>
 
-			<div>
 				<li>
 					<button className="catagory-nav-button" type="button" name="science" onClick={props.buttonClick}>
 						Science
@@ -42,13 +42,13 @@ export default function CategoryNav(props) {
 						Sports
 					</button>
 				</li>
-			</div>
-			<li>
-				<button className="catagory-nav-button" type="button" name="technology" onClick={props.buttonClick}>
-					Technology
-				</button>
-			</li>
-		</ul>
-		</div>
+
+				<li>
+					<button className="catagory-nav-button" type="button" name="technology" onClick={props.buttonClick}>
+						Technology
+					</button>
+				</li>
+			</ul>
+		</nav>
 	);
 }
