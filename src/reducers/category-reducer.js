@@ -7,6 +7,8 @@ const initialState = {
     error: null,
 };
 
+
+//FIXME: SPINNER RENDERING OFF OF CATEGORY LOADING NOT HEADLINES LOADING
 const categoryReducer = (state=initialState, action)=>{
     if (action.type===HEADLINES_LOADING){
         return Object.assign({}, state, {loading: true})

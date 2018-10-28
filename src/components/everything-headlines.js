@@ -12,6 +12,8 @@ render(){
     )
 }   
 }
+
+
 const mapStateToProps = state => {
     return {
         headlines: state.category.headlines,

@@ -26,7 +26,7 @@ export class MainSection extends React.Component {
 	
 	const mapStateToProps = (state) => {
 	return {
-    search: state.search.searchTerm,
+        search: state.search.searchTerm,
 	loading: state.search.searchloading,
 	expandedNav: state.nav.expandedNav
 	};

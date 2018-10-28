@@ -5,6 +5,7 @@ export default function HeadlinesList(props) {
 	//maps through headlines passed from parent component (Everything, science, etc)
 	//Renders a 'card' for each headlines
 	//contains Add to Folder Button
+
 	//EG everything-headlines ->headlineLi(here)
 	return (
 		<section headlines={props.headlines} className="headline-cards-list">
@@ -26,6 +27,8 @@ export default function HeadlinesList(props) {
 
 								<p>{article.description}</p>
 							</figcaption>
+
+							{/* <a href="#" /> */}
 						</a>
 						</article>
 						<footer>

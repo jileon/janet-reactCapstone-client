@@ -10,4 +10,7 @@ describe('<Dashboard />', () => {
       shallow(<Dashboard dispatch={dispatch}/>);
  
   });
+
+  
+
 });
