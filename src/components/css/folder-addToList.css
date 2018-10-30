@@ -43,9 +43,16 @@
     padding-left: 13px;
     z-index: 3;
     margin-top: -7px;
+    height: 200px;
 
 }
 
+.no-folders{
+    color: white;
+    height:100px;
+    text-indent: 3%;
+    
+}
 .dropdown-content a {
     color: black;
     padding: 12px 16px;

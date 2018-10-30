@@ -4,6 +4,23 @@ import '../components/css/folder-addToList.css';
 import { sendArticleToFolder } from '../actions/folder-actions';
 
 function FolderAddToList(props) {
+if (props.folders.length<1){
+	return (
+		<section className="dropdown">
+			<button className="dropbtn">&#9733; Add to Folder</button>
+			<div className="dropdown-content">
+				<ul folders={props.folders} className='dropdown-list-section'>
+				<li className="addLi" >
+								<div className='no-folders'>
+								You haven't created any folders yet. <br/>Open the side menu to add one.
+								</div>
+							</li>
+					
+				</ul>
+			</div>
+		</section>
+	)}
+
 
 	return (
 		<section className="dropdown">
@@ -43,4 +60,10 @@ function FolderAddToList(props) {
 	);
 }
 
-export default connect()(FolderAddToList);
+
+const mapStateToProps = (state) => {
+	return {
+		folders: state.protectedData.data
+	};
+};
+export default connect(mapStateToProps)(FolderAddToList);

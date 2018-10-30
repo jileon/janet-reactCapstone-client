@@ -19,6 +19,24 @@ export class SideMenuExpanded extends React.Component {
 	}
 
 	render() {
+
+		let folderSection;
+		if(this.props.folders.length<1){
+			folderSection= <div className= 'noFolders'>No folders yet</div>
+		}else {
+								folderSection= <FolderButtonLi
+								ulClassName="folderButtons"
+								liButtonClassName="folder-button"
+								folders={this.props.folders}
+								folderClick={(e) => {
+									this.props.dispatch(getArticlesPerFolder(e.target.getAttribute('folderid')));
+									this.props.dispatch(hideNavigation());
+								}}
+								deleteClick={(e) => {
+									this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));
+								}}
+							/>
+		}
 		return (
 			<section className="side-menu-expanded">
 				<section className="userControls">
@@ -70,18 +88,7 @@ export class SideMenuExpanded extends React.Component {
 								</form>
 							</section>
 							<h4>Folders:</h4>
-							<FolderButtonLi
-								ulClassName="folderButtons"
-								liButtonClassName="folder-button"
-								folders={this.props.folders}
-								folderClick={(e) => {
-									this.props.dispatch(getArticlesPerFolder(e.target.getAttribute('folderid')));
-									this.props.dispatch(hideNavigation());
-								}}
-								deleteClick={(e) => {
-									this.props.dispatch(deleteFolder(e.target.getAttribute('folderid')));
-								}}
-							/>
+							{folderSection}
 						</section>
 					</section>
 				</section>
