@@ -32,9 +32,9 @@ class FolderReadView extends React.Component {
 
 		if (this.props.currentarticles.length >= 1) {
 			return (
-				<section className='folderPage'>
+				<section className="App">
 					<SideMenu />
-
+					<section className= 'mainsection1'>
 					<HeaderBar
 						headerClass={this.props.expandedNav ? 'content-header-reduced ' : 'content-header-expanded'}
 					/>
@@ -51,6 +51,7 @@ class FolderReadView extends React.Component {
 							}}
 							articles={this.props.currentarticles}
 						/>
+					</section>
 					</section>
 				</section>
 			);

@@ -48,6 +48,7 @@ export default function CategoryNav(props) {
 						Technology
 					</button>
 				</li>
+				
 			</ul>
 		</nav>
 	);

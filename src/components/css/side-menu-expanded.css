@@ -21,6 +21,7 @@ text-align: center;
 	.side-menu-expanded{
 		height: 100%;
 		width: 100%;
+		max-width: 568;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -68,8 +69,8 @@ text-align: center;
 .userControls{
 	width: 100%;
 	background-color: #1d202b;
-	margin: 0 auto;
-	max-width: 900px;
+	margin-left: 0px;
+	max-width: 568px;
 	height: 100%;
 }
 

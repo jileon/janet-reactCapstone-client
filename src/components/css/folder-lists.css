@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter:700');
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 .folderPage{
   background: #faf7f4;
@@ -24,14 +25,14 @@
     padding: 0px 10px;
     background:purple;
    text-align: left;
-   margin-left:200px;
+   margin-left:100px;
 }
 
 .folder-header-reduced h2 {
 color: white;
-text-align: left;
-margin-left:120px;
+text-align: center;
 margin-top:30px;
+margin-left: 90px;
 
 }
 
@@ -39,12 +40,12 @@ margin-top:30px;
 	width:100%;
     padding: 0px 10px;
     background: purple;
-   text-align: center;
+   text-align: left;
 }
 .folder-header-expanded h2 {
 color: white;
 text-align: left;
-margin-left:120px;
+margin-left:10px;
 margin-top:30px;
 }
 
@@ -63,14 +64,19 @@ text-decoration: none;
 
 
 .folder-section-reduced{
-margin-left:200px;
+  text-align: left;
+  width:75%;
+  margin-top: 150px;
+  margin-left: 200px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 .folder-section-expanded{
-    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+    margin-top: 150px;
+    background: #faf7f4;
+    margin-left:0px;
 }
 
 
@@ -81,12 +87,12 @@ margin-left:200px;
   }
   
 .headline-cards{
-    list-style-type: none;
-
-   margin-left: 205px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:90%;
+margin: 0 auto;
 }
 .folder-figurecard {
   font-family: 'Open Sans', Arial, sans-serif;
@@ -320,7 +326,7 @@ background-color: red;
   .folder-headline-cards{
     list-style-type: none;
 
-   margin-left: 100px;
+   margin-left: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -336,16 +342,25 @@ background-color: red;
 }
 
 
-@media only screen and (min-width: 370px) {
+@media only screen and (min-width: 360px) {
 
   .folder-headline-cards{
     list-style-type: none;
-   margin-left: 130px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 12px;
 }
+.folder-headline-cards{
+  list-style-type: none;
+
+ margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
 
 }
 
@@ -384,15 +399,16 @@ background-color: red;
    
 
   }
+
   .folder-headline-cards{
     list-style-type: none;
-
-   margin-left: 130px;
+  
+   margin-left: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 12px;
-}
+  }
 
 .article-source{
   font-size: 20px;
@@ -430,14 +446,13 @@ background-color: red;
   .folder-headline-cards{
     list-style-type: none;
 width: 90%;
-    margin-left: 99px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 }
 
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 615px) {
   .folder-figurecard {
     font-family: 'Open Sans', Arial, sans-serif;
     position: relative;
@@ -455,6 +470,14 @@ width: 90%;
     border-radius: 17px;
   
   }
+
+
+  .folder-header-expanded h2 {
+    color: white;
+    text-align: left;
+    margin-left:50px;
+    margin-top:30px;
+    }
 }
 
 @media only screen and (min-width: 1030px) {
