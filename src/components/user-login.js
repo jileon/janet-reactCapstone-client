@@ -13,7 +13,7 @@ export function UserLogin(props) {
 
   return (
     <div>
-      <HeaderBarBlack />
+      <HeaderBarBlack class="header-title-black" />
       <div className="backimage" />
 
       <div className="home">

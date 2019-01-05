@@ -6,7 +6,7 @@ export default function HeaderBarBlack(props) {
   return (
     <header role="banner" className="content-header-black">
       <Link to="/news">
-        <h1 className="header-title-black">
+        <h1 className={props.class}>
           News Flash<span className="period">.</span>
         </h1>
       </Link>

@@ -43,6 +43,8 @@
 .content-header-black {
   background-color: #000000;
   padding: 10px;
+  position: sticky;
+  top: 0px;
 }
 
 .content-header-black a {

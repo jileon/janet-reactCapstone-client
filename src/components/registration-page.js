@@ -12,7 +12,7 @@ export function RegistrationPage(props) {
   }
   return (
     <div>
-      <HeaderBarBlack />
+      <HeaderBarBlack class="header-title-black" />
       <div className="backimage" />
       <div className="home">
         <h2>Register for News Flash</h2>

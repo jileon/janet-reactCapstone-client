@@ -1,0 +1,32 @@
+.intro-hero {
+  background-image: url(https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjM5OTI2fQ&s=b2b9f18643db1bb48cc41ab30310cce9);
+  background-size: cover;
+  height: 100vh;
+  margin-top: -30px;
+  filter: blur(2px) brightness(50%) grayscale(100%);
+  background-attachment: fixed;
+}
+
+.about-newsflash {
+  height: 100vh;
+}
+
+.intro-text {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.intro-text h1 {
+  color: white;
+  font-family: 'Bitter', serif;
+  font-size: 56px;
+  font-weight: 100;
+  text-transform: lowercase;
+}
+/* .intro-page-landing h1 {
+  color: white;
+  position: absolute;
+  top: 22%;
+  left: 5%;
+} */
