@@ -1,0 +1,180 @@
+.scroll-div {
+  height: 50px;
+}
+.intro-hero {
+  background-image: url(https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjM5OTI2fQ&s=b2b9f18643db1bb48cc41ab30310cce9);
+  background-size: cover;
+  height: 100vh;
+  margin-top: -10px;
+  filter: blur(2px) brightness(50%) grayscale(100%);
+  background-attachment: fixed;
+}
+
+.about-newsflash-intro {
+  height: 100vh;
+}
+.about-how-to {
+  /* height: 100%; */
+  background: black;
+  padding-bottom: 50px;
+}
+
+.intro-text {
+  position: absolute;
+  top: 5%;
+  display: block;
+  width: 100%;
+  padding-left: 5%;
+}
+
+.intro-text h1 {
+  color: white;
+  font-family: 'Bitter', serif;
+  font-size: 56px;
+  font-weight: 100;
+  text-transform: lowercase;
+}
+
+.txt-controls button,
+.intro-controls button {
+  background: #000000;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-right: 25px;
+  margin-bottom: 30px;
+}
+
+.txt-controls button:hover,
+.intro-controls button:hover {
+  background: purple;
+}
+
+.txt-controls {
+  text-align: center;
+  padding: 10px;
+}
+
+.about-newsflash-intro h1 {
+  color: black;
+  font-family: 'Bitter', serif;
+  font-size: 2.5rem;
+  font-weight: 100;
+  text-transform: lowercase;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.about-how-to div {
+  margin-bottom: 50px;
+}
+.about-how-to h1 {
+  color: white;
+  font-family: 'Bitter', serif;
+  font-size: 2.5rem;
+  font-weight: 100;
+  text-transform: lowercase;
+  text-align: center;
+  margin-top: 5rem;
+  padding-top: 50px;
+}
+
+.about-newsflash-txt {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #faf7f4;
+}
+
+.about-newsflash-txt p {
+  color: black;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.05rem;
+}
+
+.about-how-to p {
+  color: white;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.05rem;
+}
+.how-to-gif {
+  width: 70%;
+  border: 1px solid white;
+  margin: 0 auto;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.how-to-gif img {
+  width: 100%;
+  padding: 0px;
+  /* text-indent: 0px; */
+}
+
+.landing-footer {
+  background: black;
+}
+
+.landing-footer p {
+  font-size: 0.9rem;
+  margin: 0px;
+  padding-top: 20px;
+  text-align: center;
+  color: purple;
+}
+
+.landing-footer a {
+  text-decoration: underline;
+  color: purple;
+}
+
+.landing-footer a:visited {
+  text-decoration: underline;
+  color: purple;
+}
+
+.landing-footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.about-newsflash-txt .beta {
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 560px) {
+  .intro-controls {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .intro-text h1 {
+    text-align: center;
+    padding-left: ;
+  }
+
+  .intro-text {
+    padding: 2%;
+  }
+}

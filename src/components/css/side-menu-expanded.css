@@ -1,243 +1,228 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter:700');
-.side-menu-expanded{
+.side-menu-expanded {
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.side-menu-expanded h1 {
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (max-width: 670px) {
+  .side-menu-expanded {
     height: 100%;
-	width: 30%;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #111;
-	overflow-x: hidden;
-
-}
-
-.side-menu-expanded h1{
-color: white;
-text-align: center;
-
-}
-
-@media only screen and (min-width: 315px) {
-	.side-menu-expanded{
-		height: 100%;
-		width: 100%;
-		max-width: 568;
-		position: fixed;
-		top: 0;
-		left: 0;
-		background-color: #42454d;
-		overflow-x: hidden;
-
-	}
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #42454d;
+  }
 }
 
 @media only screen and (min-width: 700px) {
-	.side-menu-expanded{
-		height: 100%;
-		width: 30%;
-		min-width: 250px;
-		max-width: 300px;
-		position: fixed;
-		z-index: 5;
-		top: 0;
-		left: 0;
-		background-color:  #42454d;
-		overflow-x: hidden;
+  .side-menu-expanded {
+    height: 100%;
+    width: 30%;
+    min-width: 250px;
+    max-width: 300px;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #42454d;
 
-		margin-right:50px;
-	}
+    margin-right: 50px;
+  }
 }
 
 .userMenu {
-
-	animation:animateleft 1s;
-	width: 100%;
-	margin: 0 auto;
-	background: #181b24;
-	height: 100%;
-
-	
-
+  animation: animateleft 1s;
+  width: 100%;
+  margin: 0 auto;
+  background: #181b24;
+  height: 100%;
 }
-	@keyframes animateleft{from
-		{		
-			opacity:0}
-	 to{
-		opacity:1}
-}
-
-.userControls{
-	width: 100%;
-	background-color: #1d202b;
-	margin-left: 0px;
-	max-width: 568px;
-	height: 100%;
-}
-
-
-  .title{
-	margin-top: 100px;
-	  height: 100px;
-	  width: 100%;
+@keyframes animateleft {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+.userControls {
+  width: 100%;
+  background-color: #1d202b;
+  margin-left: 0px;
+  height: 100%;
+  margin-top: -5px;
+}
+
+.title {
+  margin-top: 100px;
+  height: 100px;
+  width: 100%;
+}
 .userMenu h1 {
-	font-family: Monofett;
-	font-style: normal;
-	font-weight: normal;
-	line-height: normal;
-	font-size: 50px;
-	text-align: center;
-	letter-spacing: .1em;
-	color: white;
-	height: 128px;
-	margin: 0 auto;
-	width: 300px;
-	padding-top: 80px;
-
+  font-family: Monofett;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: white;
+  height: 128px;
+  margin: 0 auto;
+  width: 300px;
+  padding-top: 80px;
 }
 
-
-.menuButtons{ 
-	width: 100%;
-	border-radius: 17px;
-	display: inline-block;
-	margin: 0 auto;
-	text-align: center;
-	margin-top:30px;
-	margin-bottom: 10px;
-
+.menuButtons {
+  width: 100%;
+  border-radius: 17px;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
-.dashboardButton{
-    background: #000000;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    width: 120px;
-height: 40px;
-text-align: center;
-font-style: normal;
-font-weight: normal;
-line-height: normal;
-font-size: 18px;
-text-align: center;
-color: #FFFFFF;
-border-radius: 8px;
-margin: 10px;
+.dashboardButton {
+  background: #000000;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 8px;
+  margin: 10px;
 }
 
-.dashboardButton:hover{
-	background: -moz-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
-	background: -webkit-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
-	background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+.dashboardButton:hover {
+  background: -moz-linear-gradient(
+    90deg,
+    #700877 0%,
+    #ff2759 100%,
+    #ff2759 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #700877 0%,
+    #ff2759 100%,
+    #ff2759 100%
+  );
+  background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
 }
 
-.folder-button{
-	background: #000000;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    width: 300px;
-height: 80px;
-text-align: center;
-font-style: normal;
-font-weight: normal;
-line-height: normal;
-font-size: 28px;
-text-align: center;
-color: #FFFFFF;
-margin: 20px 0;
-border-top: none;
-border-radius: 17px;
-
+.folder-button {
+  background: #000000;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 28px;
+  text-align: center;
+  color: #ffffff;
+  margin: 20px 0;
+  border-top: none;
+  border-radius: 17px;
 }
 
-.folderButtons{
-    margin-top: 0px;
-    padding-top: 50px;
-	width: 100%;
-
+.folderButtons {
+  margin-top: 0px;
+  padding-top: 50px;
+  width: 100%;
 }
 
-.folderButtons h3{
-text-align: left;
-
+.folderButtons h3 {
+  text-align: left;
 }
 
-.folderButtons a{
- color:rgb(138, 134, 134);
- text-decoration: none;
- font-size: 16px;
+.folderButtons a {
+  color: rgb(138, 134, 134);
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.folderSection{
-	width: 90%;
-	margin: 0 auto;
-
+.folderSection {
+  width: 90%;
+  margin: 0 auto;
 }
-.folderForm{
-	margin-left: 0px;
-	border-top: black 2px solid;
-	border-bottom: black 2px solid;
-	width: 100%;
-}
-
-.folderForm form{
-	margin-bottom: 0px;
+.folderForm {
+  margin-left: 0px;
+  border-top: black 2px solid;
+  border-bottom: black 2px solid;
+  width: 100%;
 }
 
-.folderButtons h4{
-	color: rgb(255, 249, 249);
-	font-size: 20px;
+.folderForm form {
+  margin-bottom: 0px;
 }
 
-
-
-.folderForm form input{
-	width: 100%;
-	height:80px;
-	border: none;
-	font-size: 15px;
-	background-color: #1d202b;
-	color:white;
-
-
-
+.folderButtons h4 {
+  color: rgb(255, 249, 249);
+  font-size: 20px;
 }
 
-.folderForm form input::placeholder{
-
-white-space:pre-line;  
-position:relative;
-top:-7px;
-color: rgb(189, 189, 189);
-font-style: italic;
+.folderForm form input {
+  width: 100%;
+  height: 80px;
+  border: none;
+  font-size: 15px;
+  background-color: #1d202b;
+  color: white;
 }
 
-
-.folderSection{
-	width: 80%;
-
+.folderForm form input::placeholder {
+  white-space: pre-line;
+  position: relative;
+  top: -7px;
+  color: rgb(189, 189, 189);
+  font-style: italic;
 }
 
-.folderForm form input:focus{
-	width: 100%;
-	height:40px;
-	border: none;
-	outline: none;
-	color: white;
-	font-size: 18px;
-
+.folderSection {
+  width: 80%;
 }
 
-.folderForm form button{
-visibility: hidden;
+.folderForm form input:focus {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
 }
 
-.addNewFolder{
-	visibility: hidden;
+.folderForm form button {
+  visibility: hidden;
 }
 
-.userControls h1{
-	color: white;
-	font-size: 20px;
+.addNewFolder {
+  visibility: hidden;
 }
 
-.noFolders{
-	color: white;
+.userControls h1 {
+  color: white;
+  font-size: 20px;
+}
+
+.noFolders {
+  color: white;
 }

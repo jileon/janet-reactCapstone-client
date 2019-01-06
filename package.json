@@ -7,11 +7,9 @@
     "jwt-decode": "^2.2.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-flickity-component": "^3.1.0",
     "react-modal": "^3.6.1",
     "react-redux": "^5.0.7",
     "react-responsive": "^5.0.0",
-    "react-responsive-carousel": "^3.1.43",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
     "react-spinkit": "^3.0.0",
@@ -38,6 +36,5 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0"
   },
-
   "proxy": "http://localhost:8080"
 }
