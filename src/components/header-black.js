@@ -5,11 +5,13 @@ import './css/header-bar.css';
 export default function HeaderBarBlack(props) {
   return (
     <header role="banner" className="content-header-black">
-      <Link to="/news">
-        <h1 className={props.class}>
-          News Flash<span className="period">.</span>
-        </h1>
-      </Link>
+      <div className="logo">
+        <Link to="/news">
+          <h1 className={props.class}>
+            News Flash<span className="period">.</span>
+          </h1>
+        </Link>
+      </div>
       <nav>
         <ul>
           <Link to="/registeruser">

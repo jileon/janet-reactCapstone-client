@@ -46,10 +46,33 @@
   position: sticky;
   top: 0px;
   z-index: 10;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.content-header-black a {
+.content-header-black .logo {
   text-decoration: none;
+  width: 50%;
+  display: block;
+}
+
+.content-header-black nav {
+  text-decoration: none;
+  width: 50%;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.content-header-black ul {
+  padding: 0px;
+  width: 100%;
+  margin: 0px;
 }
 
 .header-title-black {
@@ -60,37 +83,33 @@
   font-weight: 100;
   margin: 0 auto;
   text-transform: lowercase;
-  width: 50%;
   padding-left: 1%;
   box-sizing: border-box;
   vertical-align: middle;
+  text-decoration: none;
 }
 
-.header-title-black,
-.content-header-black nav,
-.content-header-black ul {
-  display: inline-block;
-  vertical-align: middle;
+.content-header-black a {
+  text-decoration: none;
 }
 
 .content-header-black nav {
-  margin-right: -200px;
-  width: 50%;
   text-align: right;
-  padding-right: 25px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .content-header-black ul li {
   display: inline;
   vertical-align: middle;
-  margin-right: 2rem;
+  margin-right: 1rem;
   font-size: 1rem;
 }
 
-.content-header-black ul li a,
+.content-header-black ul a,
 .content-header-black ul li {
   color: purple;
+  text-decoration: none;
 }
 
 .content-header-black ul li a:visited,
