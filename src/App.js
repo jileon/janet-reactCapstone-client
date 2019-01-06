@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, withRouter, Redirect } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 // import HeaderBar from './components/header-bar';
 import UserLogin from './components/user-login';
@@ -52,8 +52,7 @@ export class App extends React.Component {
         <Route exact path="/news" component={Dashboard} />
         <Route exact path="/registeruser" component={RegistrationPage} />
         <Route path="/folder/:id" component={FolderReadView} />
-        <Route path="/folder/:id" component={FolderReadView} />
-        <Redirect to="/" />
+        {/* <Redirect to="/" /> */}
       </div>
     );
   }
