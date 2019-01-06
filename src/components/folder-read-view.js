@@ -90,48 +90,6 @@ class FolderReadView extends React.Component {
         </section>
       );
     }
-
-    return (
-      <section className="folderPage">
-        <SideMenu />
-
-        <HeaderBar
-          headerClass={
-            this.props.expandedNav
-              ? 'content-header-reduced '
-              : 'content-header-expanded'
-          }
-        />
-
-        <section
-          className={
-            this.props.expandedNav
-              ? 'folder-header-reduced '
-              : 'folder-header-expanded'
-          }
-        >
-          <h2>
-            <span>{this.props.folder}</span>{' '}
-          </h2>
-        </section>
-        <section
-          className={
-            this.props.expandedNav
-              ? 'folder-section-reduced '
-              : 'folder-section-expanded'
-          }
-        >
-          <FolderCurrentList
-            deleteClick={e => {
-              const folderid = this.props.match.params.id;
-              const articleid = e.target.getAttribute('articleid');
-              this.props.dispatch(deleteArticle(folderid, articleid));
-            }}
-            articles={this.props.currentarticles}
-          />
-        </section>
-      </section>
-    );
   }
 }
 const mapStateToProps = state => {

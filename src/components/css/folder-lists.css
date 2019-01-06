@@ -23,30 +23,31 @@
 
 .folder-header-reduced {
   width: 100%;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
   background: purple;
-  text-align: left;
-  margin-left: 100px;
+  text-align: center;
+  /* margin-left: 100px; */
 }
 
 .folder-header-reduced h2 {
   color: white;
   text-align: center;
-  margin-top: 30px;
-  margin-left: 90px;
+  margin-left: 190px;
+  /* margin-top: 30px;
+  margin-left: 90px; */
 }
 
 .folder-header-expanded {
   width: 100%;
   padding: 0px 10px;
   background: purple;
-  text-align: left;
+  text-align: center;
 }
 .folder-header-expanded h2 {
   color: white;
   text-align: left;
-  margin-left: 10px;
-  margin-top: 30px;
+  /* margin-left: 10px;
+  margin-top: 30px; */
 }
 
 .folder-header-expanded a {
@@ -423,9 +424,9 @@
 
   .folder-header-expanded h2 {
     color: white;
-    text-align: left;
-    margin-left: 50px;
-    margin-top: 30px;
+    text-align: center;
+    /* margin-left: 50px;
+    margin-top: 30px; */
   }
 }
 
