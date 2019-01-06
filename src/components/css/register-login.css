@@ -4,19 +4,25 @@
   border: 1px solid black;
   height: 100vh;
   background-position: bottom;
-  filter: brightness(20%) grayscale(100%);
+  filter: brightness(60%) grayscale(100%);
 }
 
 .home {
   position: absolute;
-  top: 20%;
+  top: 25%;
   width: 100%;
   text-align: center;
 }
 
 .login-form {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: white;
+  background: #000000da;
+  display: inline-block;
+  width: 80%;
+  max-width: 500px;
+  padding: 50px;
+  box-sizing: border-box;
 }
 
 .registration-form {
@@ -28,6 +34,7 @@
   margin-bottom: 1.5rem;
   width: 50%;
   max-width: 500px;
+  min-width: 170px;
   background: rgba(255, 255, 255, 0.781);
   font-size: 1.5rem;
 }
