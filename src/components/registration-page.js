@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import './css/register-login.css';
 import RegistrationForm from './registration.form';
 import HeaderBarBlack from './header-black';

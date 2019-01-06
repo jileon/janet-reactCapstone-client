@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import HeaderBarBlack from '../header-black';
 import { login } from '../../actions/auth';
-import './landing.css';
+import '../css/landing.css';
 export class LandingPage extends React.Component {
   render() {
     if (this.props.loggedIn) {
@@ -42,6 +42,7 @@ export class LandingPage extends React.Component {
               come back to it when you're ready. No need to bookmark everything
               only to get lost in a disorganized void.
             </p>
+
             <div className="txt-controls ">
               <Link to="/registeruser">
                 <button type="button">Sign Up</button>
@@ -56,6 +57,9 @@ export class LandingPage extends React.Component {
                 Try a Demo
               </button>
             </div>
+            <p className="beta">
+              Newsflash is still in beta and new features are being added.
+            </p>
           </div>
 
           <div className="about-how-to">

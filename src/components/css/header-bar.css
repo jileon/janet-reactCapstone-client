@@ -45,6 +45,7 @@
   padding: 10px;
   position: sticky;
   top: 0px;
+  z-index: 10;
 }
 
 .content-header-black a {
