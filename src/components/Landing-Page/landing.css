@@ -53,6 +53,11 @@
   margin-bottom: 30px;
 }
 
+.txt-controls button:hover,
+.intro-controls button:hover {
+  background: purple;
+}
+
 .txt-controls {
   text-align: center;
   padding: 10px;

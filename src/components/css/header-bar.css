@@ -83,8 +83,28 @@
 .content-header-black ul li {
   display: inline;
   vertical-align: middle;
-  margin-right: 18px;
+  margin-right: 2rem;
   font-size: 1rem;
+}
+
+.content-header-black ul li a,
+.content-header-black ul li {
+  color: purple;
+}
+
+.content-header-black ul li a:visited,
+.content-header-black ul li:visited {
+  color: purple;
+}
+
+.content-header-black ul li a:hover,
+.content-header-black ul li:hover {
+  color: white;
+}
+
+.content-header-black ul li a:active,
+.content-header-black ul li:active {
+  color: white;
 }
 
 @media only screen and (min-width: 315px) {
