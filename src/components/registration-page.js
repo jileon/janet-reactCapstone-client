@@ -11,15 +11,13 @@ export function RegistrationPage(props) {
     return <Redirect to="/news" />;
   }
   return (
-    <div>
+    <section>
       <HeaderBarBlack class="header-title-black" />
       <div className="backimage" />
       <div className="home">
-        <h2>Register for News Flash</h2>
         <RegistrationForm />
-        <Link to="/login">Login</Link>
       </div>
-    </div>
+    </section>
   );
 }
 

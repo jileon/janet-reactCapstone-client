@@ -12,22 +12,13 @@ export function UserLogin(props) {
   }
 
   return (
-    <div>
+    <section>
       <HeaderBarBlack class="header-title-black" />
       <div className="backimage" />
-
       <div className="home">
-        <h2>Welcome to News Flash</h2>
         <LoginForm />
-
-        <Link to="/registeruser">Register</Link>
-        <section className="demo">
-          <p>DEMO</p>
-          <p>username: demouser</p>
-          <p>password: demouser123</p>
-        </section>
       </div>
-    </div>
+    </section>
   );
 }
 
