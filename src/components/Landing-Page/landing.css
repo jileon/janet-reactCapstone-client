@@ -73,6 +73,9 @@
   margin-top: 5rem;
 }
 
+.about-how-to div {
+  margin-bottom: 50px;
+}
 .about-how-to h1 {
   color: white;
   font-family: 'Bitter', serif;

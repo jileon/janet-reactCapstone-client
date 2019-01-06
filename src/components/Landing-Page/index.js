@@ -64,7 +64,7 @@ export class LandingPage extends React.Component {
             </h1>
             <div>
               <p>
-                Instead of having everything scrambles together, customize your
+                Instead of having everything scrambled together, customize your
                 reading lists to your needs.
               </p>
             </div>
