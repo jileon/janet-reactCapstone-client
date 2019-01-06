@@ -22,7 +22,9 @@
 .intro-text {
   position: absolute;
   top: 5%;
-  left: 5%;
+  display: block;
+  width: 100%;
+  padding-left: 5%;
 }
 
 .intro-text h1 {
@@ -143,4 +145,22 @@
 .landing-footer a:hover {
   text-decoration: underline;
   color: white;
+}
+
+@media only screen and (max-width: 560px) {
+  .intro-controls {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .intro-text h1 {
+    text-align: center;
+    padding-left: ;
+  }
+
+  .intro-text {
+    padding: 2%;
+  }
 }
