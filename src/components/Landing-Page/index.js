@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import HeaderBarBlack from '../header-black';
+import { login } from '../../actions/auth';
 import './landing.css';
 export class LandingPage extends React.Component {
   render() {
-    console.log(this.props);
     if (this.props.loggedIn) {
       return <Redirect to="/news" />;
     }
@@ -21,7 +21,9 @@ export class LandingPage extends React.Component {
               {' '}
               <button type="button">Learn More</button>
             </a>
-            <button type="button">Login</button>
+            <Link to="/login">
+              <button type="button">Login</button>
+            </Link>
           </div>
         </div>
         <HeaderBarBlack class="header-title-black" />
@@ -41,10 +43,18 @@ export class LandingPage extends React.Component {
               only to get lost in a disorganized void.
             </p>
             <div className="txt-controls ">
-              <a href="#newsflash">
-                <button type="button">Signup</button>
-              </a>
-              <button type="button">Try a Demo</button>
+              <Link to="/registeruser">
+                <button type="button">Sign Up</button>
+              </Link>
+
+              <button
+                onClick={() =>
+                  this.props.dispatch(login('demouser', 'demouser123'))
+                }
+                type="button"
+              >
+                Try a Demo
+              </button>
             </div>
           </div>
 
@@ -59,7 +69,7 @@ export class LandingPage extends React.Component {
               </p>
             </div>
             <div className="how-to-gif">
-              <img src={require('../../images/howto3.gif')} />
+              <img src={require('../../images/howto3.gif')} alt="how-to-use" />
             </div>
           </div>
           <div className="landing-footer">
