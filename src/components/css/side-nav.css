@@ -1,55 +1,57 @@
 .side-nav {
-	height: 100%;
-	width: 100px;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #181b24;
-	overflow-x: hidden;
-	padding-top: 20px;
-  }
-  
-.nav-h1{
-	  color : black;
-	}
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #181b24;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
 
-.burger-nav{
+.nav-h1 {
+  color: black;
+}
+
+.burger-nav {
   width: 55px;
-    height: 8px;
-    background-color: white;
-    margin: 9px 0;
-	}
+  height: 8px;
+  background-color: white;
+  text-align: center;
+  border: 1px solid blue;
+}
 
-	.burger-container{
-		margin-left: 20px;
-		}
+.burger-container {
+  margin-left: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
 
+@media only screen and (min-width: 315px) {
+  .side-nav {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #181b24;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+}
 
-		@media only screen and (min-width: 315px) {
-			.side-nav {
-				height: 100%;
-				width: 60px;
-				position: fixed;
-				z-index: 1;
-				top: 0;
-				left: 0;
-				background-color: #181b24;
-				overflow-x: hidden;
-				padding-top: 20px;
-				}
-		}
-
-		@media only screen and (min-width: 615px) {
-			.side-nav {
-				height: 100%;
-				width: 100px;
-				position: fixed;
-				z-index: 1;
-				top: 0;
-				left: 0;
-				background-color: #181b24;
-				overflow-x: hidden;
-				padding-top: 20px;
-				}
-		}
+@media only screen and (min-width: 615px) {
+  .side-nav {
+    height: 100%;
+    width: 90px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #181b24;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+}
