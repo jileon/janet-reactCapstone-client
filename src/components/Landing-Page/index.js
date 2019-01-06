@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import HeaderBarBlack from '../header-black';
-import { login } from '../../actions/auth';
+
 import '../css/landing.css';
 export class LandingPage extends React.Component {
   render() {
@@ -47,15 +47,9 @@ export class LandingPage extends React.Component {
               <Link to="/registeruser">
                 <button type="button">Sign Up</button>
               </Link>
-
-              <button
-                onClick={() =>
-                  this.props.dispatch(login('demouser', 'demouser123'))
-                }
-                type="button"
-              >
-                Try a Demo
-              </button>
+              <Link to="/demo">
+                <button type="button">Try a Demo</button>
+              </Link>
             </div>
             <p className="beta">
               Newsflash is still in beta and new features are being added.

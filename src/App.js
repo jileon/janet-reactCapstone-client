@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Redirect } from 'react-router-dom';
 
 // import HeaderBar from './components/header-bar';
 import UserLogin from './components/user-login';
@@ -8,6 +8,7 @@ import Dashboard from './components/dashboard';
 import FolderReadView from './components/folder-read-view';
 import RegistrationPage from './components/registration-page';
 import LandingPage from './components/Landing-Page';
+import Demo from './components/Landing-Page/demo';
 import { refreshAuthToken } from './actions/auth';
 import { clearAuth } from './actions/auth';
 
@@ -46,10 +47,13 @@ export class App extends React.Component {
     return (
       <div className="app">
         <Route exact path="/" component={LandingPage} />
+        <Route exact path="/demo" component={Demo} />
         <Route exact path="/login" component={UserLogin} />
         <Route exact path="/news" component={Dashboard} />
         <Route exact path="/registeruser" component={RegistrationPage} />
         <Route path="/folder/:id" component={FolderReadView} />
+        <Route path="/folder/:id" component={FolderReadView} />
+        <Redirect to="/" />
       </div>
     );
   }
