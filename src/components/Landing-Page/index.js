@@ -79,7 +79,7 @@ export class LandingPage extends React.Component {
               >
                 Built and Designed by Janet Leon
               </a>
-              <br /> <br /> Powered by news.api.org
+              <br /> <br /> Powered by newsapi.org
             </p>
           </div>
         </section>
